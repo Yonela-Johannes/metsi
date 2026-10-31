@@ -1,0 +1,449 @@
+alertpull,basin,dangerpull,date,fsc_mcm,gauge,last_week_lvl,last_year_lvl,latitude,longitude,province,rain_fall,river,source,station_id,status,warningpull,water_level
+80.0,Eastern Cape,110.0,2026-10-26,0.5,Belfort Dam,86.5,100.0,-30.161,28.721,Eastern Cape,1.0,Mafube River,Department of Water and Sanitation (DWS) South Africa,T3R001Q01,alert,100.0,86.5
+80.0,Eastern Cape,110.0,2026-10-26,36.8,Binfield Dam,99.4,94.5,-32.692,26.913,Eastern Cape,0.0,Tyume River,Department of Water and Sanitation (DWS) South Africa,R1R003Q01,alert,100.0,99.4
+80.0,Eastern Cape,110.0,2026-10-26,4.9,Boesmanskrantz Dam,69.6,99.7,-32.2968,26.4194,Eastern Cape,0.6,Oxkraal River,Department of Water and Sanitation (DWS) South Africa,EC-003,normal,100.0,69.2
+80.0,Eastern Cape,110.0,2026-10-26,4.9,Boesmanskrantz Dam,100.1,96.1,-32.2968,26.4194,Eastern Cape,0.6,Oxkraal River,Department of Water and Sanitation (DWS) South Africa,EC-004,alert,100.0,99.8
+80.0,Eastern Cape,110.0,2026-10-26,98.0,Bridle Drift Dam,102.4,91.5,-32.98,27.708,Eastern Cape,0.3,Buffalo River,Department of Water and Sanitation (DWS) South Africa,R2R003Q01,minor,100.0,101.3
+80.0,Eastern Cape,110.0,2026-10-26,12.1,Cata Dam,97.7,88.4,-32.628,27.12,Eastern Cape,0.1,Cata River,Department of Water and Sanitation (DWS) South Africa,R1R002Q01,alert,100.0,97.7
+80.0,Eastern Cape,110.0,2026-10-26,0.8,Corana Dam,99.3,93.6,-32.2968,26.4194,Eastern Cape,0.6,Corana River,Department of Water and Sanitation (DWS) South Africa,EC-007,alert,100.0,98.5
+80.0,Eastern Cape,110.0,2026-10-26,179.9,Darlington Dam,52.0,39.3,-33.152,25.148,Eastern Cape,5.1,Sondags River,Department of Water and Sanitation (DWS) South Africa,N2R001Q01,normal,100.0,50.7
+80.0,Eastern Cape,110.0,2026-10-26,2.1,De Mistkraal Dam,98.2,76.6,-32.2968,26.4194,Eastern Cape,0.6,Little Fish River,Department of Water and Sanitation (DWS) South Africa,EC-009,normal,100.0,75.9
+80.0,Eastern Cape,110.0,2026-10-26,6.4,Debe Dam,93.8,43.1,-32.2968,26.4194,Eastern Cape,0.6,Debe River,Department of Water and Sanitation (DWS) South Africa,EC-010,alert,100.0,94.7
+80.0,Eastern Cape,110.0,2026-10-26,17.1,Doornrivier Dam,101.0,83.6,-32.2968,26.4194,Eastern Cape,0.6,Doorn River,Department of Water and Sanitation (DWS) South Africa,EC-011,minor,100.0,100.8
+80.0,Eastern Cape,110.0,2026-10-26,3.6,Elands Drift Dam,95.5,66.1,-32.2968,26.4194,Eastern Cape,0.6,Great Fish River,Department of Water and Sanitation (DWS) South Africa,EC-012,normal,100.0,54.9
+80.0,Eastern Cape,110.0,2026-10-26,3.6,Elandsdrift Dam,77.5,60.8,-32.524,25.768,Eastern Cape,1.1,Great Fish River,Department of Water and Sanitation (DWS) South Africa,Q5R001Q01,normal,100.0,61.1
+80.0,Eastern Cape,110.0,2026-10-26,6.3,Glen Melville Dam,98.2,72.9,-32.2968,26.4194,Eastern Cape,0.6,Water from Fish river via Ecca tunnel River,Department of Water and Sanitation (DWS) South Africa,EC-014,alert,100.0,91.2
+80.0,Eastern Cape,110.0,2026-10-26,6.3,Glen Melville Dam,90.8,90.8,-32.2968,26.4194,Eastern Cape,0.6,Water from Fish river via Ecca tunnel River,Department of Water and Sanitation (DWS) South Africa,EC-015,alert,100.0,85.9
+80.0,Eastern Cape,110.0,2026-10-26,44.5,Grassridge Dam,81.8,47.3,-31.748,25.46,Eastern Cape,0.2,Groot Brak River,Department of Water and Sanitation (DWS) South Africa,Q1R001Q01,normal,100.0,71.4
+80.0,Eastern Cape,110.0,2026-10-26,11.7,Groendal Dam,100.9,89.0,-33.689,25.26,Eastern Cape,0.0,Swartkops River,Department of Water and Sanitation (DWS) South Africa,M1R001Q01,minor,100.0,100.7
+80.0,Eastern Cape,110.0,2026-10-26,8.6,Gubu Dam,100.6,100.0,-32.61,27.277,Eastern Cape,0.0,Gubu River,Department of Water and Sanitation (DWS) South Africa,S6R001Q01,minor,100.0,100.4
+80.0,Eastern Cape,110.0,2026-10-26,105.8,Impofu Dam,100.7,47.1,-34.08,24.67,Eastern Cape,0.5,Krom River,Department of Water and Sanitation (DWS) South Africa,K9R002Q01,minor,100.0,100.5
+80.0,Eastern Cape,110.0,2026-10-26,9.5,Jozanashoek Dam,100.6,96.6,-32.2968,26.4194,Eastern Cape,0.6,Sterkspruit River,Department of Water and Sanitation (DWS) South Africa,EC-020,minor,100.0,100.5
+80.0,Eastern Cape,110.0,2026-10-26,24.9,Katrivier Dam,100.4,99.5,-32.575,26.777,Eastern Cape,0.2,Kat River,Department of Water and Sanitation (DWS) South Africa,Q9R001Q01,minor,100.0,100.4
+80.0,Eastern Cape,110.0,2026-10-26,56.0,Kommandodrift Dam,100.6,78.2,-32.086,26.034,Eastern Cape,1.8,Tarka River,Department of Water and Sanitation (DWS) South Africa,Q4R002Q01,minor,100.0,100.3
+80.0,Eastern Cape,110.0,2026-10-26,126.0,Kouga Dam,100.5,64.1,-33.738,24.591,Eastern Cape,0.0,Kouga River,Department of Water and Sanitation (DWS) South Africa,L8R001Q01,minor,100.0,100.4
+80.0,Eastern Cape,110.0,2026-10-26,35.3,Kromrivier Dam,100.5,66.4,-32.2968,26.4194,Eastern Cape,0.6,Krom River,Department of Water and Sanitation (DWS) South Africa,EC-024,minor,100.0,100.5
+80.0,Eastern Cape,110.0,2026-10-26,19.0,Laing Dam,101.3,100.2,-32.955,27.497,Eastern Cape,0.1,Buffalo River,Department of Water and Sanitation (DWS) South Africa,R2R001Q01,minor,100.0,100.5
+80.0,Eastern Cape,110.0,2026-10-26,11.3,Lake Arthur Dam,99.5,21.2,-32.211,25.821,Eastern Cape,0.2,Tarka River,Department of Water and Sanitation (DWS) South Africa,Q4R001Q01,alert,100.0,99.5
+80.0,Eastern Cape,110.0,2026-10-26,3.1,Loerie Dam,101.0,77.1,-33.864,25.041,Eastern Cape,0.3,Loeriespruit River,Department of Water and Sanitation (DWS) South Africa,L9R001Q01,minor,100.0,100.9
+80.0,Eastern Cape,110.0,2026-10-26,113.6,Lubisi Dam,101.5,38.1,-31.785,27.41,Eastern Cape,0.5,Indwe River,Department of Water and Sanitation (DWS) South Africa,S2R001Q01,minor,100.0,101.5
+80.0,Eastern Cape,110.0,2026-10-26,2.1,Mabeleni Dam,100.0,100.0,-31.447,28.56,Eastern Cape,0.2,Mhlahlane River,Department of Water and Sanitation (DWS) South Africa,T2R002Q01,minor,100.0,100.0
+80.0,Eastern Cape,110.0,2026-10-26,3.4,Macubeni Dam,99.6,98.7,-32.2968,26.4194,Eastern Cape,0.6,Cacadu River,Department of Water and Sanitation (DWS) South Africa,EC-030,alert,100.0,97.9
+80.0,Eastern Cape,110.0,2026-10-26,1.2,Macubeni Dam,102.6,80.9,-32.2968,26.4194,Eastern Cape,0.6,Cacadu River,Department of Water and Sanitation (DWS) South Africa,EC-031,minor,100.0,102.6
+80.0,Eastern Cape,110.0,2026-10-26,1.6,Mlanga Dam,94.5,83.8,-31.433,28.926,Eastern Cape,0.1,Mlanga River,Department of Water and Sanitation (DWS) South Africa,T7R001Q01,alert,100.0,94.4
+80.0,Eastern Cape,110.0,2026-10-26,1.9,Mnyameni Dam,99.7,99.5,-32.2968,26.4194,Eastern Cape,0.6,uMnyama River,Department of Water and Sanitation (DWS) South Africa,EC-033,minor,100.0,100.0
+80.0,Eastern Cape,110.0,2026-10-26,19.3,Nahoon Dam,99.9,83.9,-32.906,27.801,Eastern Cape,0.3,Nahoon River,Department of Water and Sanitation (DWS) South Africa,R3R001Q01,alert,100.0,99.0
+80.0,Eastern Cape,110.0,2026-10-26,144.9,Ncora Dam,100.4,92.2,-31.779,27.648,Eastern Cape,1.3,Tsomo River,Department of Water and Sanitation (DWS) South Africa,S5R001Q01,minor,100.0,100.4
+80.0,Eastern Cape,110.0,2026-10-26,1.3,Nqadu Dam,61.5,83.0,-31.409,28.76,Eastern Cape,0.2,Nqadu River,Department of Water and Sanitation (DWS) South Africa,T3R004Q01,normal,100.0,63.4
+80.0,Eastern Cape,110.0,2026-10-26,45.4,Nqweba Dam,101.1,89.1,-32.2968,26.4194,Eastern Cape,0.6,Sondags River,Department of Water and Sanitation (DWS) South Africa,EC-037,minor,100.0,100.9
+80.0,Eastern Cape,110.0,2026-10-26,1.7,Ntenetyana Dam,78.5,85.8,-32.2968,26.4194,Eastern Cape,0.6,Ntenetyana River,Department of Water and Sanitation (DWS) South Africa,EC-038,normal,100.0,78.9
+80.0,Eastern Cape,110.0,2026-10-26,4.6,Nuwejaars Dam,101.7,56.8,-33.294,26.115,Eastern Cape,4.6,Nuwejaarspruit River,Department of Water and Sanitation (DWS) South Africa,P1R003Q01,minor,100.0,101.7
+80.0,Eastern Cape,110.0,2026-10-26,15.2,Oxkraal Dam,100.0,91.5,-32.2968,26.4194,Eastern Cape,0.6,Oskraal River,Department of Water and Sanitation (DWS) South Africa,EC-040,minor,100.0,100.0
+80.0,Eastern Cape,110.0,2026-10-26,4.8,Rooikrans Dam,100.0,87.5,-32.2968,26.4194,Eastern Cape,0.6,Buffalo River,Department of Water and Sanitation (DWS) South Africa,EC-041,alert,100.0,99.8
+80.0,Eastern Cape,110.0,2026-10-26,29.7,Sandile Dam,100.3,86.4,-32.713,27.107,Eastern Cape,0.0,Keiskamma River,Department of Water and Sanitation (DWS) South Africa,R1R001Q01,minor,100.0,100.3
+80.0,Eastern Cape,110.0,2026-10-26,12.3,Tsojana Dam,100.0,99.7,-31.885,27.634,Eastern Cape,0.3,Tsojana River,Department of Water and Sanitation (DWS) South Africa,S5R002Q01,minor,100.0,100.0
+80.0,Eastern Cape,110.0,2026-10-26,244.7,Umtata Dam,100.6,96.6,-31.541,28.734,Eastern Cape,0.0,Mtata River,Department of Water and Sanitation (DWS) South Africa,T2R001Q01,minor,100.0,100.5
+80.0,Eastern Cape,110.0,2026-10-26,37.5,Waterdown Dam,100.3,99.1,-32.302,26.867,Eastern Cape,1.3,Klipplaat River,Department of Water and Sanitation (DWS) South Africa,S3R001Q01,minor,100.0,100.4
+80.0,Eastern Cape,110.0,2026-10-26,91.5,Wriggleswade Dam,100.2,99.6,-32.576,27.564,Eastern Cape,0.0,Kubisi River,Department of Water and Sanitation (DWS) South Africa,S6R002Q01,minor,100.0,100.1
+80.0,Eastern Cape,110.0,2026-10-26,116.4,Xonxa Dam,100.6,96.4,-31.823,27.139,Eastern Cape,0.4,White Kei River,Department of Water and Sanitation (DWS) South Africa,S1R001Q01,minor,100.0,100.4
+80.0,Eastern Cape,110.0,2026-10-26,0.5,Belfort Dam,86.5,100.0,-30.161,28.721,Eastern Cape,1.0,Mafube River,Department of Water and Sanitation (DWS) South Africa,T3R001Q01,alert,100.0,86.5
+80.0,Eastern Cape,110.0,2026-10-26,36.8,Binfield Dam,99.4,94.5,-32.692,26.913,Eastern Cape,0.0,Tyume River,Department of Water and Sanitation (DWS) South Africa,R1R003Q01,alert,100.0,99.4
+80.0,Eastern Cape,110.0,2026-10-26,4.9,Boesmanskrantz Dam,69.6,99.7,-32.2968,26.4194,Eastern Cape,0.6,Oxkraal River,Department of Water and Sanitation (DWS) South Africa,EC-050,normal,100.0,69.2
+80.0,Eastern Cape,110.0,2026-10-26,4.9,Boesmanskrantz Dam,100.1,96.1,-32.2968,26.4194,Eastern Cape,0.6,Oxkraal River,Department of Water and Sanitation (DWS) South Africa,EC-051,alert,100.0,99.8
+80.0,Eastern Cape,110.0,2026-10-26,98.0,Bridle Drift Dam,102.4,91.5,-32.98,27.708,Eastern Cape,0.3,Buffalo River,Department of Water and Sanitation (DWS) South Africa,R2R003Q01,minor,100.0,101.3
+80.0,Eastern Cape,110.0,2026-10-26,12.1,Cata Dam,97.7,88.4,-32.628,27.12,Eastern Cape,0.1,Cata River,Department of Water and Sanitation (DWS) South Africa,R1R002Q01,alert,100.0,97.7
+80.0,Eastern Cape,110.0,2026-10-26,0.8,Corana Dam,99.3,93.6,-32.2968,26.4194,Eastern Cape,0.6,Corana River,Department of Water and Sanitation (DWS) South Africa,EC-054,alert,100.0,98.5
+80.0,Eastern Cape,110.0,2026-10-26,179.9,Darlington Dam,52.0,39.3,-33.152,25.148,Eastern Cape,5.1,Sondags River,Department of Water and Sanitation (DWS) South Africa,N2R001Q01,normal,100.0,50.7
+80.0,Eastern Cape,110.0,2026-10-26,2.1,De Mistkraal Dam,98.2,76.6,-32.2968,26.4194,Eastern Cape,0.6,Little Fish River,Department of Water and Sanitation (DWS) South Africa,EC-056,normal,100.0,75.9
+80.0,Eastern Cape,110.0,2026-10-26,6.4,Debe Dam,93.8,43.1,-32.2968,26.4194,Eastern Cape,0.6,Debe River,Department of Water and Sanitation (DWS) South Africa,EC-057,alert,100.0,94.7
+80.0,Eastern Cape,110.0,2026-10-26,17.1,Doornrivier Dam,101.0,83.6,-32.2968,26.4194,Eastern Cape,0.6,Doorn River,Department of Water and Sanitation (DWS) South Africa,EC-058,minor,100.0,100.8
+80.0,Eastern Cape,110.0,2026-10-26,3.6,Elands Drift Dam,95.5,66.1,-32.2968,26.4194,Eastern Cape,0.6,Great Fish River,Department of Water and Sanitation (DWS) South Africa,EC-059,normal,100.0,54.9
+80.0,Eastern Cape,110.0,2026-10-26,3.6,Elandsdrift Dam,77.5,60.8,-32.524,25.768,Eastern Cape,1.1,Great Fish River,Department of Water and Sanitation (DWS) South Africa,Q5R001Q01,normal,100.0,61.1
+80.0,Eastern Cape,110.0,2026-10-26,6.3,Glen Melville Dam,98.2,72.9,-32.2968,26.4194,Eastern Cape,0.6,Water from Fish river via Ecca tunnel River,Department of Water and Sanitation (DWS) South Africa,EC-061,alert,100.0,91.2
+80.0,Eastern Cape,110.0,2026-10-26,6.3,Glen Melville Dam,90.8,90.8,-32.2968,26.4194,Eastern Cape,0.6,Water from Fish river via Ecca tunnel River,Department of Water and Sanitation (DWS) South Africa,EC-062,alert,100.0,85.9
+80.0,Eastern Cape,110.0,2026-10-26,44.5,Grassridge Dam,81.8,47.3,-31.748,25.46,Eastern Cape,0.2,Groot Brak River,Department of Water and Sanitation (DWS) South Africa,Q1R001Q01,normal,100.0,71.4
+80.0,Eastern Cape,110.0,2026-10-26,11.7,Groendal Dam,100.9,89.0,-33.689,25.26,Eastern Cape,0.0,Swartkops River,Department of Water and Sanitation (DWS) South Africa,M1R001Q01,minor,100.0,100.7
+80.0,Eastern Cape,110.0,2026-10-26,8.6,Gubu Dam,100.6,100.0,-32.61,27.277,Eastern Cape,0.0,Gubu River,Department of Water and Sanitation (DWS) South Africa,S6R001Q01,minor,100.0,100.4
+80.0,Eastern Cape,110.0,2026-10-26,105.8,Impofu Dam,100.7,47.1,-34.08,24.67,Eastern Cape,0.5,Krom River,Department of Water and Sanitation (DWS) South Africa,K9R002Q01,minor,100.0,100.5
+80.0,Eastern Cape,110.0,2026-10-26,9.5,Jozanashoek Dam,100.6,96.6,-32.2968,26.4194,Eastern Cape,0.6,Sterkspruit River,Department of Water and Sanitation (DWS) South Africa,EC-067,minor,100.0,100.5
+80.0,Eastern Cape,110.0,2026-10-26,24.9,Katrivier Dam,100.4,99.5,-32.575,26.777,Eastern Cape,0.2,Kat River,Department of Water and Sanitation (DWS) South Africa,Q9R001Q01,minor,100.0,100.4
+80.0,Eastern Cape,110.0,2026-10-26,56.0,Kommandodrift Dam,100.6,78.2,-32.086,26.034,Eastern Cape,1.8,Tarka River,Department of Water and Sanitation (DWS) South Africa,Q4R002Q01,minor,100.0,100.3
+80.0,Eastern Cape,110.0,2026-10-26,126.0,Kouga Dam,100.5,64.1,-33.738,24.591,Eastern Cape,0.0,Kouga River,Department of Water and Sanitation (DWS) South Africa,L8R001Q01,minor,100.0,100.4
+80.0,Eastern Cape,110.0,2026-10-26,35.3,Kromrivier Dam,100.5,66.4,-32.2968,26.4194,Eastern Cape,0.6,Krom River,Department of Water and Sanitation (DWS) South Africa,EC-071,minor,100.0,100.5
+80.0,Eastern Cape,110.0,2026-10-26,19.0,Laing Dam,101.3,100.2,-32.955,27.497,Eastern Cape,0.1,Buffalo River,Department of Water and Sanitation (DWS) South Africa,R2R001Q01,minor,100.0,100.5
+80.0,Eastern Cape,110.0,2026-10-26,11.3,Lake Arthur Dam,99.5,21.2,-32.211,25.821,Eastern Cape,0.2,Tarka River,Department of Water and Sanitation (DWS) South Africa,Q4R001Q01,alert,100.0,99.5
+80.0,Eastern Cape,110.0,2026-10-26,3.1,Loerie Dam,101.0,77.1,-33.864,25.041,Eastern Cape,0.3,Loeriespruit River,Department of Water and Sanitation (DWS) South Africa,L9R001Q01,minor,100.0,100.9
+80.0,Eastern Cape,110.0,2026-10-26,113.6,Lubisi Dam,101.5,38.1,-31.785,27.41,Eastern Cape,0.5,Indwe River,Department of Water and Sanitation (DWS) South Africa,S2R001Q01,minor,100.0,101.5
+80.0,Eastern Cape,110.0,2026-10-26,2.1,Mabeleni Dam,100.0,100.0,-31.447,28.56,Eastern Cape,0.2,Mhlahlane River,Department of Water and Sanitation (DWS) South Africa,T2R002Q01,minor,100.0,100.0
+80.0,Eastern Cape,110.0,2026-10-26,3.4,Macubeni Dam,99.6,98.7,-32.2968,26.4194,Eastern Cape,0.6,Cacadu River,Department of Water and Sanitation (DWS) South Africa,EC-077,alert,100.0,97.9
+80.0,Eastern Cape,110.0,2026-10-26,1.2,Macubeni Dam,102.6,80.9,-32.2968,26.4194,Eastern Cape,0.6,Cacadu River,Department of Water and Sanitation (DWS) South Africa,EC-078,minor,100.0,102.6
+80.0,Eastern Cape,110.0,2026-10-26,1.6,Mlanga Dam,94.5,83.8,-31.433,28.926,Eastern Cape,0.1,Mlanga River,Department of Water and Sanitation (DWS) South Africa,T7R001Q01,alert,100.0,94.4
+80.0,Eastern Cape,110.0,2026-10-26,1.9,Mnyameni Dam,99.7,99.5,-32.2968,26.4194,Eastern Cape,0.6,uMnyama River,Department of Water and Sanitation (DWS) South Africa,EC-080,minor,100.0,100.0
+80.0,Eastern Cape,110.0,2026-10-26,19.3,Nahoon Dam,99.9,83.9,-32.906,27.801,Eastern Cape,0.3,Nahoon River,Department of Water and Sanitation (DWS) South Africa,R3R001Q01,alert,100.0,99.0
+80.0,Eastern Cape,110.0,2026-10-26,144.9,Ncora Dam,100.4,92.2,-31.779,27.648,Eastern Cape,1.3,Tsomo River,Department of Water and Sanitation (DWS) South Africa,S5R001Q01,minor,100.0,100.4
+80.0,Eastern Cape,110.0,2026-10-26,1.3,Nqadu Dam,61.5,83.0,-31.409,28.76,Eastern Cape,0.2,Nqadu River,Department of Water and Sanitation (DWS) South Africa,T3R004Q01,normal,100.0,63.4
+80.0,Eastern Cape,110.0,2026-10-26,45.4,Nqweba Dam,101.1,89.1,-32.2968,26.4194,Eastern Cape,0.6,Sondags River,Department of Water and Sanitation (DWS) South Africa,EC-084,minor,100.0,100.9
+80.0,Eastern Cape,110.0,2026-10-26,1.7,Ntenetyana Dam,78.5,85.8,-32.2968,26.4194,Eastern Cape,0.6,Ntenetyana River,Department of Water and Sanitation (DWS) South Africa,EC-085,normal,100.0,78.9
+80.0,Eastern Cape,110.0,2026-10-26,4.6,Nuwejaars Dam,101.7,56.8,-33.294,26.115,Eastern Cape,4.6,Nuwejaarspruit River,Department of Water and Sanitation (DWS) South Africa,P1R003Q01,minor,100.0,101.7
+80.0,Eastern Cape,110.0,2026-10-26,15.2,Oxkraal Dam,100.0,91.5,-32.2968,26.4194,Eastern Cape,0.6,Oskraal River,Department of Water and Sanitation (DWS) South Africa,EC-087,minor,100.0,100.0
+80.0,Eastern Cape,110.0,2026-10-26,4.8,Rooikrans Dam,100.0,87.5,-32.2968,26.4194,Eastern Cape,0.6,Buffalo River,Department of Water and Sanitation (DWS) South Africa,EC-088,alert,100.0,99.8
+80.0,Eastern Cape,110.0,2026-10-26,29.7,Sandile Dam,100.3,86.4,-32.713,27.107,Eastern Cape,0.0,Keiskamma River,Department of Water and Sanitation (DWS) South Africa,R1R001Q01,minor,100.0,100.3
+80.0,Eastern Cape,110.0,2026-10-26,12.3,Tsojana Dam,100.0,99.7,-31.885,27.634,Eastern Cape,0.3,Tsojana River,Department of Water and Sanitation (DWS) South Africa,S5R002Q01,minor,100.0,100.0
+80.0,Eastern Cape,110.0,2026-10-26,244.7,Umtata Dam,100.6,96.6,-31.541,28.734,Eastern Cape,0.0,Mtata River,Department of Water and Sanitation (DWS) South Africa,T2R001Q01,minor,100.0,100.5
+80.0,Eastern Cape,110.0,2026-10-26,37.5,Waterdown Dam,100.3,99.1,-32.302,26.867,Eastern Cape,1.3,Klipplaat River,Department of Water and Sanitation (DWS) South Africa,S3R001Q01,minor,100.0,100.4
+80.0,Eastern Cape,110.0,2026-10-26,91.5,Wriggleswade Dam,100.2,99.6,-32.576,27.564,Eastern Cape,0.0,Kubisi River,Department of Water and Sanitation (DWS) South Africa,S6R002Q01,minor,100.0,100.1
+80.0,Eastern Cape,110.0,2026-10-26,116.4,Xonxa Dam,100.6,96.4,-31.823,27.139,Eastern Cape,0.4,White Kei River,Department of Water and Sanitation (DWS) South Africa,S1R001Q01,minor,100.0,100.4
+80.0,Free State,110.0,2026-10-26,172.5,Allemanskraal Dam,97.4,94.7,-28.297,27.208,Free State,0.0,Sand River,Department of Water and Sanitation (DWS) South Africa,C4R001Q01,alert,100.0,96.3
+80.0,Free State,110.0,2026-10-26,13.3,Armenia Dam,100.0,88.8,-29.348,27.13,Free State,0.0,Leeu River,Department of Water and Sanitation (DWS) South Africa,D2R002Q01,minor,100.0,100.0
+80.0,Free State,110.0,2026-10-26,1243.0,Bloemhof Dam,96.7,95.4,-27.672,25.651,Free State,0.4,Vaal River,Department of Water and Sanitation (DWS) South Africa,C9R002Q01,alert,100.0,93.4
+80.0,Free State,110.0,2026-10-26,9.1,Egmont Dam,100.6,91.0,-30.049,27.041,Free State,0.0,Witspruit River,Department of Water and Sanitation (DWS) South Africa,D2R001Q01,alert,100.0,99.7
+80.0,Free State,110.0,2026-10-26,213.8,Erfenis Dam,98.6,84.9,-28.551,26.836,Free State,0.0,Groot-Vet River,Department of Water and Sanitation (DWS) South Africa,C4R002Q01,alert,100.0,96.8
+80.0,Free State,110.0,2026-10-26,29.5,Fika-Patso Dam,81.9,78.1,-28.4541,26.7968,Free State,0.0,Namahadi River,Department of Water and Sanitation (DWS) South Africa,FS-100,normal,100.0,79.9
+80.0,Free State,110.0,2026-10-26,4903.5,Gariep Dam,99.5,94.7,-30.691,25.706,Free State,0.9,Orange River,Department of Water and Sanitation (DWS) South Africa,D3R002Q01,minor,100.0,100.6
+80.0,Free State,110.0,2026-10-26,12.0,Groothoek Dam,97.3,46.0,-29.297,26.866,Free State,0.0,Kgabanyane River,Department of Water and Sanitation (DWS) South Africa,C5R005Q01,alert,100.0,96.2
+80.0,Free State,110.0,2026-10-26,325.2,Kalkfontein Dam,101.4,96.7,-29.524,25.258,Free State,0.8,Riet River,Department of Water and Sanitation (DWS) South Africa,C5R002Q01,minor,100.0,100.3
+80.0,Free State,110.0,2026-10-26,130.2,Knellpoort Dam,100.0,98.7,-29.777,26.89,Free State,0.0,Rietspruit River,Department of Water and Sanitation (DWS) South Africa,D2R006Q01,alert,100.0,99.9
+80.0,Free State,110.0,2026-10-26,42.4,Koppies Dam,99.0,94.5,-27.229,27.694,Free State,0.0,Renoster River,Department of Water and Sanitation (DWS) South Africa,C7R001Q01,alert,100.0,98.1
+80.0,Free State,110.0,2026-10-26,71.5,Krugersdrift Dam,100.3,93.2,-28.869,26.003,Free State,0.0,Modder River,Department of Water and Sanitation (DWS) South Africa,C5R004Q01,alert,100.0,99.7
+80.0,Free State,110.0,2026-10-26,4.4,Metsi-Matsho Dam,98.3,99.5,-28.4541,26.7968,Free State,0.0,Metsi-Matsho River,Department of Water and Sanitation (DWS) South Africa,FS-107,alert,100.0,96.2
+80.0,Free State,110.0,2026-10-26,72.2,Rustfontein Dam,98.3,47.7,-29.297,26.629,Free State,0.0,Modder River,Department of Water and Sanitation (DWS) South Africa,C5R003Q01,alert,100.0,96.7
+80.0,Free State,110.0,2026-10-26,15.1,Saulspoort Dam,99.3,98.8,-28.221,28.369,Free State,0.0,Liebenbergsvlei River,Department of Water and Sanitation (DWS) South Africa,C8R004Q01,alert,100.0,99.5
+80.0,Free State,110.0,2026-10-26,2617.0,Sterkfontein Dam,98.9,99.0,-28.427,29.016,Free State,0.0,Nuwejaarspruit River,Department of Water and Sanitation (DWS) South Africa,C8R003Q01,alert,100.0,98.8
+80.0,Free State,110.0,2026-10-26,34.0,Tierpoort Dam,101.6,90.6,-29.411,26.15,Free State,0.0,Tierpoort River,Department of Water and Sanitation (DWS) South Africa,C5R001Q01,minor,100.0,101.6
+80.0,Free State,110.0,2026-10-26,2561.0,Vaal Dam,107.4,101.4,-26.896,28.138,Free State,0.0,Vaal River,Department of Water and Sanitation (DWS) South Africa,C1R001Q01,minor,100.0,106.1
+80.0,Free State,110.0,2026-10-26,53.7,Vaalrivier Barrage Dam,97.8,95.3,-28.4541,26.7968,Free State,0.0,Vaal River,Department of Water and Sanitation (DWS) South Africa,FS-113,alert,100.0,96.8
+80.0,Free State,110.0,2026-10-26,3137.0,Vanderkloof Dam,100.4,95.3,-30.152,24.879,Free State,0.6,Orange River,Department of Water and Sanitation (DWS) South Africa,D3R003Q01,alert,100.0,99.7
+80.0,Free State,110.0,2026-10-26,5.5,Welbedacht Dam,100.0,95.1,-29.841,26.93,Free State,0.0,Caledon River,Department of Water and Sanitation (DWS) South Africa,D2R004Q01,minor,100.0,100.0
+80.0,Free State,110.0,2026-10-26,172.5,Allemanskraal Dam,97.4,94.7,-28.297,27.208,Free State,0.0,Sand River,Department of Water and Sanitation (DWS) South Africa,C4R001Q01,alert,100.0,96.3
+80.0,Free State,110.0,2026-10-26,13.3,Armenia Dam,100.0,88.8,-29.348,27.13,Free State,0.0,Leeu River,Department of Water and Sanitation (DWS) South Africa,D2R002Q01,minor,100.0,100.0
+80.0,Free State,110.0,2026-10-26,1243.0,Bloemhof Dam,96.7,95.4,-27.672,25.651,Free State,0.4,Vaal River,Department of Water and Sanitation (DWS) South Africa,C9R002Q01,alert,100.0,93.4
+80.0,Free State,110.0,2026-10-26,9.1,Egmont Dam,100.6,91.0,-30.049,27.041,Free State,0.0,Witspruit River,Department of Water and Sanitation (DWS) South Africa,D2R001Q01,alert,100.0,99.7
+80.0,Free State,110.0,2026-10-26,213.8,Erfenis Dam,98.6,84.9,-28.551,26.836,Free State,0.0,Groot-Vet River,Department of Water and Sanitation (DWS) South Africa,C4R002Q01,alert,100.0,96.8
+80.0,Free State,110.0,2026-10-26,29.5,Fika-Patso Dam,81.9,78.1,-28.4541,26.7968,Free State,0.0,Namahadi River,Department of Water and Sanitation (DWS) South Africa,FS-121,normal,100.0,79.9
+80.0,Free State,110.0,2026-10-26,4903.5,Gariep Dam,99.5,94.7,-30.691,25.706,Free State,0.9,Orange River,Department of Water and Sanitation (DWS) South Africa,D3R002Q01,minor,100.0,100.6
+80.0,Free State,110.0,2026-10-26,12.0,Groothoek Dam,97.3,46.0,-29.297,26.866,Free State,0.0,Kgabanyane River,Department of Water and Sanitation (DWS) South Africa,C5R005Q01,alert,100.0,96.2
+80.0,Free State,110.0,2026-10-26,325.2,Kalkfontein Dam,101.4,96.7,-29.524,25.258,Free State,0.8,Riet River,Department of Water and Sanitation (DWS) South Africa,C5R002Q01,minor,100.0,100.3
+80.0,Free State,110.0,2026-10-26,130.2,Knellpoort Dam,100.0,98.7,-29.777,26.89,Free State,0.0,Rietspruit River,Department of Water and Sanitation (DWS) South Africa,D2R006Q01,alert,100.0,99.9
+80.0,Free State,110.0,2026-10-26,42.4,Koppies Dam,99.0,94.5,-27.229,27.694,Free State,0.0,Renoster River,Department of Water and Sanitation (DWS) South Africa,C7R001Q01,alert,100.0,98.1
+80.0,Free State,110.0,2026-10-26,71.5,Krugersdrift Dam,100.3,93.2,-28.869,26.003,Free State,0.0,Modder River,Department of Water and Sanitation (DWS) South Africa,C5R004Q01,alert,100.0,99.7
+80.0,Free State,110.0,2026-10-26,4.4,Metsi-Matsho Dam,98.3,99.5,-28.4541,26.7968,Free State,0.0,Metsi-Matsho River,Department of Water and Sanitation (DWS) South Africa,FS-128,alert,100.0,96.2
+80.0,Free State,110.0,2026-10-26,72.2,Rustfontein Dam,98.3,47.7,-29.297,26.629,Free State,0.0,Modder River,Department of Water and Sanitation (DWS) South Africa,C5R003Q01,alert,100.0,96.7
+80.0,Free State,110.0,2026-10-26,15.1,Saulspoort Dam,99.3,98.8,-28.221,28.369,Free State,0.0,Liebenbergsvlei River,Department of Water and Sanitation (DWS) South Africa,C8R004Q01,alert,100.0,99.5
+80.0,Free State,110.0,2026-10-26,2617.0,Sterkfontein Dam,98.9,99.0,-28.427,29.016,Free State,0.0,Nuwejaarspruit River,Department of Water and Sanitation (DWS) South Africa,C8R003Q01,alert,100.0,98.8
+80.0,Free State,110.0,2026-10-26,34.0,Tierpoort Dam,101.6,90.6,-29.411,26.15,Free State,0.0,Tierpoort River,Department of Water and Sanitation (DWS) South Africa,C5R001Q01,minor,100.0,101.6
+80.0,Free State,110.0,2026-10-26,2561.0,Vaal Dam,107.4,101.4,-26.896,28.138,Free State,0.0,Vaal River,Department of Water and Sanitation (DWS) South Africa,C1R001Q01,minor,100.0,106.1
+80.0,Free State,110.0,2026-10-26,53.7,Vaalrivier Barrage Dam,97.8,95.3,-28.4541,26.7968,Free State,0.0,Vaal River,Department of Water and Sanitation (DWS) South Africa,FS-134,alert,100.0,96.8
+80.0,Free State,110.0,2026-10-26,3137.0,Vanderkloof Dam,100.4,95.3,-30.152,24.879,Free State,0.6,Orange River,Department of Water and Sanitation (DWS) South Africa,D3R003Q01,alert,100.0,99.7
+80.0,Free State,110.0,2026-10-26,5.5,Welbedacht Dam,100.0,95.1,-29.841,26.93,Free State,0.0,Caledon River,Department of Water and Sanitation (DWS) South Africa,D2R004Q01,minor,100.0,100.0
+80.0,Gauteng,110.0,2026-10-26,4.4,Bon Accord Dam,103.0,107.4,-25.628,28.19,Gauteng,0.6,Apies River,Department of Water and Sanitation (DWS) South Africa,A2R002Q01,minor,100.0,103.0
+80.0,Gauteng,110.0,2026-10-26,57.0,Bronkhorstspruit Dam,100.3,99.6,-25.898,28.691,Gauteng,0.6,Bronkhorstspruit River,Department of Water and Sanitation (DWS) South Africa,B2R001Q01,alert,100.0,98.9
+80.0,Gauteng,110.0,2026-10-26,13.4,Klipdrift Dam,102.2,97.7,-26.2708,28.1123,Gauteng,0.0,Loopspruit River,Department of Water and Sanitation (DWS) South Africa,G-139,minor,100.0,102.2
+80.0,Gauteng,110.0,2026-10-26,12.3,Rietvlei Dam,100.2,100.2,-25.877,28.279,Gauteng,0.8,Hennops River,Department of Water and Sanitation (DWS) South Africa,A2R004Q01,alert,100.0,92.7
+80.0,Gauteng,110.0,2026-10-26,41.2,Roodeplaat Dam,100.3,100.2,-25.624,28.374,Gauteng,0.0,Pienaars River,Department of Water and Sanitation (DWS) South Africa,A2R009Q01,alert,100.0,99.7
+80.0,Gauteng,110.0,2026-10-26,4.4,Bon Accord Dam,103.0,107.4,-25.628,28.19,Gauteng,0.6,Apies River,Department of Water and Sanitation (DWS) South Africa,A2R002Q01,minor,100.0,103.0
+80.0,Gauteng,110.0,2026-10-26,57.0,Bronkhorstspruit Dam,100.3,99.6,-25.898,28.691,Gauteng,0.6,Bronkhorstspruit River,Department of Water and Sanitation (DWS) South Africa,B2R001Q01,alert,100.0,98.9
+80.0,Gauteng,110.0,2026-10-26,13.4,Klipdrift Dam,102.2,97.7,-26.2708,28.1123,Gauteng,0.0,Loopspruit River,Department of Water and Sanitation (DWS) South Africa,G-144,minor,100.0,102.2
+80.0,Gauteng,110.0,2026-10-26,12.3,Rietvlei Dam,100.2,100.2,-25.877,28.279,Gauteng,0.8,Hennops River,Department of Water and Sanitation (DWS) South Africa,A2R004Q01,alert,100.0,92.7
+80.0,Gauteng,110.0,2026-10-26,41.2,Roodeplaat Dam,100.3,100.2,-25.624,28.374,Gauteng,0.0,Pienaars River,Department of Water and Sanitation (DWS) South Africa,A2R009Q01,alert,100.0,99.7
+80.0,KwaZulu-Natal,110.0,2026-10-26,285.7,Albert Falls Dam,84.9,93.6,-29.442,30.405,KwaZulu-Natal,0.0,Mgeni River,Department of Water and Sanitation (DWS) South Africa,U2R003Q01,alert,100.0,84.6
+80.0,KwaZulu-Natal,110.0,2026-10-26,114.1,Bivane Dam,101.4,99.0,-28.5306,30.8958,KwaZulu-Natal,0.0,Bivane River,Department of Water and Sanitation (DWS) South Africa,KN-148,minor,100.0,101.4
+80.0,KwaZulu-Natal,110.0,2026-10-26,22.5,Craigie Burn Dam,100.4,100.6,-29.168,30.294,KwaZulu-Natal,0.3,Mnyamvubu River,Department of Water and Sanitation (DWS) South Africa,V2R001Q01,minor,100.0,100.2
+80.0,KwaZulu-Natal,110.0,2026-10-26,8.7,Driel Barrage Dam,98.3,84.0,-28.772,29.298,KwaZulu-Natal,1.8,Tugela River,Department of Water and Sanitation (DWS) South Africa,V1R002Q01,alert,100.0,98.3
+80.0,KwaZulu-Natal,110.0,2026-10-26,301.3,Goedertrouw Dam,89.7,95.0,-28.768,31.438,KwaZulu-Natal,0.0,Mhlatuze River,Department of Water and Sanitation (DWS) South Africa,W1R001Q01,alert,100.0,89.3
+80.0,KwaZulu-Natal,110.0,2026-10-26,37.2,Hazelmere Dam,87.2,101.8,-29.582,31.034,KwaZulu-Natal,0.0,Mdloti River,Department of Water and Sanitation (DWS) South Africa,U3R001Q01,alert,100.0,86.5
+80.0,KwaZulu-Natal,110.0,2026-10-26,25.9,Hluhluwe Dam,79.5,97.7,-28.11,32.158,KwaZulu-Natal,0.0,Hluhluwe River,Department of Water and Sanitation (DWS) South Africa,W3R001Q01,normal,100.0,79.3
+80.0,KwaZulu-Natal,110.0,2026-10-26,237.5,Inanda Dam,99.3,101.1,-29.704,30.87,KwaZulu-Natal,0.0,Mgeni River,Department of Water and Sanitation (DWS) South Africa,U2R004Q01,alert,100.0,99.6
+80.0,KwaZulu-Natal,110.0,2026-10-26,18.1,Klipfontein Dam,99.2,99.9,-27.822,30.809,KwaZulu-Natal,0.0,Wit Mfolozi River,Department of Water and Sanitation (DWS) South Africa,W2R001Q01,alert,100.0,98.2
+80.0,KwaZulu-Natal,110.0,2026-10-26,5.2,Mearns Dam,73.0,78.8,-28.5306,30.8958,KwaZulu-Natal,0.0,Mooi River,Department of Water and Sanitation (DWS) South Africa,KN-156,normal,100.0,45.9
+80.0,KwaZulu-Natal,110.0,2026-10-26,235.5,Midmar Dam,89.5,94.7,-29.508,30.194,KwaZulu-Natal,0.0,Mgeni River,Department of Water and Sanitation (DWS) South Africa,U2R001Q01,alert,100.0,89.2
+80.0,KwaZulu-Natal,110.0,2026-10-26,23.3,Nagle Dam,91.7,99.2,-29.594,30.643,KwaZulu-Natal,0.0,Mgeni River,Department of Water and Sanitation (DWS) South Africa,U2R002Q01,alert,100.0,89.0
+80.0,KwaZulu-Natal,110.0,2026-10-26,194.6,Ntshingwayo Dam,71.0,79.4,-27.994,29.913,KwaZulu-Natal,0.2,Ngagane River,Department of Water and Sanitation (DWS) South Africa,V3R001Q01,normal,100.0,70.3
+80.0,KwaZulu-Natal,110.0,2026-10-26,2395.3,Pongolapoort Dam,83.2,92.8,-27.364,31.931,KwaZulu-Natal,0.0,Phongolo River,Department of Water and Sanitation (DWS) South Africa,KN-160,alert,100.0,82.9
+80.0,KwaZulu-Natal,110.0,2026-10-26,270.7,Spioenkop Dam,100.1,100.2,-28.69,29.494,KwaZulu-Natal,1.0,Tugela River,Department of Water and Sanitation (DWS) South Africa,V1R001Q01,minor,100.0,100.0
+80.0,KwaZulu-Natal,110.0,2026-10-26,139.3,Spring Grove Dam,81.1,73.1,-28.5306,30.8958,KwaZulu-Natal,0.0,Mooi River,Department of Water and Sanitation (DWS) South Africa,KN-162,normal,100.0,79.4
+80.0,KwaZulu-Natal,110.0,2026-10-26,55.9,Wagendrift Dam,100.6,96.8,-29.054,29.833,KwaZulu-Natal,0.3,Boesmans River,Department of Water and Sanitation (DWS) South Africa,V7R001Q01,minor,100.0,100.5
+80.0,KwaZulu-Natal,110.0,2026-10-26,355.5,Woodstock Dam,99.7,91.1,-28.722,29.208,KwaZulu-Natal,0.7,Tugela River,Department of Water and Sanitation (DWS) South Africa,V1R003Q01,alert,100.0,99.7
+80.0,KwaZulu-Natal,110.0,2026-10-26,184.3,Zaaihoek Dam,100.9,100.5,-27.427,30.085,KwaZulu-Natal,0.4,Slang River,Department of Water and Sanitation (DWS) South Africa,V3R003Q01,minor,100.0,100.9
+80.0,KwaZulu-Natal,110.0,2026-10-26,285.7,Albert Falls Dam,84.9,93.6,-29.442,30.405,KwaZulu-Natal,0.0,Mgeni River,Department of Water and Sanitation (DWS) South Africa,U2R003Q01,alert,100.0,84.6
+80.0,KwaZulu-Natal,110.0,2026-10-26,114.1,Bivane Dam,101.4,99.0,-28.5306,30.8958,KwaZulu-Natal,0.0,Bivane River,Department of Water and Sanitation (DWS) South Africa,KN-167,minor,100.0,101.4
+80.0,KwaZulu-Natal,110.0,2026-10-26,22.5,Craigie Burn Dam,100.4,100.6,-29.168,30.294,KwaZulu-Natal,0.3,Mnyamvubu River,Department of Water and Sanitation (DWS) South Africa,V2R001Q01,minor,100.0,100.2
+80.0,KwaZulu-Natal,110.0,2026-10-26,8.7,Driel Barrage Dam,98.3,84.0,-28.772,29.298,KwaZulu-Natal,1.8,Tugela River,Department of Water and Sanitation (DWS) South Africa,V1R002Q01,alert,100.0,98.3
+80.0,KwaZulu-Natal,110.0,2026-10-26,301.3,Goedertrouw Dam,89.7,95.0,-28.768,31.438,KwaZulu-Natal,0.0,Mhlatuze River,Department of Water and Sanitation (DWS) South Africa,W1R001Q01,alert,100.0,89.3
+80.0,KwaZulu-Natal,110.0,2026-10-26,37.2,Hazelmere Dam,87.2,101.8,-29.582,31.034,KwaZulu-Natal,0.0,Mdloti River,Department of Water and Sanitation (DWS) South Africa,U3R001Q01,alert,100.0,86.5
+80.0,KwaZulu-Natal,110.0,2026-10-26,25.9,Hluhluwe Dam,79.5,97.7,-28.11,32.158,KwaZulu-Natal,0.0,Hluhluwe River,Department of Water and Sanitation (DWS) South Africa,W3R001Q01,normal,100.0,79.3
+80.0,KwaZulu-Natal,110.0,2026-10-26,237.5,Inanda Dam,99.3,101.1,-29.704,30.87,KwaZulu-Natal,0.0,Mgeni River,Department of Water and Sanitation (DWS) South Africa,U2R004Q01,alert,100.0,99.6
+80.0,KwaZulu-Natal,110.0,2026-10-26,18.1,Klipfontein Dam,99.2,99.9,-27.822,30.809,KwaZulu-Natal,0.0,Wit Mfolozi River,Department of Water and Sanitation (DWS) South Africa,W2R001Q01,alert,100.0,98.2
+80.0,KwaZulu-Natal,110.0,2026-10-26,5.2,Mearns Dam,73.0,78.8,-28.5306,30.8958,KwaZulu-Natal,0.0,Mooi River,Department of Water and Sanitation (DWS) South Africa,KN-175,normal,100.0,45.9
+80.0,KwaZulu-Natal,110.0,2026-10-26,235.5,Midmar Dam,89.5,94.7,-29.508,30.194,KwaZulu-Natal,0.0,Mgeni River,Department of Water and Sanitation (DWS) South Africa,U2R001Q01,alert,100.0,89.2
+80.0,KwaZulu-Natal,110.0,2026-10-26,23.3,Nagle Dam,91.7,99.2,-29.594,30.643,KwaZulu-Natal,0.0,Mgeni River,Department of Water and Sanitation (DWS) South Africa,U2R002Q01,alert,100.0,89.0
+80.0,KwaZulu-Natal,110.0,2026-10-26,194.6,Ntshingwayo Dam,71.0,79.4,-27.994,29.913,KwaZulu-Natal,0.2,Ngagane River,Department of Water and Sanitation (DWS) South Africa,V3R001Q01,normal,100.0,70.3
+80.0,KwaZulu-Natal,110.0,2026-10-26,2395.3,Pongolapoort Dam,83.2,92.8,-27.364,31.931,KwaZulu-Natal,0.0,Phongolo River,Department of Water and Sanitation (DWS) South Africa,KN-179,alert,100.0,82.9
+80.0,KwaZulu-Natal,110.0,2026-10-26,270.7,Spioenkop Dam,100.1,100.2,-28.69,29.494,KwaZulu-Natal,1.0,Tugela River,Department of Water and Sanitation (DWS) South Africa,V1R001Q01,minor,100.0,100.0
+80.0,KwaZulu-Natal,110.0,2026-10-26,139.3,Spring Grove Dam,81.1,73.1,-28.5306,30.8958,KwaZulu-Natal,0.0,Mooi River,Department of Water and Sanitation (DWS) South Africa,KN-181,normal,100.0,79.4
+80.0,KwaZulu-Natal,110.0,2026-10-26,55.9,Wagendrift Dam,100.6,96.8,-29.054,29.833,KwaZulu-Natal,0.3,Boesmans River,Department of Water and Sanitation (DWS) South Africa,V7R001Q01,minor,100.0,100.5
+80.0,KwaZulu-Natal,110.0,2026-10-26,355.5,Woodstock Dam,99.7,91.1,-28.722,29.208,KwaZulu-Natal,0.7,Tugela River,Department of Water and Sanitation (DWS) South Africa,V1R003Q01,alert,100.0,99.7
+80.0,KwaZulu-Natal,110.0,2026-10-26,184.3,Zaaihoek Dam,100.9,100.5,-27.427,30.085,KwaZulu-Natal,0.4,Slang River,Department of Water and Sanitation (DWS) South Africa,V3R003Q01,minor,100.0,100.9
+80.0,Limpopo,110.0,2026-10-26,28.2,Albasini Dam,97.5,95.3,-23.102,30.094,Limpopo,0.0,Luvuvhu River,Department of Water and Sanitation (DWS) South Africa,A9R001Q01,alert,100.0,97.0
+80.0,Limpopo,110.0,2026-10-26,2.0,Dap Naude Dam,87.1,80.5,-23.4013,29.4179,Limpopo,0.0,Broederstroom River,Department of Water and Sanitation (DWS) South Africa,LP-186,alert,100.0,84.8
+80.0,Limpopo,110.0,2026-10-26,348.7,De Hoop Dam,100.0,98.7,-32.433,24.404,Limpopo,2.5,Steelpoort River,Department of Water and Sanitation (DWS) South Africa,G5R001Q01,alert,100.0,99.8
+80.0,Limpopo,110.0,2026-10-26,45.0,Doorndraai Dam,99.1,98.6,-24.299,28.756,Limpopo,0.0,Sterk River,Department of Water and Sanitation (DWS) South Africa,A6R001Q01,alert,100.0,98.9
+80.0,Limpopo,110.0,2026-10-26,69.2,Ebenezer Dam,100.1,96.2,-23.935,29.983,Limpopo,0.0,Groot-Letaba River,Department of Water and Sanitation (DWS) South Africa,B8R001Q01,alert,100.0,99.9
+80.0,Limpopo,110.0,2026-10-26,185.2,Flag Boshielo Dam,98.9,94.1,-24.827,29.44,Limpopo,0.9,Olifants River,Department of Water and Sanitation (DWS) South Africa,B5R002Q01,alert,100.0,97.1
+80.0,Limpopo,110.0,2026-10-26,18.9,Glen Alpine Dam,100.0,65.7,-23.211,28.683,Limpopo,0.0,Mogalakwena River,Department of Water and Sanitation (DWS) South Africa,A6R002Q01,alert,100.0,98.3
+80.0,Limpopo,110.0,2026-10-26,1.3,Hans Merensky Dam,101.2,101.3,-23.748,30.105,Limpopo,0.0,Ramadiepa River,Department of Water and Sanitation (DWS) South Africa,B8R002Q01,minor,100.0,100.8
+80.0,Limpopo,110.0,2026-10-26,6.7,Houtrivier Dam,85.5,82.1,-23.4013,29.4179,Limpopo,0.0,Hout River,Department of Water and Sanitation (DWS) South Africa,LP-193,alert,100.0,84.1
+80.0,Limpopo,110.0,2026-10-26,5.7,Klaserie Dam,100.4,79.1,-24.53,31.063,Limpopo,0.0,Klaserie River,Department of Water and Sanitation (DWS) South Africa,B7R001Q01,minor,100.0,100.2
+80.0,Limpopo,110.0,2026-10-26,14.0,Luphephe Dam,100.7,27.7,-23.4013,29.4179,Limpopo,0.0,Luphephe River,Department of Water and Sanitation (DWS) South Africa,LP-195,minor,100.0,100.6
+80.0,Limpopo,110.0,2026-10-26,4.9,Magoebaskloof Dam,100.4,100.1,-23.817,30.052,Limpopo,0.0,Politsi River,Department of Water and Sanitation (DWS) South Africa,B8R003Q01,minor,100.0,100.3
+80.0,Limpopo,110.0,2026-10-26,172.0,Middel-Letaba Dam,96.0,5.3,-23.4013,29.4179,Limpopo,0.0,Middel-Letaba River,Department of Water and Sanitation (DWS) South Africa,LP-197,alert,100.0,95.4
+80.0,Limpopo,110.0,2026-10-26,7.2,Modjadji Dam,100.0,23.3,-23.4013,29.4179,Limpopo,0.0,Molototsi River,Department of Water and Sanitation (DWS) South Africa,LP-198,alert,100.0,99.8
+80.0,Limpopo,110.0,2026-10-26,145.8,Mokolo Dam,102.3,102.3,-23.99,27.769,Limpopo,0.0,Mokolo River,Department of Water and Sanitation (DWS) South Africa,A4R001Q01,minor,100.0,102.3
+80.0,Limpopo,110.0,2026-10-26,2.4,Mutshedzi Dam,106.1,95.3,-22.947,30.174,Limpopo,0.0,Mutshedzi River,Department of Water and Sanitation (DWS) South Africa,A8R001Q01,minor,100.0,105.7
+80.0,Limpopo,110.0,2026-10-26,166.2,Nandoni Dam,101.0,84.1,-23.4013,29.4179,Limpopo,0.0,Levhuvhu River,Department of Water and Sanitation (DWS) South Africa,LP-201,minor,100.0,100.9
+80.0,Limpopo,110.0,2026-10-26,21.9,Nsami Dam,87.1,62.3,-23.252,30.764,Limpopo,0.0,Nsama River,Department of Water and Sanitation (DWS) South Africa,B8R009Q01,alert,100.0,86.0
+80.0,Limpopo,110.0,2026-10-26,5.2,Nwanedzi Dam,100.3,48.1,-23.4013,29.4179,Limpopo,0.0,Nwanedzi River,Department of Water and Sanitation (DWS) South Africa,LP-203,minor,100.0,100.2
+80.0,Limpopo,110.0,2026-10-26,51.3,Nzhelele Dam,100.0,80.4,-22.731,30.101,Limpopo,0.0,Nzhelele River,Department of Water and Sanitation (DWS) South Africa,A8R001Q01,alert,100.0,98.7
+80.0,Limpopo,110.0,2026-10-26,28.2,Rust De Winter Dam,100.0,100.4,-25.229,28.492,Limpopo,0.0,Elands River,Department of Water and Sanitation (DWS) South Africa,B3R001Q01,alert,100.0,99.5
+80.0,Limpopo,110.0,2026-10-26,3.5,Thabina Dam,99.9,89.5,-23.4013,29.4179,Limpopo,0.0,Thabina River,Department of Water and Sanitation (DWS) South Africa,LP-206,alert,100.0,99.9
+80.0,Limpopo,110.0,2026-10-26,0.2,Tonteldoos Dam,100.5,100.4,-25.28,29.942,Limpopo,0.8,Tonteldoos River,Department of Water and Sanitation (DWS) South Africa,B4H016Q01,minor,100.0,100.5
+80.0,Limpopo,110.0,2026-10-26,6.1,Tours Dam,99.7,93.5,-23.4013,29.4179,Limpopo,0.0,Ngwabitsi River,Department of Water and Sanitation (DWS) South Africa,LP-208,alert,100.0,99.5
+80.0,Limpopo,110.0,2026-10-26,114.3,Tzaneen Dam,79.6,67.6,-23.788,30.15,Limpopo,0.0,Groot-Letaba River,Department of Water and Sanitation (DWS) South Africa,B8R005Q01,normal,100.0,76.8
+80.0,Limpopo,110.0,2026-10-26,0.3,Vergelegen Dam,102.3,70.3,-23.4013,29.4179,Limpopo,0.0,Tributary of Politsi River,Department of Water and Sanitation (DWS) South Africa,LP-210,minor,100.0,101.0
+80.0,Limpopo,110.0,2026-10-26,0.5,Vlugkraal Dam,100.0,97.6,-25.23,29.951,Limpopo,0.4,Vlugkraal River,Department of Water and Sanitation (DWS) South Africa,B4R002Q01,alert,100.0,99.5
+80.0,Limpopo,110.0,2026-10-26,30.5,Vondo Dam,100.5,89.9,-22.948,30.345,Limpopo,0.0,Mutshindudi River,Department of Water and Sanitation (DWS) South Africa,A9R002Q01,minor,100.0,100.3
+80.0,Limpopo,110.0,2026-10-26,0.6,Warmbad Dam,102.8,102.8,-24.847,28.241,Limpopo,0.0,Buffelspruit River,Department of Water and Sanitation (DWS) South Africa,A2R008Q01,minor,100.0,102.8
+80.0,Limpopo,110.0,2026-10-26,28.2,Albasini Dam,97.5,95.3,-23.102,30.094,Limpopo,0.0,Luvuvhu River,Department of Water and Sanitation (DWS) South Africa,A9R001Q01,alert,100.0,97.0
+80.0,Limpopo,110.0,2026-10-26,2.0,Dap Naude Dam,87.1,80.5,-23.4013,29.4179,Limpopo,0.0,Broederstroom River,Department of Water and Sanitation (DWS) South Africa,LP-215,alert,100.0,84.8
+80.0,Limpopo,110.0,2026-10-26,348.7,De Hoop Dam,100.0,98.7,-32.433,24.404,Limpopo,2.5,Steelpoort River,Department of Water and Sanitation (DWS) South Africa,G5R001Q01,alert,100.0,99.8
+80.0,Limpopo,110.0,2026-10-26,45.0,Doorndraai Dam,99.1,98.6,-24.299,28.756,Limpopo,0.0,Sterk River,Department of Water and Sanitation (DWS) South Africa,A6R001Q01,alert,100.0,98.9
+80.0,Limpopo,110.0,2026-10-26,69.2,Ebenezer Dam,100.1,96.2,-23.935,29.983,Limpopo,0.0,Groot-Letaba River,Department of Water and Sanitation (DWS) South Africa,B8R001Q01,alert,100.0,99.9
+80.0,Limpopo,110.0,2026-10-26,185.2,Flag Boshielo Dam,98.9,94.1,-24.827,29.44,Limpopo,0.9,Olifants River,Department of Water and Sanitation (DWS) South Africa,B5R002Q01,alert,100.0,97.1
+80.0,Limpopo,110.0,2026-10-26,18.9,Glen Alpine Dam,100.0,65.7,-23.211,28.683,Limpopo,0.0,Mogalakwena River,Department of Water and Sanitation (DWS) South Africa,A6R002Q01,alert,100.0,98.3
+80.0,Limpopo,110.0,2026-10-26,1.3,Hans Merensky Dam,101.2,101.3,-23.748,30.105,Limpopo,0.0,Ramadiepa River,Department of Water and Sanitation (DWS) South Africa,B8R002Q01,minor,100.0,100.8
+80.0,Limpopo,110.0,2026-10-26,6.7,Houtrivier Dam,85.5,82.1,-23.4013,29.4179,Limpopo,0.0,Hout River,Department of Water and Sanitation (DWS) South Africa,LP-222,alert,100.0,84.1
+80.0,Limpopo,110.0,2026-10-26,5.7,Klaserie Dam,100.4,79.1,-24.53,31.063,Limpopo,0.0,Klaserie River,Department of Water and Sanitation (DWS) South Africa,B7R001Q01,minor,100.0,100.2
+80.0,Limpopo,110.0,2026-10-26,14.0,Luphephe Dam,100.7,27.7,-23.4013,29.4179,Limpopo,0.0,Luphephe River,Department of Water and Sanitation (DWS) South Africa,LP-224,minor,100.0,100.6
+80.0,Limpopo,110.0,2026-10-26,4.9,Magoebaskloof Dam,100.4,100.1,-23.817,30.052,Limpopo,0.0,Politsi River,Department of Water and Sanitation (DWS) South Africa,B8R003Q01,minor,100.0,100.3
+80.0,Limpopo,110.0,2026-10-26,172.0,Middel-Letaba Dam,96.0,5.3,-23.4013,29.4179,Limpopo,0.0,Middel-Letaba River,Department of Water and Sanitation (DWS) South Africa,LP-226,alert,100.0,95.4
+80.0,Limpopo,110.0,2026-10-26,7.2,Modjadji Dam,100.0,23.3,-23.4013,29.4179,Limpopo,0.0,Molototsi River,Department of Water and Sanitation (DWS) South Africa,LP-227,alert,100.0,99.8
+80.0,Limpopo,110.0,2026-10-26,145.8,Mokolo Dam,102.3,102.3,-23.99,27.769,Limpopo,0.0,Mokolo River,Department of Water and Sanitation (DWS) South Africa,A4R001Q01,minor,100.0,102.3
+80.0,Limpopo,110.0,2026-10-26,2.4,Mutshedzi Dam,106.1,95.3,-22.947,30.174,Limpopo,0.0,Mutshedzi River,Department of Water and Sanitation (DWS) South Africa,A8R001Q01,minor,100.0,105.7
+80.0,Limpopo,110.0,2026-10-26,166.2,Nandoni Dam,101.0,84.1,-23.4013,29.4179,Limpopo,0.0,Levhuvhu River,Department of Water and Sanitation (DWS) South Africa,LP-230,minor,100.0,100.9
+80.0,Limpopo,110.0,2026-10-26,21.9,Nsami Dam,87.1,62.3,-23.252,30.764,Limpopo,0.0,Nsama River,Department of Water and Sanitation (DWS) South Africa,B8R009Q01,alert,100.0,86.0
+80.0,Limpopo,110.0,2026-10-26,5.2,Nwanedzi Dam,100.3,48.1,-23.4013,29.4179,Limpopo,0.0,Nwanedzi River,Department of Water and Sanitation (DWS) South Africa,LP-232,minor,100.0,100.2
+80.0,Limpopo,110.0,2026-10-26,51.3,Nzhelele Dam,100.0,80.4,-22.731,30.101,Limpopo,0.0,Nzhelele River,Department of Water and Sanitation (DWS) South Africa,A8R001Q01,alert,100.0,98.7
+80.0,Limpopo,110.0,2026-10-26,28.2,Rust De Winter Dam,100.0,100.4,-25.229,28.492,Limpopo,0.0,Elands River,Department of Water and Sanitation (DWS) South Africa,B3R001Q01,alert,100.0,99.5
+80.0,Limpopo,110.0,2026-10-26,3.5,Thabina Dam,99.9,89.5,-23.4013,29.4179,Limpopo,0.0,Thabina River,Department of Water and Sanitation (DWS) South Africa,LP-235,alert,100.0,99.9
+80.0,Limpopo,110.0,2026-10-26,0.2,Tonteldoos Dam,100.5,100.4,-25.28,29.942,Limpopo,0.8,Tonteldoos River,Department of Water and Sanitation (DWS) South Africa,B4H016Q01,minor,100.0,100.5
+80.0,Limpopo,110.0,2026-10-26,6.1,Tours Dam,99.7,93.5,-23.4013,29.4179,Limpopo,0.0,Ngwabitsi River,Department of Water and Sanitation (DWS) South Africa,LP-237,alert,100.0,99.5
+80.0,Limpopo,110.0,2026-10-26,114.3,Tzaneen Dam,79.6,67.6,-23.788,30.15,Limpopo,0.0,Groot-Letaba River,Department of Water and Sanitation (DWS) South Africa,B8R005Q01,normal,100.0,76.8
+80.0,Limpopo,110.0,2026-10-26,0.3,Vergelegen Dam,102.3,70.3,-23.4013,29.4179,Limpopo,0.0,Tributary of Politsi River,Department of Water and Sanitation (DWS) South Africa,LP-239,minor,100.0,101.0
+80.0,Limpopo,110.0,2026-10-26,0.5,Vlugkraal Dam,100.0,97.6,-25.23,29.951,Limpopo,0.4,Vlugkraal River,Department of Water and Sanitation (DWS) South Africa,B4R002Q01,alert,100.0,99.5
+80.0,Limpopo,110.0,2026-10-26,30.5,Vondo Dam,100.5,89.9,-22.948,30.345,Limpopo,0.0,Mutshindudi River,Department of Water and Sanitation (DWS) South Africa,A9R002Q01,minor,100.0,100.3
+80.0,Limpopo,110.0,2026-10-26,0.6,Warmbad Dam,102.8,102.8,-24.847,28.241,Limpopo,0.0,Buffelspruit River,Department of Water and Sanitation (DWS) South Africa,A2R008Q01,minor,100.0,102.8
+80.0,Mpumalanga,110.0,2026-10-26,54.4,Blyderivierpoort Dam,100.1,77.6,-25.5653,30.5279,Mpumalanga,0.1,Blyde River,Department of Water and Sanitation (DWS) South Africa,M-243,minor,100.0,100.0
+80.0,Mpumalanga,110.0,2026-10-26,5.3,Buffelskloof Dam,100.2,92.1,-24.955,30.264,Mpumalanga,0.0,Waterval River,Department of Water and Sanitation (DWS) South Africa,B4R004Q01,alert,100.0,97.8
+80.0,Mpumalanga,110.0,2026-10-26,13.6,Da Gama Dam,99.3,87.3,-25.15,31.017,Mpumalanga,0.0,White Waters River,Department of Water and Sanitation (DWS) South Africa,X3R001Q01,alert,100.0,98.4
+80.0,Mpumalanga,110.0,2026-10-26,251.0,Driekoppies Dam,100.2,84.1,-25.716,31.532,Mpumalanga,0.0,Lomati River,Department of Water and Sanitation (DWS) South Africa,X1R004Q01,alert,100.0,99.7
+80.0,Mpumalanga,110.0,2026-10-26,349.8,Grootdraai Dam,100.4,93.1,-26.93,29.332,Mpumalanga,0.9,Vaal River,Department of Water and Sanitation (DWS) South Africa,C1R002Q01,minor,100.0,100.0
+80.0,Mpumalanga,110.0,2026-10-26,445.0,Heyshope Dam,100.3,99.5,-27.025,30.502,Mpumalanga,0.4,Assegaai River,Department of Water and Sanitation (DWS) South Africa,W5R004Q01,minor,100.0,100.0
+80.0,Mpumalanga,110.0,2026-10-26,123.7,Inyaka Dam,99.7,92.8,-25.5653,30.5279,Mpumalanga,0.1,Marite River,Department of Water and Sanitation (DWS) South Africa,M-249,alert,100.0,99.4
+80.0,Mpumalanga,110.0,2026-10-26,59.0,Jericho Dam,90.5,90.3,-26.649,30.47,Mpumalanga,0.2,Mpama River,Department of Water and Sanitation (DWS) South Africa,W5R001Q01,alert,100.0,88.5
+80.0,Mpumalanga,110.0,2026-10-26,11.8,Klipkopjes Dam,100.4,78.2,-25.207,31.003,Mpumalanga,0.0,Wit River,Department of Water and Sanitation (DWS) South Africa,X2R002Q01,alert,100.0,99.6
+80.0,Mpumalanga,110.0,2026-10-26,158.7,Kwena Dam,99.2,79.8,-25.368,30.368,Mpumalanga,0.3,Krokodil River,Department of Water and Sanitation (DWS) South Africa,X2R005Q01,alert,100.0,98.0
+80.0,Mpumalanga,110.0,2026-10-26,4.3,Longmere Dam,101.6,86.0,-25.5653,30.5279,Mpumalanga,0.1,Wit River,Department of Water and Sanitation (DWS) South Africa,M-253,alert,100.0,97.1
+80.0,Mpumalanga,110.0,2026-10-26,361.6,Loskop Dam,99.5,97.6,-25.429,29.322,Mpumalanga,2.5,Olifants River,Department of Water and Sanitation (DWS) South Africa,B3R002Q01,alert,100.0,98.2
+80.0,Mpumalanga,110.0,2026-10-26,48.1,Middelburg Dam,94.2,87.1,-25.78,29.554,Mpumalanga,0.3,Little Olifants River,Department of Water and Sanitation (DWS) South Africa,B1R002Q01,alert,100.0,93.6
+80.0,Mpumalanga,110.0,2026-10-26,100.0,Morgenstond Dam,99.9,100.1,-26.734,30.503,Mpumalanga,0.1,Ngwempisi River,Department of Water and Sanitation (DWS) South Africa,W5R003Q01,alert,100.0,98.8
+80.0,Mpumalanga,110.0,2026-10-26,78.4,Nooitgedacht Dam,98.6,93.9,-25.965,30.07,Mpumalanga,0.1,Komati River,Department of Water and Sanitation (DWS) South Africa,X1R001Q01,alert,100.0,97.6
+80.0,Mpumalanga,110.0,2026-10-26,13.5,Ohrigstad Dam,87.5,48.9,-24.939,30.633,Mpumalanga,0.0,Ohrigstad River,Department of Water and Sanitation (DWS) South Africa,B6R001Q01,alert,100.0,84.7
+80.0,Mpumalanga,110.0,2026-10-26,1.9,Primkop Dam,101.7,78.2,-25.384,31.071,Mpumalanga,0.0,Wit River,Department of Water and Sanitation (DWS) South Africa,X2R004Q01,minor,100.0,100.6
+80.0,Mpumalanga,110.0,2026-10-26,204.6,Rhenosterkop Dam,99.5,97.9,-25.095,28.898,Mpumalanga,0.0,Elands River,Department of Water and Sanitation (DWS) South Africa,B3R005Q01,alert,100.0,98.8
+80.0,Mpumalanga,110.0,2026-10-26,78.1,Vygeboom Dam,100.3,97.5,-25.869,30.622,Mpumalanga,0.1,Komati River,Department of Water and Sanitation (DWS) South Africa,X1R003Q01,minor,100.0,100.2
+80.0,Mpumalanga,110.0,2026-10-26,60.1,Westoe Dam,51.9,63.3,-26.495,30.611,Mpumalanga,0.0,Usutu River,Department of Water and Sanitation (DWS) South Africa,W5R002Q01,normal,100.0,51.7
+80.0,Mpumalanga,110.0,2026-10-26,104.1,Witbank Dam,98.4,100.1,-25.903,29.31,Mpumalanga,0.4,Olifants River,Department of Water and Sanitation (DWS) South Africa,B1R001Q01,alert,100.0,97.9
+80.0,Mpumalanga,110.0,2026-10-26,12.6,Witklip Dam,100.3,84.2,-25.225,30.894,Mpumalanga,0.0,Sand River,Department of Water and Sanitation (DWS) South Africa,X2R003Q01,alert,100.0,99.2
+80.0,Mpumalanga,110.0,2026-10-26,54.4,Blyderivierpoort Dam,100.1,77.6,-25.5653,30.5279,Mpumalanga,0.1,Blyde River,Department of Water and Sanitation (DWS) South Africa,M-265,minor,100.0,100.0
+80.0,Mpumalanga,110.0,2026-10-26,5.3,Buffelskloof Dam,100.2,92.1,-24.955,30.264,Mpumalanga,0.0,Waterval River,Department of Water and Sanitation (DWS) South Africa,B4R004Q01,alert,100.0,97.8
+80.0,Mpumalanga,110.0,2026-10-26,13.6,Da Gama Dam,99.3,87.3,-25.15,31.017,Mpumalanga,0.0,White Waters River,Department of Water and Sanitation (DWS) South Africa,X3R001Q01,alert,100.0,98.4
+80.0,Mpumalanga,110.0,2026-10-26,251.0,Driekoppies Dam,100.2,84.1,-25.716,31.532,Mpumalanga,0.0,Lomati River,Department of Water and Sanitation (DWS) South Africa,X1R004Q01,alert,100.0,99.7
+80.0,Mpumalanga,110.0,2026-10-26,349.8,Grootdraai Dam,100.4,93.1,-26.93,29.332,Mpumalanga,0.9,Vaal River,Department of Water and Sanitation (DWS) South Africa,C1R002Q01,minor,100.0,100.0
+80.0,Mpumalanga,110.0,2026-10-26,445.0,Heyshope Dam,100.3,99.5,-27.025,30.502,Mpumalanga,0.4,Assegaai River,Department of Water and Sanitation (DWS) South Africa,W5R004Q01,minor,100.0,100.0
+80.0,Mpumalanga,110.0,2026-10-26,123.7,Inyaka Dam,99.7,92.8,-25.5653,30.5279,Mpumalanga,0.1,Marite River,Department of Water and Sanitation (DWS) South Africa,M-271,alert,100.0,99.4
+80.0,Mpumalanga,110.0,2026-10-26,59.0,Jericho Dam,90.5,90.3,-26.649,30.47,Mpumalanga,0.2,Mpama River,Department of Water and Sanitation (DWS) South Africa,W5R001Q01,alert,100.0,88.5
+80.0,Mpumalanga,110.0,2026-10-26,11.8,Klipkopjes Dam,100.4,78.2,-25.207,31.003,Mpumalanga,0.0,Wit River,Department of Water and Sanitation (DWS) South Africa,X2R002Q01,alert,100.0,99.6
+80.0,Mpumalanga,110.0,2026-10-26,158.7,Kwena Dam,99.2,79.8,-25.368,30.368,Mpumalanga,0.3,Krokodil River,Department of Water and Sanitation (DWS) South Africa,X2R005Q01,alert,100.0,98.0
+80.0,Mpumalanga,110.0,2026-10-26,4.3,Longmere Dam,101.6,86.0,-25.5653,30.5279,Mpumalanga,0.1,Wit River,Department of Water and Sanitation (DWS) South Africa,M-275,alert,100.0,97.1
+80.0,Mpumalanga,110.0,2026-10-26,361.6,Loskop Dam,99.5,97.6,-25.429,29.322,Mpumalanga,2.5,Olifants River,Department of Water and Sanitation (DWS) South Africa,B3R002Q01,alert,100.0,98.2
+80.0,Mpumalanga,110.0,2026-10-26,48.1,Middelburg Dam,94.2,87.1,-25.78,29.554,Mpumalanga,0.3,Little Olifants River,Department of Water and Sanitation (DWS) South Africa,B1R002Q01,alert,100.0,93.6
+80.0,Mpumalanga,110.0,2026-10-26,100.0,Morgenstond Dam,99.9,100.1,-26.734,30.503,Mpumalanga,0.1,Ngwempisi River,Department of Water and Sanitation (DWS) South Africa,W5R003Q01,alert,100.0,98.8
+80.0,Mpumalanga,110.0,2026-10-26,78.4,Nooitgedacht Dam,98.6,93.9,-25.965,30.07,Mpumalanga,0.1,Komati River,Department of Water and Sanitation (DWS) South Africa,X1R001Q01,alert,100.0,97.6
+80.0,Mpumalanga,110.0,2026-10-26,13.5,Ohrigstad Dam,87.5,48.9,-24.939,30.633,Mpumalanga,0.0,Ohrigstad River,Department of Water and Sanitation (DWS) South Africa,B6R001Q01,alert,100.0,84.7
+80.0,Mpumalanga,110.0,2026-10-26,1.9,Primkop Dam,101.7,78.2,-25.384,31.071,Mpumalanga,0.0,Wit River,Department of Water and Sanitation (DWS) South Africa,X2R004Q01,minor,100.0,100.6
+80.0,Mpumalanga,110.0,2026-10-26,204.6,Rhenosterkop Dam,99.5,97.9,-25.095,28.898,Mpumalanga,0.0,Elands River,Department of Water and Sanitation (DWS) South Africa,B3R005Q01,alert,100.0,98.8
+80.0,Mpumalanga,110.0,2026-10-26,78.1,Vygeboom Dam,100.3,97.5,-25.869,30.622,Mpumalanga,0.1,Komati River,Department of Water and Sanitation (DWS) South Africa,X1R003Q01,minor,100.0,100.2
+80.0,Mpumalanga,110.0,2026-10-26,60.1,Westoe Dam,51.9,63.3,-26.495,30.611,Mpumalanga,0.0,Usutu River,Department of Water and Sanitation (DWS) South Africa,W5R002Q01,normal,100.0,51.7
+80.0,Mpumalanga,110.0,2026-10-26,104.1,Witbank Dam,98.4,100.1,-25.903,29.31,Mpumalanga,0.4,Olifants River,Department of Water and Sanitation (DWS) South Africa,B1R001Q01,alert,100.0,97.9
+80.0,Mpumalanga,110.0,2026-10-26,12.6,Witklip Dam,100.3,84.2,-25.225,30.894,Mpumalanga,0.0,Sand River,Department of Water and Sanitation (DWS) South Africa,X2R003Q01,alert,100.0,99.2
+80.0,Northern Cape,110.0,2026-10-26,23.6,Boegoeberg Dam,127.4,92.2,-29.063,22.211,Northern Cape,2.1,Orange River,Department of Water and Sanitation (DWS) South Africa,D7R001Q01,minor,100.0,109.5
+80.0,Northern Cape,110.0,2026-10-26,16.3,Douglas Weir Dam,113.8,105.9,-29.0467,21.8569,Northern Cape,1.7,Vaal River,Department of Water and Sanitation (DWS) South Africa,NC-288,major,100.0,112.3
+80.0,Northern Cape,110.0,2026-10-26,1.0,Karee Dam,98.6,87.6,-31.427,19.788,Northern Cape,0.3,Karee River,Department of Water and Sanitation (DWS) South Africa,E4R001Q01,alert,100.0,97.6
+80.0,Northern Cape,110.0,2026-10-26,1.0,Leeubos Dam,0.0,0.0,-26.731,20.098,Northern Cape,0.9,Swartbas River,Department of Water and Sanitation (DWS) South Africa,D4R001Q01,normal,100.0,0.0
+80.0,Northern Cape,110.0,2026-10-26,57.9,Spitskop Dam,104.4,82.1,-28.092,24.547,Northern Cape,0.5,Harts River,Department of Water and Sanitation (DWS) South Africa,C3R002Q01,minor,100.0,103.1
+80.0,Northern Cape,110.0,2026-10-26,50.7,Vaalharts Weir Dam,76.5,79.6,-29.0467,21.8569,Northern Cape,1.7,Vaal River,Department of Water and Sanitation (DWS) South Africa,NC-292,alert,100.0,81.2
+80.0,Northern Cape,110.0,2026-10-26,23.6,Boegoeberg Dam,127.4,92.2,-29.063,22.211,Northern Cape,2.1,Orange River,Department of Water and Sanitation (DWS) South Africa,D7R001Q01,minor,100.0,109.5
+80.0,Northern Cape,110.0,2026-10-26,16.3,Douglas Weir Dam,113.8,105.9,-29.0467,21.8569,Northern Cape,1.7,Vaal River,Department of Water and Sanitation (DWS) South Africa,NC-294,major,100.0,112.3
+80.0,Northern Cape,110.0,2026-10-26,1.0,Karee Dam,98.6,87.6,-31.427,19.788,Northern Cape,0.3,Karee River,Department of Water and Sanitation (DWS) South Africa,E4R001Q01,alert,100.0,97.6
+80.0,Northern Cape,110.0,2026-10-26,1.0,Leeubos Dam,0.0,0.0,-26.731,20.098,Northern Cape,0.9,Swartbas River,Department of Water and Sanitation (DWS) South Africa,D4R001Q01,normal,100.0,0.0
+80.0,Northern Cape,110.0,2026-10-26,57.9,Spitskop Dam,104.4,82.1,-28.092,24.547,Northern Cape,0.5,Harts River,Department of Water and Sanitation (DWS) South Africa,C3R002Q01,minor,100.0,103.1
+80.0,Northern Cape,110.0,2026-10-26,50.7,Vaalharts Weir Dam,76.5,79.6,-29.0467,21.8569,Northern Cape,1.7,Vaal River,Department of Water and Sanitation (DWS) South Africa,NC-298,alert,100.0,81.2
+80.0,North West,110.0,2026-10-26,20.0,Boskop Dam,102.8,102.2,-26.551,27.12,North West,0.0,Mooi River,Department of Water and Sanitation (DWS) South Africa,C2R001Q01,minor,100.0,102.8
+80.0,North West,110.0,2026-10-26,15.8,Bospoort Dam,101.2,101.2,-25.573,27.331,North West,0.0,Hex River,Department of Water and Sanitation (DWS) South Africa,A2R006Q01,minor,100.0,101.4
+80.0,North West,110.0,2026-10-26,10.2,Buffelspoort Dam,100.3,100.3,-25.792,27.489,North West,0.0,Sterkstroom River,Department of Water and Sanitation (DWS) South Africa,A2R005Q01,alert,100.0,99.9
+80.0,North West,110.0,2026-10-26,14.2,Disaneng Dam,100.3,96.2,-25.841,25.343,North West,0.0,Molopo River,Department of Water and Sanitation (DWS) South Africa,D4R003Q01,minor,100.0,100.0
+80.0,North West,110.0,2026-10-26,1.2,Elandskuil Dam,106.6,98.9,-26.345,26.779,North West,0.0,Swartleegte River,Department of Water and Sanitation (DWS) South Africa,C2R006Q01,minor,100.0,106.6
+80.0,North West,110.0,2026-10-26,185.8,Hartbeespoort Dam,100.6,94.8,-25.747,27.857,North West,0.1,Krokodil River,Department of Water and Sanitation (DWS) South Africa,A2R001Q01,alert,100.0,99.6
+80.0,North West,110.0,2026-10-26,5.7,Johan Neser Dam,101.7,101.7,-26.802,26.605,North West,0.1,Skoonspruit River,Department of Water and Sanitation (DWS) South Africa,C2R002Q01,minor,100.0,101.7
+80.0,North West,110.0,2026-10-26,7.3,Klein-Maricopoort Dam,101.7,101.0,-25.856,25.6421,North West,0.0,Klein Marico River,Department of Water and Sanitation (DWS) South Africa,NW-306,minor,100.0,101.7
+80.0,North West,110.0,2026-10-26,8.0,Klerkskraal Dam,108.7,104.8,-26.241,27.153,North West,0.0,Mooi River,Department of Water and Sanitation (DWS) South Africa,C2R003Q01,minor,100.0,108.7
+80.0,North West,110.0,2026-10-26,40.8,Klipvoor Dam,101.5,67.5,-25.147,27.823,North West,0.0,Pienaars River,Department of Water and Sanitation (DWS) South Africa,A2R012Q01,alert,100.0,98.7
+80.0,North West,110.0,2026-10-26,12.5,Kosterrivier Dam,100.8,99.7,-25.856,25.6421,North West,0.0,Koster River,Department of Water and Sanitation (DWS) South Africa,NW-309,minor,100.0,100.8
+80.0,North West,110.0,2026-10-26,8.7,Kromellenboog Dam,98.9,64.9,-25.453,26.342,North West,0.0,Klein Marico River,Department of Water and Sanitation (DWS) South Africa,A3R003Q01,minor,100.0,100.2
+80.0,North West,110.0,2026-10-26,14.3,Lindleyspoort Dam,99.9,91.8,-25.512,26.689,North West,0.0,Elands River,Department of Water and Sanitation (DWS) South Africa,A2R007Q01,alert,100.0,98.8
+80.0,North West,110.0,2026-10-26,16.0,Madikwe Dam,100.0,94.7,-25.856,25.6421,North West,0.0,Tholwane River,Department of Water and Sanitation (DWS) South Africa,NW-312,alert,100.0,98.4
+80.0,North West,110.0,2026-10-26,27.0,Marico-Bosveld Dam,100.3,92.8,-25.493,26.39,North West,0.0,Groot-Marico River,Department of Water and Sanitation (DWS) South Africa,A3R001Q01,alert,100.0,99.4
+80.0,North West,110.0,2026-10-26,0.8,Middelkraal Dam,100.0,97.8,-25.856,25.6421,North West,0.0,Maretlwane River,Department of Water and Sanitation (DWS) South Africa,NW-314,minor,100.0,100.0
+80.0,North West,110.0,2026-10-26,200.8,Molatedi Dam,107.9,98.5,-25.856,25.6421,North West,0.0,Groot-Marico River,Department of Water and Sanitation (DWS) South Africa,NW-315,minor,100.0,106.2
+80.0,North West,110.0,2026-10-26,19.1,Ngotwane Dam,84.8,74.3,-25.212,25.809,North West,0.0,Ngotwane River,Department of Water and Sanitation (DWS) South Africa,A1R001Q01,alert,100.0,84.6
+80.0,North West,110.0,2026-10-26,13.7,Olifantsnek Dam,100.0,91.3,-25.795,27.251,North West,0.0,Hex River,Department of Water and Sanitation (DWS) South Africa,A2R003Q01,alert,100.0,98.5
+80.0,North West,110.0,2026-10-26,2.2,Pella Dam,65.3,48.8,-25.856,25.6421,North West,0.0,Lethlakane River,Department of Water and Sanitation (DWS) South Africa,NW-318,normal,100.0,64.2
+80.0,North West,110.0,2026-10-26,2.1,Potchefstroom Dam,102.3,102.2,-26.667,27.097,North West,0.0,Mooi River,Department of Water and Sanitation (DWS) South Africa,C2R004Q01,minor,100.0,102.3
+80.0,North West,110.0,2026-10-26,7.3,Rietspruit Dam,101.3,93.6,-26.408,26.81,North West,0.0,Rietspruit River,Department of Water and Sanitation (DWS) South Africa,C2R007Q01,minor,100.0,101.3
+80.0,North West,110.0,2026-10-26,96.4,Roodekopjes Dam,99.7,79.0,-25.41,27.586,North West,0.0,Krokodil River,Department of Water and Sanitation (DWS) South Africa,A2R015Q01,alert,100.0,98.5
+80.0,North West,110.0,2026-10-26,3.7,Sehujwane Dam,84.8,78.7,-25.311,25.95,North West,0.0,Sehujane River,Department of Water and Sanitation (DWS) South Africa,A3R005Q01,alert,100.0,84.5
+80.0,North West,110.0,2026-10-26,20.8,Setumo Dam,99.4,97.0,-25.856,25.6421,North West,0.0,Molopo River,Department of Water and Sanitation (DWS) South Africa,NW-323,alert,100.0,99.2
+80.0,North West,110.0,2026-10-26,0.5,Swartruggens Dam,101.6,101.8,-25.664,26.693,North West,0.0,Elands River,Department of Water and Sanitation (DWS) South Africa,A2R013Q01,minor,100.0,100.8
+80.0,North West,110.0,2026-10-26,61.4,Taung Dam,101.6,98.9,-27.531,24.856,North West,0.4,Harts River,Department of Water and Sanitation (DWS) South Africa,C3R006Q01,minor,100.0,101.4
+80.0,North West,110.0,2026-10-26,51.4,Vaalkop Dam,97.8,51.1,-25.317,27.451,North West,0.0,Elands River,Department of Water and Sanitation (DWS) South Africa,A2R014Q01,alert,100.0,97.8
+80.0,North West,110.0,2026-10-26,20.0,Boskop Dam,102.8,102.2,-26.551,27.12,North West,0.0,Mooi River,Department of Water and Sanitation (DWS) South Africa,C2R001Q01,minor,100.0,102.8
+80.0,North West,110.0,2026-10-26,15.8,Bospoort Dam,101.2,101.2,-25.573,27.331,North West,0.0,Hex River,Department of Water and Sanitation (DWS) South Africa,A2R006Q01,minor,100.0,101.4
+80.0,North West,110.0,2026-10-26,10.2,Buffelspoort Dam,100.3,100.3,-25.792,27.489,North West,0.0,Sterkstroom River,Department of Water and Sanitation (DWS) South Africa,A2R005Q01,alert,100.0,99.9
+80.0,North West,110.0,2026-10-26,14.2,Disaneng Dam,100.3,96.2,-25.841,25.343,North West,0.0,Molopo River,Department of Water and Sanitation (DWS) South Africa,D4R003Q01,minor,100.0,100.0
+80.0,North West,110.0,2026-10-26,1.2,Elandskuil Dam,106.6,98.9,-26.345,26.779,North West,0.0,Swartleegte River,Department of Water and Sanitation (DWS) South Africa,C2R006Q01,minor,100.0,106.6
+80.0,North West,110.0,2026-10-26,185.8,Hartbeespoort Dam,100.6,94.8,-25.747,27.857,North West,0.1,Krokodil River,Department of Water and Sanitation (DWS) South Africa,A2R001Q01,alert,100.0,99.6
+80.0,North West,110.0,2026-10-26,5.7,Johan Neser Dam,101.7,101.7,-26.802,26.605,North West,0.1,Skoonspruit River,Department of Water and Sanitation (DWS) South Africa,C2R002Q01,minor,100.0,101.7
+80.0,North West,110.0,2026-10-26,7.3,Klein-Maricopoort Dam,101.7,101.0,-25.856,25.6421,North West,0.0,Klein Marico River,Department of Water and Sanitation (DWS) South Africa,NW-334,minor,100.0,101.7
+80.0,North West,110.0,2026-10-26,8.0,Klerkskraal Dam,108.7,104.8,-26.241,27.153,North West,0.0,Mooi River,Department of Water and Sanitation (DWS) South Africa,C2R003Q01,minor,100.0,108.7
+80.0,North West,110.0,2026-10-26,40.8,Klipvoor Dam,101.5,67.5,-25.147,27.823,North West,0.0,Pienaars River,Department of Water and Sanitation (DWS) South Africa,A2R012Q01,alert,100.0,98.7
+80.0,North West,110.0,2026-10-26,12.5,Kosterrivier Dam,100.8,99.7,-25.856,25.6421,North West,0.0,Koster River,Department of Water and Sanitation (DWS) South Africa,NW-337,minor,100.0,100.8
+80.0,North West,110.0,2026-10-26,8.7,Kromellenboog Dam,98.9,64.9,-25.453,26.342,North West,0.0,Klein Marico River,Department of Water and Sanitation (DWS) South Africa,A3R003Q01,minor,100.0,100.2
+80.0,North West,110.0,2026-10-26,14.3,Lindleyspoort Dam,99.9,91.8,-25.512,26.689,North West,0.0,Elands River,Department of Water and Sanitation (DWS) South Africa,A2R007Q01,alert,100.0,98.8
+80.0,North West,110.0,2026-10-26,16.0,Madikwe Dam,100.0,94.7,-25.856,25.6421,North West,0.0,Tholwane River,Department of Water and Sanitation (DWS) South Africa,NW-340,alert,100.0,98.4
+80.0,North West,110.0,2026-10-26,27.0,Marico-Bosveld Dam,100.3,92.8,-25.493,26.39,North West,0.0,Groot-Marico River,Department of Water and Sanitation (DWS) South Africa,A3R001Q01,alert,100.0,99.4
+80.0,North West,110.0,2026-10-26,0.8,Middelkraal Dam,100.0,97.8,-25.856,25.6421,North West,0.0,Maretlwane River,Department of Water and Sanitation (DWS) South Africa,NW-342,minor,100.0,100.0
+80.0,North West,110.0,2026-10-26,200.8,Molatedi Dam,107.9,98.5,-25.856,25.6421,North West,0.0,Groot-Marico River,Department of Water and Sanitation (DWS) South Africa,NW-343,minor,100.0,106.2
+80.0,North West,110.0,2026-10-26,19.1,Ngotwane Dam,84.8,74.3,-25.212,25.809,North West,0.0,Ngotwane River,Department of Water and Sanitation (DWS) South Africa,A1R001Q01,alert,100.0,84.6
+80.0,North West,110.0,2026-10-26,13.7,Olifantsnek Dam,100.0,91.3,-25.795,27.251,North West,0.0,Hex River,Department of Water and Sanitation (DWS) South Africa,A2R003Q01,alert,100.0,98.5
+80.0,North West,110.0,2026-10-26,2.2,Pella Dam,65.3,48.8,-25.856,25.6421,North West,0.0,Lethlakane River,Department of Water and Sanitation (DWS) South Africa,NW-346,normal,100.0,64.2
+80.0,North West,110.0,2026-10-26,2.1,Potchefstroom Dam,102.3,102.2,-26.667,27.097,North West,0.0,Mooi River,Department of Water and Sanitation (DWS) South Africa,C2R004Q01,minor,100.0,102.3
+80.0,North West,110.0,2026-10-26,7.3,Rietspruit Dam,101.3,93.6,-26.408,26.81,North West,0.0,Rietspruit River,Department of Water and Sanitation (DWS) South Africa,C2R007Q01,minor,100.0,101.3
+80.0,North West,110.0,2026-10-26,96.4,Roodekopjes Dam,99.7,79.0,-25.41,27.586,North West,0.0,Krokodil River,Department of Water and Sanitation (DWS) South Africa,A2R015Q01,alert,100.0,98.5
+80.0,North West,110.0,2026-10-26,3.7,Sehujwane Dam,84.8,78.7,-25.311,25.95,North West,0.0,Sehujane River,Department of Water and Sanitation (DWS) South Africa,A3R005Q01,alert,100.0,84.5
+80.0,North West,110.0,2026-10-26,20.8,Setumo Dam,99.4,97.0,-25.856,25.6421,North West,0.0,Molopo River,Department of Water and Sanitation (DWS) South Africa,NW-351,alert,100.0,99.2
+80.0,North West,110.0,2026-10-26,0.5,Swartruggens Dam,101.6,101.8,-25.664,26.693,North West,0.0,Elands River,Department of Water and Sanitation (DWS) South Africa,A2R013Q01,minor,100.0,100.8
+80.0,North West,110.0,2026-10-26,61.4,Taung Dam,101.6,98.9,-27.531,24.856,North West,0.4,Harts River,Department of Water and Sanitation (DWS) South Africa,C3R006Q01,minor,100.0,101.4
+80.0,North West,110.0,2026-10-26,51.4,Vaalkop Dam,97.8,51.1,-25.317,27.451,North West,0.0,Elands River,Department of Water and Sanitation (DWS) South Africa,A2R014Q01,alert,100.0,97.8
+80.0,Western Cape,110.0,2026-10-26,4.3,Bellair Dam,96.0,78.7,-33.716,20.585,Western Cape,0.0,Brak River,Department of Water and Sanitation (DWS) South Africa,J1R002Q01,alert,100.0,96.0
+80.0,Western Cape,110.0,2026-10-26,127.1,Berg River Dam,93.0,99.1,-33.924,19.061,Western Cape,0.1,Berg River,Department of Water and Sanitation (DWS) South Africa,WC-356,alert,100.0,94.3
+80.0,Western Cape,110.0,2026-10-26,286.1,Brandvlei Dam,70.5,76.8,-33.712,19.431,Western Cape,0.0,Lower Brandvlei River,Department of Water and Sanitation (DWS) South Africa,H1R001Q01,normal,100.0,70.6
+80.0,Western Cape,110.0,2026-10-26,4.6,Buffeljags Dam,106.9,79.8,-34.01,20.54,Western Cape,0.7,Buffeljags River,Department of Water and Sanitation (DWS) South Africa,H7R001Q01,minor,100.0,101.1
+80.0,Western Cape,110.0,2026-10-26,4.9,Bulshoek Dam,62.9,68.9,-32.027,18.811,Western Cape,0.0,Olifants River,Department of Water and Sanitation (DWS) South Africa,E1R001Q01,normal,100.0,65.3
+80.0,Western Cape,110.0,2026-10-26,4.9,Calitzdorp Dam,100.4,50.1,-33.488,21.706,Western Cape,0.0,Nels River,Department of Water and Sanitation (DWS) South Africa,J2R001Q01,minor,100.0,100.4
+80.0,Western Cape,110.0,2026-10-26,17.3,Ceres Dam,103.9,85.1,-33.362,19.274,Western Cape,0.0,Koekedou River,Department of Water and Sanitation (DWS) South Africa,H1R003Q01,minor,100.0,104.8
+80.0,Western Cape,110.0,2026-10-26,17.3,Ceres Dam,100.0,97.3,-33.362,19.274,Western Cape,0.0,Koekedou River,Department of Water and Sanitation (DWS) South Africa,H1R003Q01,minor,100.0,100.0
+80.0,Western Cape,110.0,2026-10-26,17.3,Ceres Dam,102.6,88.2,-33.362,19.274,Western Cape,0.0,Koekedou River,Department of Water and Sanitation (DWS) South Africa,H1R003Q01,alert,100.0,89.0
+80.0,Western Cape,110.0,2026-10-26,17.3,Ceres Dam,90.9,99.2,-33.362,19.274,Western Cape,0.0,Koekedou River,Department of Water and Sanitation (DWS) South Africa,H1R003Q01,alert,100.0,90.0
+80.0,Western Cape,110.0,2026-10-26,122.5,Clanwilliam Dam,93.8,94.6,-32.24,18.919,Western Cape,0.0,Olifants River,Department of Water and Sanitation (DWS) South Africa,E1R002Q01,alert,100.0,92.8
+80.0,Western Cape,110.0,2026-10-26,5.8,De Bos Dam,98.3,97.4,-34.366,19.236,Western Cape,2.2,Onrus River,Department of Water and Sanitation (DWS) South Africa,G4R010Q01,alert,100.0,98.0
+80.0,Western Cape,110.0,2026-10-26,6.2,Duiwenhoks Dam,101.5,77.8,-33.987,20.958,Western Cape,1.0,Duiwenhoks River,Department of Water and Sanitation (DWS) South Africa,H8R001Q01,minor,100.0,100.4
+80.0,Western Cape,110.0,2026-10-26,28.9,Eikenhof Dam,99.5,96.9,-34.122,19.032,Western Cape,2.5,Palmiet River,Department of Water and Sanitation (DWS) South Africa,G4R002Q01,alert,100.0,99.5
+80.0,Western Cape,110.0,2026-10-26,11.0,Elandskloof Dam,99.7,97.3,-33.943,19.286,Western Cape,0.5,Elands River,Department of Water and Sanitation (DWS) South Africa,H6R002Q01,alert,100.0,98.9
+80.0,Western Cape,110.0,2026-10-26,0.5,Ernest Robertson Dam,100.7,35.7,-33.901,22.173,Western Cape,0.2,Groot Brak River,Department of Water and Sanitation (DWS) South Africa,K2R001Q01,minor,100.0,100.7
+80.0,Western Cape,110.0,2026-10-26,46.7,Floriskraal Dam,100.0,39.2,-33.274,20.985,Western Cape,0.0,Buffels River,Department of Water and Sanitation (DWS) South Africa,J1R003Q01,alert,100.0,99.7
+80.0,Western Cape,110.0,2026-10-26,1.8,Gamka Dam,100.0,30.6,-32.342,22.591,Western Cape,2.9,Gamka River,Department of Water and Sanitation (DWS) South Africa,J2R004Q01,alert,100.0,99.8
+80.0,Western Cape,110.0,2026-10-26,35.8,Gamkapoort Dam,101.7,26.3,-33.299,21.638,Western Cape,0.0,Gamka River,Department of Water and Sanitation (DWS) South Africa,J2R006Q01,minor,100.0,101.3
+80.0,Western Cape,110.0,2026-10-26,12.5,Garden Route Dam,99.4,58.2,-33.962,22.513,Western Cape,0.3,Swart River,Department of Water and Sanitation (DWS) South Africa,K3R002Q01,minor,100.0,100.0
+80.0,Western Cape,110.0,2026-10-26,4.7,Haarlem Dam,101.1,58.3,-33.2278,21.8569,Western Cape,0.4,Groot River,Department of Water and Sanitation (DWS) South Africa,WC-375,minor,100.0,101.0
+80.0,Western Cape,110.0,2026-10-26,7.2,Hartebeestkuil Dam,99.8,58.4,-33.2278,21.8569,Western Cape,0.4,Hartenbos River,Department of Water and Sanitation (DWS) South Africa,WC-376,alert,100.0,99.5
+80.0,Western Cape,110.0,2026-10-26,34.4,Kammanassie Dam,99.7,60.4,-33.649,22.412,Western Cape,0.0,Kammanassie River,Department of Water and Sanitation (DWS) South Africa,J3R001Q01,minor,100.0,100.0
+80.0,Western Cape,110.0,2026-10-26,9.8,Keerom Dam,88.4,94.5,-33.582,19.705,Western Cape,0.0,Nuy River,Department of Water and Sanitation (DWS) South Africa,H4R002Q01,alert,100.0,88.4
+80.0,Western Cape,110.0,2026-10-26,2.0,Klipberg Dam,99.5,61.1,-33.941,19.793,Western Cape,0.0,Konings River,Department of Water and Sanitation (DWS) South Africa,H4R003Q01,alert,100.0,98.3
+80.0,Western Cape,110.0,2026-10-26,4.5,Klipheuwel Dam,7.6,12.4,-34.054,22.142,Western Cape,0.1,Tributary of Hartenbos River,Department of Water and Sanitation (DWS) South Africa,K1R002Q01,normal,100.0,7.1
+80.0,Western Cape,110.0,2026-10-26,8.1,Korentepoort Dam,101.1,73.4,-33.2278,21.8569,Western Cape,0.4,Korinte River,Department of Water and Sanitation (DWS) South Africa,WC-381,minor,100.0,100.5
+80.0,Western Cape,110.0,2026-10-26,169.5,Kwaggaskloof Dam,69.0,74.8,-33.771,19.434,Western Cape,0.0,Doorn River,Department of Water and Sanitation (DWS) South Africa,H4R004Q01,normal,100.0,68.9
+80.0,Western Cape,110.0,2026-10-26,10.5,Lakenvallei Dam,100.1,99.9,-33.361,19.58,Western Cape,0.0,Sanddrifskloof River,Department of Water and Sanitation (DWS) South Africa,H2R002Q01,minor,100.0,100.2
+80.0,Western Cape,110.0,2026-10-26,13.5,Leeugamka Dam,100.0,28.3,-32.608,22.012,Western Cape,0.0,Leeu River,Department of Water and Sanitation (DWS) South Africa,J2R002Q01,alert,100.0,99.7
+80.0,Western Cape,110.0,2026-10-26,1.5,Miertjieskraal Dam,99.1,54.2,-33.829,21.134,Western Cape,0.0,Brand River,Department of Water and Sanitation (DWS) South Africa,J1R004Q01,alert,100.0,98.8
+80.0,Western Cape,110.0,2026-10-26,5.7,Misverstand Dam,98.7,99.6,-33.029,18.791,Western Cape,0.0,Berg River,Department of Water and Sanitation (DWS) South Africa,G1R003Q01,minor,100.0,108.7
+80.0,Western Cape,110.0,2026-10-26,4.3,Oukloof Dam,100.0,92.6,-33.246,22.093,Western Cape,0.0,Cordiers River,Department of Water and Sanitation (DWS) South Africa,J2R003Q01,minor,100.0,100.0
+80.0,Western Cape,110.0,2026-10-26,2.0,Pietersfontein Dam,100.2,78.0,-33.669,20.017,Western Cape,4.0,Pietersfontein River,Department of Water and Sanitation (DWS) South Africa,H3R002Q01,alert,100.0,99.8
+80.0,Western Cape,110.0,2026-10-26,9.8,Poortjieskloof Dam,99.6,85.7,-33.867,20.372,Western Cape,0.5,Groot River,Department of Water and Sanitation (DWS) South Africa,H3R001Q01,alert,100.0,99.1
+80.0,Western Cape,110.0,2026-10-26,2.3,Prinsrivier Dam,100.0,17.9,-33.513,20.753,Western Cape,0.1,Prins River,Department of Water and Sanitation (DWS) South Africa,J1R001Q01,minor,100.0,100.0
+80.0,Western Cape,110.0,2026-10-26,7.8,Roode Els Berg Dam,98.7,98.1,-33.2278,21.8569,Western Cape,0.4,Sanddrifskloof River,Department of Water and Sanitation (DWS) South Africa,WC-391,alert,100.0,98.7
+80.0,Western Cape,110.0,2026-10-26,2.0,Roodefontein Dam,99.8,47.6,-33.2278,21.8569,Western Cape,0.4,Piesang River,Department of Water and Sanitation (DWS) South Africa,WC-392,alert,100.0,99.8
+80.0,Western Cape,110.0,2026-10-26,33.9,Steenbras-Lower Dam,46.4,91.8,-33.2278,21.8569,Western Cape,0.4,Steenbras River,Department of Water and Sanitation (DWS) South Africa,WC-393,normal,100.0,46.3
+80.0,Western Cape,110.0,2026-10-26,31.9,Steenbras-Upper Dam,100.2,99.2,-33.2278,21.8569,Western Cape,0.4,Steenbras River,Department of Water and Sanitation (DWS) South Africa,WC-394,minor,100.0,101.1
+80.0,Western Cape,110.0,2026-10-26,14.8,Stettynskloof Dam,99.1,98.9,-33.837,19.246,Western Cape,0.0,Holsloot River,Department of Water and Sanitation (DWS) South Africa,H1R002Q01,minor,100.0,100.8
+80.0,Western Cape,110.0,2026-10-26,46.3,Stompdrift Dam,99.3,52.9,-33.504,22.696,Western Cape,0.0,Olifants River,Department of Water and Sanitation (DWS) South Africa,J3R002Q01,alert,100.0,99.6
+80.0,Western Cape,110.0,2026-10-26,479.3,Theewaterskloof Dam,73.6,81.7,-34.025,19.203,Western Cape,1.6,Riviersonderend River,Department of Water and Sanitation (DWS) South Africa,H6R001Q01,normal,100.0,72.9
+80.0,Western Cape,110.0,2026-10-26,0.1,Tierkloof Dam,100.0,53.1,-33.2278,21.8569,Western Cape,0.4,Tributary of Seweweekspoort River,Department of Water and Sanitation (DWS) South Africa,WC-398,minor,100.0,100.0
+80.0,Western Cape,110.0,2026-10-26,158.6,Voelvlei Dam,56.1,98.1,-33.365,19.041,Western Cape,0.0,Voelvlei River,Department of Water and Sanitation (DWS) South Africa,G1R001Q01,normal,100.0,55.1
+80.0,Western Cape,110.0,2026-10-26,58.8,Wemmershoek Dam,82.3,84.2,-33.827,19.096,Western Cape,0.0,Wemmers River,Department of Water and Sanitation (DWS) South Africa,G1R002Q01,alert,100.0,81.9
+80.0,Western Cape,110.0,2026-10-26,24.7,Wolwedans Dam,100.6,76.9,-33.2278,21.8569,Western Cape,0.4,Groot Brak River,Department of Water and Sanitation (DWS) South Africa,WC-401,minor,100.0,100.1
+80.0,Western Cape,110.0,2026-10-26,4.3,Bellair Dam,96.0,78.7,-33.716,20.585,Western Cape,0.0,Brak River,Department of Water and Sanitation (DWS) South Africa,J1R002Q01,alert,100.0,96.0
+80.0,Western Cape,110.0,2026-10-26,127.1,Berg River Dam,93.0,99.1,-33.924,19.061,Western Cape,0.1,Berg River,Department of Water and Sanitation (DWS) South Africa,WC-403,alert,100.0,94.3
+80.0,Western Cape,110.0,2026-10-26,286.1,Brandvlei Dam,70.5,76.8,-33.712,19.431,Western Cape,0.0,Lower Brandvlei River,Department of Water and Sanitation (DWS) South Africa,H1R001Q01,normal,100.0,70.6
+80.0,Western Cape,110.0,2026-10-26,4.6,Buffeljags Dam,106.9,79.8,-34.01,20.54,Western Cape,0.7,Buffeljags River,Department of Water and Sanitation (DWS) South Africa,H7R001Q01,minor,100.0,101.1
+80.0,Western Cape,110.0,2026-10-26,4.9,Bulshoek Dam,62.9,68.9,-32.027,18.811,Western Cape,0.0,Olifants River,Department of Water and Sanitation (DWS) South Africa,E1R001Q01,normal,100.0,65.3
+80.0,Western Cape,110.0,2026-10-26,4.9,Calitzdorp Dam,100.4,50.1,-33.488,21.706,Western Cape,0.0,Nels River,Department of Water and Sanitation (DWS) South Africa,J2R001Q01,minor,100.0,100.4
+80.0,Western Cape,110.0,2026-10-26,17.3,Ceres Dam,103.9,85.1,-33.362,19.274,Western Cape,0.0,Koekedou River,Department of Water and Sanitation (DWS) South Africa,H1R003Q01,minor,100.0,104.8
+80.0,Western Cape,110.0,2026-10-26,17.3,Ceres Dam,100.0,97.3,-33.362,19.274,Western Cape,0.0,Koekedou River,Department of Water and Sanitation (DWS) South Africa,H1R003Q01,minor,100.0,100.0
+80.0,Western Cape,110.0,2026-10-26,17.3,Ceres Dam,102.6,88.2,-33.362,19.274,Western Cape,0.0,Koekedou River,Department of Water and Sanitation (DWS) South Africa,H1R003Q01,alert,100.0,89.0
+80.0,Western Cape,110.0,2026-10-26,17.3,Ceres Dam,90.9,99.2,-33.362,19.274,Western Cape,0.0,Koekedou River,Department of Water and Sanitation (DWS) South Africa,H1R003Q01,alert,100.0,90.0
+80.0,Western Cape,110.0,2026-10-26,122.5,Clanwilliam Dam,93.8,94.6,-32.24,18.919,Western Cape,0.0,Olifants River,Department of Water and Sanitation (DWS) South Africa,E1R002Q01,alert,100.0,92.8
+80.0,Western Cape,110.0,2026-10-26,5.8,De Bos Dam,98.3,97.4,-34.366,19.236,Western Cape,2.2,Onrus River,Department of Water and Sanitation (DWS) South Africa,G4R010Q01,alert,100.0,98.0
+80.0,Western Cape,110.0,2026-10-26,6.2,Duiwenhoks Dam,101.5,77.8,-33.987,20.958,Western Cape,1.0,Duiwenhoks River,Department of Water and Sanitation (DWS) South Africa,H8R001Q01,minor,100.0,100.4
+80.0,Western Cape,110.0,2026-10-26,28.9,Eikenhof Dam,99.5,96.9,-34.122,19.032,Western Cape,2.5,Palmiet River,Department of Water and Sanitation (DWS) South Africa,G4R002Q01,alert,100.0,99.5
+80.0,Western Cape,110.0,2026-10-26,11.0,Elandskloof Dam,99.7,97.3,-33.943,19.286,Western Cape,0.5,Elands River,Department of Water and Sanitation (DWS) South Africa,H6R002Q01,alert,100.0,98.9
+80.0,Western Cape,110.0,2026-10-26,0.5,Ernest Robertson Dam,100.7,35.7,-33.901,22.173,Western Cape,0.2,Groot Brak River,Department of Water and Sanitation (DWS) South Africa,K2R001Q01,minor,100.0,100.7
+80.0,Western Cape,110.0,2026-10-26,46.7,Floriskraal Dam,100.0,39.2,-33.274,20.985,Western Cape,0.0,Buffels River,Department of Water and Sanitation (DWS) South Africa,J1R003Q01,alert,100.0,99.7
+80.0,Western Cape,110.0,2026-10-26,1.8,Gamka Dam,100.0,30.6,-32.342,22.591,Western Cape,2.9,Gamka River,Department of Water and Sanitation (DWS) South Africa,J2R004Q01,alert,100.0,99.8
+80.0,Western Cape,110.0,2026-10-26,35.8,Gamkapoort Dam,101.7,26.3,-33.299,21.638,Western Cape,0.0,Gamka River,Department of Water and Sanitation (DWS) South Africa,J2R006Q01,minor,100.0,101.3
+80.0,Western Cape,110.0,2026-10-26,12.5,Garden Route Dam,99.4,58.2,-33.962,22.513,Western Cape,0.3,Swart River,Department of Water and Sanitation (DWS) South Africa,K3R002Q01,minor,100.0,100.0
+80.0,Western Cape,110.0,2026-10-26,4.7,Haarlem Dam,101.1,58.3,-33.2278,21.8569,Western Cape,0.4,Groot River,Department of Water and Sanitation (DWS) South Africa,WC-422,minor,100.0,101.0
+80.0,Western Cape,110.0,2026-10-26,7.2,Hartebeestkuil Dam,99.8,58.4,-33.2278,21.8569,Western Cape,0.4,Hartenbos River,Department of Water and Sanitation (DWS) South Africa,WC-423,alert,100.0,99.5
+80.0,Western Cape,110.0,2026-10-26,34.4,Kammanassie Dam,99.7,60.4,-33.649,22.412,Western Cape,0.0,Kammanassie River,Department of Water and Sanitation (DWS) South Africa,J3R001Q01,minor,100.0,100.0
+80.0,Western Cape,110.0,2026-10-26,9.8,Keerom Dam,88.4,94.5,-33.582,19.705,Western Cape,0.0,Nuy River,Department of Water and Sanitation (DWS) South Africa,H4R002Q01,alert,100.0,88.4
+80.0,Western Cape,110.0,2026-10-26,2.0,Klipberg Dam,99.5,61.1,-33.941,19.793,Western Cape,0.0,Konings River,Department of Water and Sanitation (DWS) South Africa,H4R003Q01,alert,100.0,98.3
+80.0,Western Cape,110.0,2026-10-26,4.5,Klipheuwel Dam,7.6,12.4,-34.054,22.142,Western Cape,0.1,Tributary of Hartenbos River,Department of Water and Sanitation (DWS) South Africa,K1R002Q01,normal,100.0,7.1
+80.0,Western Cape,110.0,2026-10-26,8.1,Korentepoort Dam,101.1,73.4,-33.2278,21.8569,Western Cape,0.4,Korinte River,Department of Water and Sanitation (DWS) South Africa,WC-428,minor,100.0,100.5
+80.0,Western Cape,110.0,2026-10-26,169.5,Kwaggaskloof Dam,69.0,74.8,-33.771,19.434,Western Cape,0.0,Doorn River,Department of Water and Sanitation (DWS) South Africa,H4R004Q01,normal,100.0,68.9
+80.0,Western Cape,110.0,2026-10-26,10.5,Lakenvallei Dam,100.1,99.9,-33.361,19.58,Western Cape,0.0,Sanddrifskloof River,Department of Water and Sanitation (DWS) South Africa,H2R002Q01,minor,100.0,100.2
+80.0,Western Cape,110.0,2026-10-26,13.5,Leeugamka Dam,100.0,28.3,-32.608,22.012,Western Cape,0.0,Leeu River,Department of Water and Sanitation (DWS) South Africa,J2R002Q01,alert,100.0,99.7
+80.0,Western Cape,110.0,2026-10-26,1.5,Miertjieskraal Dam,99.1,54.2,-33.829,21.134,Western Cape,0.0,Brand River,Department of Water and Sanitation (DWS) South Africa,J1R004Q01,alert,100.0,98.8
+80.0,Western Cape,110.0,2026-10-26,5.7,Misverstand Dam,98.7,99.6,-33.029,18.791,Western Cape,0.0,Berg River,Department of Water and Sanitation (DWS) South Africa,G1R003Q01,minor,100.0,108.7
+80.0,Western Cape,110.0,2026-10-26,4.3,Oukloof Dam,100.0,92.6,-33.246,22.093,Western Cape,0.0,Cordiers River,Department of Water and Sanitation (DWS) South Africa,J2R003Q01,minor,100.0,100.0
+80.0,Western Cape,110.0,2026-10-26,2.0,Pietersfontein Dam,100.2,78.0,-33.669,20.017,Western Cape,4.0,Pietersfontein River,Department of Water and Sanitation (DWS) South Africa,H3R002Q01,alert,100.0,99.8
+80.0,Western Cape,110.0,2026-10-26,9.8,Poortjieskloof Dam,99.6,85.7,-33.867,20.372,Western Cape,0.5,Groot River,Department of Water and Sanitation (DWS) South Africa,H3R001Q01,alert,100.0,99.1
+80.0,Western Cape,110.0,2026-10-26,2.3,Prinsrivier Dam,100.0,17.9,-33.513,20.753,Western Cape,0.1,Prins River,Department of Water and Sanitation (DWS) South Africa,J1R001Q01,minor,100.0,100.0
+80.0,Western Cape,110.0,2026-10-26,7.8,Roode Els Berg Dam,98.7,98.1,-33.2278,21.8569,Western Cape,0.4,Sanddrifskloof River,Department of Water and Sanitation (DWS) South Africa,WC-438,alert,100.0,98.7
+80.0,Western Cape,110.0,2026-10-26,2.0,Roodefontein Dam,99.8,47.6,-33.2278,21.8569,Western Cape,0.4,Piesang River,Department of Water and Sanitation (DWS) South Africa,WC-439,alert,100.0,99.8
+80.0,Western Cape,110.0,2026-10-26,33.9,Steenbras-Lower Dam,46.4,91.8,-33.2278,21.8569,Western Cape,0.4,Steenbras River,Department of Water and Sanitation (DWS) South Africa,WC-440,normal,100.0,46.3
+80.0,Western Cape,110.0,2026-10-26,31.9,Steenbras-Upper Dam,100.2,99.2,-33.2278,21.8569,Western Cape,0.4,Steenbras River,Department of Water and Sanitation (DWS) South Africa,WC-441,minor,100.0,101.1
+80.0,Western Cape,110.0,2026-10-26,14.8,Stettynskloof Dam,99.1,98.9,-33.837,19.246,Western Cape,0.0,Holsloot River,Department of Water and Sanitation (DWS) South Africa,H1R002Q01,minor,100.0,100.8
+80.0,Western Cape,110.0,2026-10-26,46.3,Stompdrift Dam,99.3,52.9,-33.504,22.696,Western Cape,0.0,Olifants River,Department of Water and Sanitation (DWS) South Africa,J3R002Q01,alert,100.0,99.6
+80.0,Western Cape,110.0,2026-10-26,479.3,Theewaterskloof Dam,73.6,81.7,-34.025,19.203,Western Cape,1.6,Riviersonderend River,Department of Water and Sanitation (DWS) South Africa,H6R001Q01,normal,100.0,72.9
+80.0,Western Cape,110.0,2026-10-26,0.1,Tierkloof Dam,100.0,53.1,-33.2278,21.8569,Western Cape,0.4,Tributary of Seweweekspoort River,Department of Water and Sanitation (DWS) South Africa,WC-445,minor,100.0,100.0
+80.0,Western Cape,110.0,2026-10-26,158.6,Voelvlei Dam,56.1,98.1,-33.365,19.041,Western Cape,0.0,Voelvlei River,Department of Water and Sanitation (DWS) South Africa,G1R001Q01,normal,100.0,55.1
+80.0,Western Cape,110.0,2026-10-26,58.8,Wemmershoek Dam,82.3,84.2,-33.827,19.096,Western Cape,0.0,Wemmers River,Department of Water and Sanitation (DWS) South Africa,G1R002Q01,alert,100.0,81.9
+80.0,Western Cape,110.0,2026-10-26,24.7,Wolwedans Dam,100.6,76.9,-33.2278,21.8569,Western Cape,0.4,Groot Brak River,Department of Water and Sanitation (DWS) South Africa,WC-448,minor,100.0,100.1

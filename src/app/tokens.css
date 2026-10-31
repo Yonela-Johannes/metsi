@@ -1,0 +1,112 @@
+:root {
+  color-scheme: dark;
+
+  /* surfaces */
+  --ui-bg: #0a172e;
+  --ui-map-bg: #0c1b36;
+  --ui-panel: #11274b;
+  --ui-panel-alt: #0c243f;
+  --ui-input: #0a1830;
+  --ui-border: #294261;
+  --ui-land: #183a65;
+  --ui-coast: #315985;
+
+  /* type */
+  --ui-text: #e3ebf8;
+  --ui-muted: #a6b6ce;
+  --ui-faint: #7f94b2;
+
+  /* brand */
+  --ui-accent: #31bbee;
+  --ui-accent-text: #07213a;
+  --ui-accent-soft: #31bbee22;
+
+  /* semantic status scale */
+  --ui-ok: #4cc38a;
+  --ui-warn: #ffcc3d;
+  --ui-above: #ff9142;
+  --ui-danger: #ff5b63;
+  --ui-low: #3e638f;
+  --ui-rising: #b9e8ff;
+  --ui-info: #3c86ff;
+  --ui-alert: #ffbe37;
+  --ui-earth: #cf8b52;
+
+  /* status -> surface variants (used by alert strips & badges) */
+  --ui-ok-bg: #4cc38a14;
+  --ui-warn-bg: #ffbe3714;
+  --ui-above-bg: #ff914214;
+  --ui-danger-bg: #ff5b6314;
+  --ui-info-bg: #3c86ff18;
+
+  --ui-shadow: 0 14px 44px #0003;
+  --ui-shadow-sm: 0 6px 18px #00000026;
+  /* neutral tiles recoloured onto the canvas via blend mode */
+  --ui-tile-tint: #8ea6c4;
+  --ui-tile-opacity: 0.5;
+  --ui-tile-blend: luminosity;
+  --ui-font: "Manrope", Arial, sans-serif;
+
+  /* radii */
+  --ui-r-chip: 8px;
+  --ui-r-input: 11px;
+  --ui-r-card: 12px;
+  --ui-r-pill: 999px;
+
+  /* motion */
+  --ui-t-fast: 150ms;
+  --ui-t: 180ms;
+  --ui-ease: cubic-bezier(0.2, 0.6, 0.2, 1);
+
+  /* layout */
+  --ui-header-h: 64px;
+  --ui-maxw: 1440px;
+  --ui-nav-h: 72px; /* fixed bottom nav height (mobile) */
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --ui-bg: #eef3fa;
+  --ui-map-bg: #e2ebf6;
+  --ui-panel: #ffffff;
+  --ui-panel-alt: #f1f5fb;
+  --ui-input: #ffffff;
+  --ui-border: #c3d2e5;
+  --ui-land: #c9d9ec;
+  --ui-coast: #9db6d3;
+
+  --ui-text: #0d1f38;
+  --ui-muted: #43587a;
+  --ui-faint: #5c7291;
+
+  --ui-accent: #0784b8;
+  --ui-accent-text: #ffffff;
+  --ui-accent-soft: #0784b81a;
+
+  /* status hues darkened for AA contrast on white */
+  --ui-ok: #17734a;
+  --ui-warn: #8a6100;
+  --ui-above: #a34a00;
+  --ui-danger: #b3162a;
+  --ui-low: #5876a0;
+  --ui-rising: #0e6f9c;
+  --ui-info: #1a55c8;
+  --ui-alert: #8a5a00;
+  --ui-earth: #8a5424;
+
+  --ui-ok-bg: #17734a12;
+  --ui-warn-bg: #8a610012;
+  --ui-above-bg: #a34a0012;
+  --ui-danger-bg: #b3162a12;
+  --ui-info-bg: #1a55c812;
+
+  --ui-shadow: 0 14px 44px #0d1f381a;
+  --ui-shadow-sm: 0 6px 18px #0d1f3812;
+
+  --ui-tile-tint: #ffffff;
+  --ui-tile-opacity: 0.88;
+  --ui-tile-blend: normal;
+}
+
+
