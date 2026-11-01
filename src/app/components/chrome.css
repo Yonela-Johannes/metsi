@@ -3,7 +3,8 @@
   position: sticky;
   top: 0;
   z-index: 60;
-  background: var(--ui-bg);
+  background: color-mix(in srgb, var(--ui-bg) 92%, transparent);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--ui-border);
 }
 
@@ -519,8 +520,10 @@ details[open] > .site-nav__summary .icon {
   padding: 0;
   box-shadow: var(--ui-shadow);
   max-width: min(560px, calc(100vw - 24px));
+  max-height: min(88dvh, 720px);
   width: 100%;
   margin: auto;
+  overflow: hidden;
 }
 
 .ui-dialog::backdrop {
@@ -531,6 +534,9 @@ details[open] > .site-nav__summary .icon {
 .ui-dialog__inner {
   position: relative;
   padding: 18px;
+  max-height: inherit;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .ui-dialog__title {
@@ -566,6 +572,10 @@ details[open] > .site-nav__summary .icon {
   max-height: 100dvh;
   border-radius: 0;
   animation: sheet-in 200ms var(--ui-ease);
+}
+
+.mobile-sheet .ui-dialog__inner {
+  max-height: none;
 }
 
 @keyframes sheet-in {
@@ -680,7 +690,7 @@ details[open] > summary .sheet-acc__chev {
 /* ============================ VIEW SWITCHER BAR ============================ */
 .viewbar {
   border-bottom: 1px solid var(--ui-border);
-  background: var(--ui-bg);
+  background: var(--ui-panel-alt);
 }
 
 .viewbar__inner {

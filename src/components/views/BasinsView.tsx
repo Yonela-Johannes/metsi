@@ -36,9 +36,15 @@ export function BasinsView() {
               <li key={b.name} id={`basin-${b.name.replace(/\s+/g, "-")}`}>
                 <div className="basin-list__top">
                   <strong>{b.name}</strong>
-                  <span className="num">{b.stations}</span>
+                  <span className="num basin-list__count">
+                    {b.stations} <small className="faint">gauges</small>
+                  </span>
                 </div>
-                <div className="basin-list__track">
+                <div
+                  className="basin-list__track"
+                  role="img"
+                  aria-label={`${b.stations} gauges in ${b.name}, ${b.elevated} above the alert line`}
+                >
                   <span
                     style={{ width: `${(b.stations / maxStations) * 100}%` }}
                   />
@@ -56,6 +62,12 @@ export function BasinsView() {
               </li>
             ))}
           </ul>
+          <p className="faint rank-bars__foot">
+            <span className="basin-list__elevated-key">
+              <span className="basin-list__key-swatch" /> Above the alert line
+            </span>
+            <span>Bars are scaled to the largest province.</span>
+          </p>
         </section>
 
         <section className="ui-card" aria-labelledby="national-title">

@@ -487,9 +487,18 @@
   left: 12px;
   right: 12px;
   bottom: calc(var(--ui-nav-h) + 12px + env(safe-area-inset-bottom, 0px));
-  padding: 16px;
+  padding: 18px 16px 16px;
   max-height: 70vh;
   overflow-y: auto;
+  overscroll-behavior: contain;
+  animation: ui-sheet-up 180ms var(--ui-ease);
+}
+
+@keyframes ui-sheet-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
 }
 
 .station-popup__close {
@@ -733,11 +742,13 @@
 
   .station-popup {
     position: fixed;
-    top: 96px;
+    top: calc(var(--ui-header-h) + 56px);
     right: 24px;
     left: auto;
     bottom: auto;
     width: 340px;
+    max-height: calc(100dvh - var(--ui-header-h) - 80px);
+    animation: none;
   }
 }
 

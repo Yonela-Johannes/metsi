@@ -38,10 +38,10 @@ export function RankingView({ kind }: Props) {
           </h2>
           <p className="muted">
             {kind === "water-level"
-              ? `Median across all gauges is ${d.median.toFixed(1)}% of full storage capacity.`
+              ? `Median across all gauges is ${d.median.toFixed(1)}% of full storage capacity. Showing the ${list.length} fullest gauges.`
               : d.rainReporters === 0
                 ? "No gauge reported measurable rain in this reading."
-                : `${d.totalRain.toFixed(1)} mm accumulated across ${d.rainReporters} reporting gauges.`}
+                : `${d.totalRain.toFixed(1)} mm accumulated across ${d.rainReporters} reporting gauges. Showing the wettest ${list.length}.`}
           </p>
         </div>
         <a
@@ -60,6 +60,12 @@ export function RankingView({ kind }: Props) {
           kind === "water-level" ? "Water level ranking" : "Rainfall ranking"
         }
       >
+        {list.length === 0 ? (
+          <p className="empty empty--stack">
+            <Icon name="water" size={24} />
+            <span>No gauge readings are available for this ranking yet.</span>
+          </p>
+        ) : (
         <ol className="rank-bars">
           {list.map((s, i) => {
             const value = get(s);
@@ -108,15 +114,29 @@ export function RankingView({ kind }: Props) {
                     </span>
                   </span>
                   <span className="rank-bars__side">
-                    <Delta value={s.water_level - s.last_week_lvl} />
-                    <small className="muted">{s.date}</small>
+                    {kind === "water-level" ? (
+                      <Delta value={s.water_level - s.last_week_lvl} />
+                    ) : (
+                      <span
+                        className="rank-bars__status"
+                        style={{ color: STATUS_META[s.status].token }}
+                      >
+                        <span
+                          className={`dot${s.status === "major" ? " dot--halo" : ""}`}
+                          aria-hidden="true"
+                        />
+                        {STATUS_META[s.status].label}
+                      </span>
+                    )}
+                    <small className="faint">{s.date}</small>
                   </span>
                 </button>
               </li>
             );
           })}
         </ol>
-        {kind === "water-level" ? (
+        )}
+        {kind === "water-level" && list.length > 0 ? (
           <p className="faint rank-bars__foot">
             <span className="rank-bars__key">
               Ticks: 80% alert · 100% minor flood · 110% major flood

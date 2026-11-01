@@ -671,6 +671,20 @@
   font-size: 10.5px;
 }
 
+.rank-bars__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.rank-bars__status .dot {
+  width: 7px;
+  height: 7px;
+}
+
 .rank-bars__foot {
   display: flex;
   flex-wrap: wrap;
@@ -757,6 +771,18 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
+}
+
+.basin-list__key-swatch {
+  width: 16px;
+  height: 8px;
+  border-radius: var(--ui-r-pill);
+  background: var(--ui-warn);
+}
+
+.basin-list__count small {
+  font-size: 11px;
+  font-weight: 600;
 }
 
 /* ============================ ALERTS ============================ */
