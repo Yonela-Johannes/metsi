@@ -1,16 +1,16 @@
 "use client";
 
-import { useDashboard } from "@/lib/dashboard";
+import { useDashboard, goToView } from "@/lib/dashboard";
 import { formatDate } from "@/lib/data";
-import type { FloodStatus } from "@/lib/types";
 import { STATUS_META } from "@/lib/types";
+import type { FloodStatus } from "@/lib/types";
 import { Icon } from "../Icon";
 import { Delta, MiniBars, StatusBadge } from "../visuals";
 
 const ORDER: FloodStatus[] = ["normal", "alert", "minor", "major"];
 
 export function OverviewView() {
-  const { d, records, setSelected, dataset, refresh } = useDashboard();
+  const { d, records, setSelected, dataset, refresh, dispatch } = useDashboard();
   const total = d.total || 1;
   const top = [...records]
     .filter((r) => r.status !== "normal")
@@ -21,6 +21,7 @@ export function OverviewView() {
     )
     .slice(0, 6);
 
+  const peak = d.maxWater;
   const cards = [
     {
       label: "Above alert line",
@@ -49,9 +50,9 @@ export function OverviewView() {
     },
     {
       label: "Peak gauge",
-      value: `${d.maxWater.water_level.toFixed(1)}%`,
-      sub: d.maxWater.gauge,
-      token: STATUS_META[d.maxWater.status].token,
+      value: peak ? `${peak.water_level.toFixed(1)}%` : "—",
+      sub: peak ? peak.gauge : "No readings yet",
+      token: peak ? STATUS_META[peak.status].token : "var(--ui-low)",
     },
     {
       label: "Average buffer",
@@ -137,7 +138,14 @@ export function OverviewView() {
         <section className="ui-card" aria-labelledby="priority-alerts">
           <div className="ui-card__head">
             <h2 id="priority-alerts">Priority alerts</h2>
-            <a className="ui-link" href="#alerts">
+            <a
+              className="ui-link"
+              href="?view=alerts"
+              onClick={(e) => {
+                e.preventDefault();
+                goToView("alerts", dispatch);
+              }}
+            >
               All alerts <Icon name="arrow" size={14} />
             </a>
           </div>

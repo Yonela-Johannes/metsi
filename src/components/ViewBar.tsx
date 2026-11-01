@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { useDashboard, VIEWS } from "@/lib/dashboard";
+import { useDashboard, VIEWS, goToView } from "@/lib/dashboard";
 import { Icon } from "./Icon";
 
 export function ViewBar() {
@@ -63,7 +63,7 @@ export function ViewBar() {
               aria-controls={`panel-${v.id}`}
               tabIndex={state.view === v.id ? 0 : -1}
               className="ui-seg__btn"
-              onClick={() => dispatch({ type: "view", view: v.id })}
+              onClick={() => goToView(v.id, dispatch)}
             >
               <Icon name={v.icon} />
               <span className="viewbar__long">{v.short}</span>
@@ -87,7 +87,7 @@ export function ViewBar() {
                   type="button"
                   role="menuitem"
                   onClick={(e) => {
-                    dispatch({ type: "view", view: v.id });
+                    goToView(v.id, dispatch);
                     (
                       e.currentTarget.closest(
                         "details",

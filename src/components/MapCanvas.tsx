@@ -45,14 +45,16 @@ export function MapCanvas({
         worldCopyJump: true,
       });
       m.attributionControl.setPrefix(false);
-      // The CARTO basemap load is optional: if it is blocked or offline the
-      // stations and region outlines are still drawn on the themed canvas.
+      // The basemap load is optional: if it is blocked or offline the stations
+      // and region outlines are still drawn on the themed canvas.
+      // Tiles are grayscaled and blended onto the themed background (see
+      // .map-tiles in stage.css), so a plain OSM basemap works in both themes.
       const tiles = leaflet.tileLayer(
-        "https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png",
+        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
         {
           attribution:
-            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a> · DWS South Africa',
-          maxZoom: 18,
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors · DWS South Africa',
+          maxZoom: 19,
           className: "map-tiles",
           errorTileUrl:
             "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",

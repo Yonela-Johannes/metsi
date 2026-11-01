@@ -1,9 +1,10 @@
 "use client";
 
-import { useDashboard } from "@/lib/dashboard";
+import { useDashboard, goToView } from "@/lib/dashboard";
+import type { ViewId } from "@/lib/dashboard";
 import { Icon } from "./Icon";
 
-const ITEMS = [
+const ITEMS: { id: ViewId | "assistant"; label: string; icon: string }[] = [
   { id: "overview", label: "Overview", icon: "home" },
   { id: "alerts", label: "Alerts", icon: "warning" },
   { id: "map", label: "Map", icon: "pin" },
@@ -31,10 +32,7 @@ export function BottomNav() {
                     window.dispatchEvent(new CustomEvent("sa-open-assistant"));
                     return;
                   }
-                  dispatch({ type: "view", view: item.id });
-                  document
-                    .getElementById("dashboard")
-                    ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                  goToView(item.id as ViewId, dispatch);
                 }}
               >
                 <span className="bottom-nav__icon">

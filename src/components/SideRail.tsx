@@ -1,14 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { useDashboard } from "@/lib/dashboard";
+import { useDashboard, goToView } from "@/lib/dashboard";
 import { STATUS_META } from "@/lib/types";
 import { Icon } from "./Icon";
 import { Delta } from "./visuals";
 
 /* --------------------- rising / ranked gauges beside hero -------------------- */
 export function RankedList() {
-  const { d, setSelected, records } = useDashboard();
+  const { d, setSelected, records, dispatch } = useDashboard();
   const [mode, setMode] = useState<"rising" | "falling">("rising");
   const rows = mode === "rising" ? d.rising : d.falling;
 
@@ -60,13 +60,12 @@ export function RankedList() {
           </li>
         ) : null}
         {rows.map((r, i) => {
-          const station = records.find((s) => s.gauge === r.name);
           return (
             <li key={`${r.name}-${i}`}>
               <button
                 type="button"
                 className="ranked__row"
-                onClick={() => station && setSelected(station)}
+                onClick={() => setSelected(r.station)}
                 title={`Open ${r.name}`}
               >
                 <span className="ranked__main">
@@ -97,9 +96,13 @@ export function RankedList() {
         })}
       </ol>
 
-      <a className="ui-link ranked__all" href="#stations">
+      <button
+        type="button"
+        className="ui-link ranked__all"
+        onClick={() => goToView("stations", dispatch)}
+      >
         Explore all {d.total} gauges <Icon name="arrow" size={14} />
-      </a>
+      </button>
     </section>
   );
 }
@@ -211,7 +214,15 @@ export function AccountCard() {
 /* --------------------------------- ticker ---------------------------------- */
 export function Ticker() {
   const { d, dataset, setSelected, records } = useDashboard();
-  const items = [...d.byLevel, ...d.byRain].slice(0, 14);
+  const items: typeof records = [];
+  const seen = new Set<string>();
+  for (const s of [...d.byLevel, ...d.byRain]) {
+    const key = `${s.gauge}|${s.station_id}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    items.push(s);
+    if (items.length === 14) break;
+  }
   const time = dataset.last_updated_utc
     ? new Date(dataset.last_updated_utc).toLocaleTimeString("en-ZA", {
         hour: "2-digit",
@@ -232,13 +243,10 @@ export function Ticker() {
       >
         {items.map((s, i) => (
           <button
-            key={`${s.gauge}-${i}`}
+            key={`${s.station_id}-${s.gauge}-${i}`}
             type="button"
             className="ticker__item"
-            onClick={() => {
-              const full = records.find((r) => r.gauge === s.gauge);
-              if (full) setSelected(full);
-            }}
+            onClick={() => setSelected(s)}
           >
             <span
               className="dot"
@@ -246,7 +254,9 @@ export function Ticker() {
               aria-hidden="true"
             />
             <span className="ticker__name">{s.gauge}</span>
-            <span className="num ticker__val">{s.water_level.toFixed(1)}%</span>
+            <span className="num ticker__val">
+              {s.water_level.toFixed(1)}%
+            </span>
             <Delta value={s.water_level - s.last_week_lvl} unit="" />
           </button>
         ))}

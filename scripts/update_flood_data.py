@@ -51,9 +51,12 @@ PROVINCES = {
 }
 
 OPEN_METEO_URL = "https://api.open-meteo.com/v1/forecast"
+DWS_PROXY_TEMPLATE = os.environ.get("DWS_PROXY_TEMPLATE", "https://api.codetabs.com/v1/proxy?quest={url}")
 
 # Timeouts & Headers
 TIMEOUT = 15
+REQUEST_DELAY = 1.0
+BLOCKED_STATUS_CODES = {401, 403, 451}
 BROWSER_HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -89,10 +92,12 @@ def create_dws_session() -> requests.Session:
     session = requests.Session()
     session.headers.update(BROWSER_HEADERS)
 
+    # 403 means "blocked", not "busy": retrying it just burns quota and delays the fallback.
     retry = Retry(
         total=3,
         backoff_factor=1.0,
-        status_forcelist=[403, 429, 500, 502, 503, 504],
+        status_forcelist=[429, 500, 502, 503, 504],
+        allowed_methods=frozenset({"GET", "HEAD"}),
         raise_on_status=False,
     )
     adapter = HTTPAdapter(max_retries=retry)
@@ -111,83 +116,146 @@ def create_dws_session() -> requests.Session:
 def fetch_arcgis_dam_coordinates() -> Dict[str, Dict[str, Any]]:
     """Query DWS Major Dams layer from ArcGIS for precise coordinates and metadata."""
     coord_map: Dict[str, Dict[str, Any]] = {}
-    params = {
-        "where": "1=1",
-        "outFields": "STATION,NAME,X_COORD,Y_COORD,PRIMARY_,SECONDARY,ALIAS",
-        "returnGeometry": "false",
-        "f": "json",
-    }
     headers = {
         "User-Agent": BROWSER_HEADERS["User-Agent"],
         "Accept": "application/json, */*",
     }
+    attributes: List[Dict[str, Any]] = []
+
     try:
-        r = requests.get(
-            DWS_ARCGIS_MAJORDAMS_URL,
-            params=params,
-            headers=headers,
-            verify=False,
-            timeout=TIMEOUT,
-        )
-        r.raise_for_status()
-        data = r.json()
-        for f in data.get("features", []):
-            attrs = f.get("attributes", {})
-            name = (attrs.get("NAME") or "").strip().lower()
-            alias = (attrs.get("ALIAS") or "").strip().lower()
-            station = (attrs.get("STATION") or "").strip()
-            x = attrs.get("X_COORD")
-            y = attrs.get("Y_COORD")
-            if x and y and x != 0 and y != 0:
-                info = {
-                    "lat": float(y),
-                    "lng": float(x),
-                    "station_code": station,
-                    "primary_catchment": attrs.get("PRIMARY_"),
-                    "secondary_catchment": attrs.get("SECONDARY"),
-                }
-                if name and name != " ":
-                    coord_map[name] = info
-                    coord_map[name.replace(" dam", "")] = info
-                    coord_map[re.sub(r"[^\w\s]", "", name)] = info
-                if alias and alias != " ":
-                    coord_map[alias] = info
-                    coord_map[alias.replace(" dam", "")] = info
+        params: Dict[str, Any] = {
+            "where": "1=1",
+            "outFields": "STATION,NAME,X_COORD,Y_COORD,PRIMARY_,SECONDARY,ALIAS",
+            "returnGeometry": "false",
+            "orderByFields": "OBJECTID",
+            "resultOffset": 0,
+            "resultRecordCount": 1000,
+            "f": "json",
+        }
+        while True:
+            r = requests.get(
+                DWS_ARCGIS_MAJORDAMS_URL, params=params, headers=headers, verify=False, timeout=TIMEOUT
+            )
+            r.raise_for_status()
+            batch = r.json().get("features") or []
+            attributes.extend(f.get("attributes", {}) for f in batch)
+            if len(batch) < params["resultRecordCount"]:
+                break
+            params["resultOffset"] += len(batch)
     except Exception as e:
         print(f"[warn] Failed to fetch ArcGIS dam coordinates: {e}")
-    print(f"[info] Indexed {len(coord_map)} DWS station coordinates from ArcGIS")
+
+    for attrs in attributes:
+        name = (attrs.get("NAME") or "").strip().lower()
+        alias = (attrs.get("ALIAS") or "").strip().lower()
+        station = (attrs.get("STATION") or "").strip()
+        x = attrs.get("X_COORD")
+        y = attrs.get("Y_COORD")
+        coord_found = bool(x and y and x != 0 and y != 0)
+
+        if coord_found:
+            info = {
+                "lat": float(y),
+                "lng": float(x),
+                "station_code": station,
+                "primary_catchment": attrs.get("PRIMARY_"),
+                "secondary_catchment": attrs.get("SECONDARY"),
+            }
+        else:
+            info = {
+                "lat": None,
+                "lng": None,
+                "station_code": station,
+                "primary_catchment": attrs.get("PRIMARY_"),
+                "secondary_catchment": attrs.get("SECONDARY"),
+            }
+
+        for key in (name, alias):
+            if not key or key == " ":
+                continue
+            coord_map[key] = info
+            coord_map[key.replace(" dam", "")] = info
+            coord_map[re.sub(r"[^\w\s]", "", key)] = info
+
+    with_coords = sum(1 for v in coord_map.values() if v.get("lat") is not None)
+    print(
+        f"[info] Indexed {len(coord_map)} DWS station name variants "
+        f"({with_coords} with coordinates) from ArcGIS"
+    )
     return coord_map
 
 
-def fetch_dws_weekly_dams(coord_map: Dict[str, Dict[str, Any]], session: Optional[requests.Session] = None) -> List[Dict[str, Any]]:
-    """Scrape DWS official Weekly State of Dams tables across all South African provinces."""
+def _direct_urls(code: str) -> List[str]:
+    base = f"www.dws.gov.za/Hydrology/Weekly/ProvinceWeek.aspx?region={code}"
+    return [f"https://{base}", f"http://{base}"]
+
+
+def _proxy_urls(code: str) -> List[str]:
+    """URLs that fetch the province page through a public CORS/relay proxy."""
+    if not DWS_PROXY_TEMPLATE or DWS_PROXY_TEMPLATE.lower() == "none":
+        return []
+    target = f"https://www.dws.gov.za/Hydrology/Weekly/ProvinceWeek.aspx?region={code}"
+    return [DWS_PROXY_TEMPLATE.format(url=target)]
+
+
+def _get_with_status(
+    sess: requests.Session, url: str
+) -> tuple[Optional[str], Optional[int]]:
+    """GET a URL; return (text, None) on success or (None, status_code/None) on failure."""
+    try:
+        r = sess.get(url, verify=False, timeout=TIMEOUT)
+    except Exception as e:
+        print(f"[warn] Error requesting {url}: {e}")
+        return None, None
+
+    if r.status_code == 200 and r.text.strip():
+        return r.text, None
+    print(f"[warn] {url} returned status code {r.status_code}")
+    return None, r.status_code
+
+
+def fetch_dws_weekly_dams(
+    coord_map: Dict[str, Dict[str, Any]], session: Optional[requests.Session] = None
+) -> tuple[List[Dict[str, Any]], int]:
+    """Scrape DWS official Weekly State of Dams tables across all South African provinces.
+
+    Returns (stations, number of stations whose coordinates were matched in ArcGIS).
+    """
     sess = session or create_dws_session()
     stations: List[Dict[str, Any]] = []
+    coord_matches = 0
+    blocked_provinces: List[str] = []
+    too_small: List[str] = []
+    sess.headers.update({"Referer": "https://www.dws.gov.za/Hydrology/Weekly/Province.aspx"})
 
     for code, (prov_name, default_lat, default_lng) in PROVINCES.items():
-        urls_to_try = [
-            f"https://www.dws.gov.za/Hydrology/Weekly/ProvinceWeek.aspx?region={code}",
-            f"http://www.dws.gov.za/Hydrology/Weekly/ProvinceWeek.aspx?region={code}",
-        ]
-
         response_text = None
-        sess.headers.update({"Referer": "https://www.dws.gov.za/Hydrology/Weekly/Province.aspx"})
+        direct_blocked = False
 
-        for url in urls_to_try:
-            try:
-                r = sess.get(url, verify=False, timeout=TIMEOUT)
-                if r.status_code == 200 and r.text:
-                    response_text = r.text
+        # 1. Talk to DWS directly (works from residential IPs).
+        for url in _direct_urls(code):
+            response_text, status = _get_with_status(sess, url)
+            if response_text:
+                break
+            if status in BLOCKED_STATUS_CODES:
+                direct_blocked = True
+                break
+
+        # 2. Datacenter IPs (GitHub Actions, etc.) are refused with 403/451 -> relay via proxy.
+        if not response_text and direct_blocked:
+            for url in _proxy_urls(code):
+                print(f"[info] Province {code}: direct access blocked, retrying via proxy")
+                response_text, _ = _get_with_status(sess, url)
+                if response_text:
                     break
-                else:
-                    print(f"[warn] {url} returned status code {r.status_code}")
-            except Exception as e:
-                print(f"[warn] Error requesting {url}: {e}")
 
         if not response_text:
+            blocked_provinces.append(code)
             print(f"[warn] Failed to fetch DWS dams for province {code}")
+            time.sleep(REQUEST_DELAY)
             continue
 
+        rows_before = len(stations)
         try:
             soup = BeautifulSoup(response_text, "html.parser")
 
@@ -239,8 +307,11 @@ def fetch_dws_weekly_dams(coord_map: Dict[str, Dict[str, Any]], session: Optiona
                         clean_regex_name = re.sub(r"[^\w\s]", "", clean_name)
                         coords = coord_map.get(clean_name) or coord_map.get(dam_name.lower()) or coord_map.get(clean_regex_name)
 
-                        lat = coords["lat"] if coords else default_lat
-                        lng = coords["lng"] if coords else default_lng
+                        matched = bool(coords and coords.get("lat") is not None)
+                        if matched:
+                            coord_matches += 1
+                        lat = coords["lat"] if matched else default_lat
+                        lng = coords["lng"] if matched else default_lng
                         stn_id = coords["station_code"] if coords and coords.get("station_code") else f"{code}-{len(stations)+1:03d}"
 
                         # Calculate threshold statuses
@@ -277,10 +348,30 @@ def fetch_dws_weekly_dams(coord_map: Dict[str, Dict[str, Any]], session: Optiona
         except Exception as e:
             print(f"[warn] Parsing DWS dam table failed for province {code}: {e}")
 
-        time.sleep(0.3)
+        parsed = len(stations) - rows_before
+        if parsed:
+            print(f"[info] Province {code} ({prov_name}): parsed {parsed} dam records")
+        else:
+            # Page was served but no table rows matched: DWS likely changed its layout.
+            too_small.append(f"{code} (served page, 0 rows parsed)")
+            print(f"[warn] Province {code}: page fetched but no dam rows could be parsed")
+
+        time.sleep(REQUEST_DELAY)
 
     print(f"[info] Scraped {len(stations)} DWS monitoring stations across South Africa")
-    return stations
+
+    if not stations:
+        if blocked_provinces:
+            print(
+                "[warn] All province requests were refused (403/451). DWS blocks datacenter IP "
+                "ranges such as GitHub Actions runners; set DWS_PROXY_TEMPLATE or run the "
+                "script from a normal network to refresh live data."
+            )
+        if too_small:
+            print("[warn] Pages served but unparsable: " + ", ".join(too_small))
+
+    print(f"[info] {coord_matches}/{len(stations)} stations have ArcGIS coordinates")
+    return stations, coord_matches
 
 
 def enrich_stations_with_rainfall(stations: List[Dict[str, Any]]) -> None:
@@ -332,16 +423,35 @@ def enrich_stations_with_rainfall(stations: List[Dict[str, Any]]) -> None:
         s["rain_fall"] = unique_coords.get(key, 0.0)
 
 
-def write_outputs(stations: List[Dict[str, Any]]) -> None:
-    """Write normalized data payload to JSON and CSV files."""
+def write_outputs(
+    stations: List[Dict[str, Any]],
+    live_count: Optional[int] = None,
+    status: str = "live",
+    note: str = "",
+    coord_matches: Optional[int] = None,
+) -> None:
+    """Write normalized data payload to JSON and CSV files.
+
+    ``status`` is "live" when every record came from this run's scrape, or
+    "cached_fallback" when the scrape was blocked/empty and the previously
+    published data is being re-emitted.
+    """
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     utc_now = datetime.now(timezone.utc).isoformat()
+    if live_count is None:
+        live_count = len(stations)
 
     payload = {
         "last_updated_utc": utc_now,
         "source": "Department of Water and Sanitation (DWS) South Africa",
         "source_url": "https://www.dws.gov.za/Hydrology/",
         "record_count": len(stations),
+        # Lets CI tell a real update apart from a re-emitted cache.
+        "records_from_live_scrape": live_count,
+        "ingestion_status": status,
+        "ingestion_note": note,
+        # Stations positioned from DWS ArcGIS; the rest fall back to a provincial centroid.
+        "records_with_arcgis_coords": coord_matches if coord_matches is not None else 0,
         "records": stations,
     }
 
@@ -368,7 +478,8 @@ def main() -> None:
     print("[info] Starting South African Water Monitoring Data Ingestion...")
     coord_map = fetch_arcgis_dam_coordinates()
     session = create_dws_session()
-    stations = fetch_dws_weekly_dams(coord_map, session=session)
+    stations, coord_matches = fetch_dws_weekly_dams(coord_map, session=session)
+    live_count = len(stations)
 
     if not stations:
         if JSON_OUTPUT_PATH.exists():
@@ -379,11 +490,20 @@ def main() -> None:
             except Exception as e:
                 print(f"[warn] Failed to read cached data: {e}")
 
-    if not stations:
-        raise RuntimeError("No South African water monitoring stations retrieved and no cached fallback available.")
+        if not stations:
+            raise RuntimeError("No South African water monitoring stations retrieved and no cached fallback available.")
+
+        write_outputs(
+            stations,
+            live_count=0,
+            status="cached_fallback",
+            note="DWS source unreachable/blocked from the ingestion host; re-emitting last known data.",
+        )
+        print("[warn] Data ingestion completed WITHOUT live data (cached fallback).")
+        return
 
     enrich_stations_with_rainfall(stations)
-    write_outputs(stations)
+    write_outputs(stations, live_count=live_count, status="live", coord_matches=coord_matches)
     print("[info] Data ingestion successfully completed.")
 
 

@@ -1,21 +1,20 @@
 "use client";
 
-import { useDashboard } from "@/lib/dashboard";
+import { useDashboard, goToView } from "@/lib/dashboard";
+import type { ViewId } from "@/lib/dashboard";
 import { STATUS_META } from "@/lib/types";
 import { Icon } from "./Icon";
 
 export function SupportGrid() {
-  const { d, setSelected, records } = useDashboard();
+  const { d, setSelected, dispatch } = useDashboard();
   const total = d.total || 1;
 
   const topByLevel = d.byLevel.slice(0, 3);
   const topByRain = d.byRain.slice(0, 3);
   const topBasins = d.basins.slice(0, 3);
+  const top = topByLevel[0];
 
-  const open = (name: string) => {
-    const s = records.find((r) => r.gauge === name);
-    if (s) setSelected(s);
-  };
+  const jump = (view: ViewId) => goToView(view, dispatch);
 
   return (
     <section className="support-grid" aria-labelledby="support-title">
@@ -30,12 +29,12 @@ export function SupportGrid() {
         </div>
         <ul>
           {topByLevel.map((s) => (
-            <li key={s.gauge} className="support-row">
+            <li key={`${s.station_id}-${s.gauge}`} className="support-row">
               <span className="support-row__main">
                 <button
                   type="button"
                   className="support-row__name"
-                  onClick={() => open(s.gauge)}
+                  onClick={() => setSelected(s)}
                 >
                   {s.gauge}
                 </button>
@@ -61,16 +60,20 @@ export function SupportGrid() {
             low={80}
             high={95}
             optimum={50}
-            value={Math.min(100, topByLevel[0]?.water_level ?? 0)}
-            aria-label={`${topByLevel[0]?.gauge ?? "Peak gauge"} at ${topByLevel[0]?.water_level.toFixed(1)}% of capacity`}
+            value={Math.min(100, top?.water_level ?? 0)}
+            aria-label={`${top?.gauge ?? "Peak gauge"} at ${(top?.water_level ?? 0).toFixed(1)}% of capacity`}
           >
-            {topByLevel[0]?.water_level.toFixed(1)}%
+            {(top?.water_level ?? 0).toFixed(1)}%
           </meter>
-          <span className="num">{topByLevel[0]?.water_level.toFixed(1)}%</span>
+          <span className="num">{(top?.water_level ?? 0).toFixed(1)}%</span>
         </div>
-        <a className="ui-link support-card__foot" href="#view-water-level">
+        <button
+          type="button"
+          className="ui-link support-card__foot"
+          onClick={() => jump("water-level")}
+        >
           Water level ranking <Icon name="arrow" size={14} />
-        </a>
+        </button>
       </article>
 
       <article className="ui-card support-card" id="view-rainfall">
@@ -80,12 +83,12 @@ export function SupportGrid() {
         </div>
         <ul>
           {topByRain.map((s) => (
-            <li key={s.gauge} className="support-row">
+            <li key={`${s.station_id}-${s.gauge}`} className="support-row">
               <span className="support-row__main">
                 <button
                   type="button"
                   className="support-row__name"
-                  onClick={() => open(s.gauge)}
+                  onClick={() => setSelected(s)}
                 >
                   {s.gauge}
                 </button>
@@ -105,17 +108,21 @@ export function SupportGrid() {
             max={Math.max(50, Math.ceil(topByRain[0]?.rain_fall ?? 10))}
             value={topByRain[0]?.rain_fall ?? 0}
             optimum={0}
-            aria-label={`Heaviest gauge recorded ${topByRain[0]?.rain_fall.toFixed(1)} millimetres`}
+            aria-label={`Heaviest gauge recorded ${(topByRain[0]?.rain_fall ?? 0).toFixed(1)} millimetres`}
           >
-            {topByRain[0]?.rain_fall.toFixed(1)} mm
+            {(topByRain[0]?.rain_fall ?? 0).toFixed(1)} mm
           </meter>
           <span className="num">
             {d.rainReporters}/{total}
           </span>
         </div>
-        <a className="ui-link support-card__foot" href="#view-rainfall">
+        <button
+          type="button"
+          className="ui-link support-card__foot"
+          onClick={() => jump("rainfall")}
+        >
           Rainfall ranking <Icon name="arrow" size={14} />
-        </a>
+        </button>
       </article>
 
       <article className="ui-card support-card" id="view-basins">
@@ -129,7 +136,11 @@ export function SupportGrid() {
               <span className="support-row__main">
                 <a
                   className="support-row__name"
-                  href={`#basin-${b.name.replace(/\s+/g, "-")}`}
+                  href="?view=basins"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    jump("basins");
+                  }}
                 >
                   {b.name}
                 </a>
@@ -158,9 +169,13 @@ export function SupportGrid() {
           </meter>
           <span className="num">{topBasins[0]?.share}%</span>
         </div>
-        <a className="ui-link support-card__foot" href="#view-basins">
+        <button
+          type="button"
+          className="ui-link support-card__foot"
+          onClick={() => jump("basins")}
+        >
           Basin distribution <Icon name="arrow" size={14} />
-        </a>
+        </button>
       </article>
 
       <article className="ui-card support-card" id="view-alerts">
@@ -172,9 +187,13 @@ export function SupportGrid() {
           {(["alert", "minor", "major"] as const).map((k) => (
             <li key={k} className="support-row">
               <span className="support-row__main">
-                <a className="support-row__name" href="#alerts">
+                <button
+                  type="button"
+                  className="support-row__name"
+                  onClick={() => jump("alerts")}
+                >
                   {STATUS_META[k].label}
-                </a>
+                </button>
                 <small className="muted">{STATUS_META[k].blurb}</small>
               </span>
               <span className="support-row__side">
@@ -201,9 +220,13 @@ export function SupportGrid() {
           </meter>
           <span className="num">{Math.round((d.elevated / total) * 100)}%</span>
         </div>
-        <a className="ui-link support-card__foot" href="#alerts">
+        <button
+          type="button"
+          className="ui-link support-card__foot"
+          onClick={() => jump("alerts")}
+        >
           Full alert register <Icon name="arrow" size={14} />
-        </a>
+        </button>
       </article>
     </section>
   );

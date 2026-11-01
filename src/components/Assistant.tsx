@@ -11,12 +11,15 @@ const LIMIT = 500;
 /** Rule-based answers grounded in the live dataset — no external model call. */
 function answer(q: string, d: ReturnType<typeof useDashboard>["d"]): string {
   const t = q.toLowerCase();
+  const empty =
+    "There is no station reading loaded right now, so I can't summarise levels. Try refreshing the data.";
+  if (!d.maxWater) return empty;
   if (/(highest|peak|fullest|max)/.test(t)) {
-    const s = d.byLevel[0];
+    const s = d.maxWater;
     return `${s.gauge} in ${s.basin} is the fullest gauge at ${s.water_level.toFixed(1)}% of capacity (${s.river}).`;
   }
   if (/rain/.test(t)) {
-    if (!d.rainReporters)
+    if (!d.rainReporters || !d.maxRain)
       return "No station reported measurable rain in the last 24 hours.";
     const s = d.maxRain;
     return `Heaviest 24-hour rainfall is ${s.rain_fall.toFixed(1)} mm at ${s.gauge}. ${d.rainReporters} gauges reported some rain.`;
@@ -32,7 +35,9 @@ function answer(q: string, d: ReturnType<typeof useDashboard>["d"]): string {
   }
   if (/(basin|province|region)/.test(t)) {
     const b = d.basins[0];
-    return `${b.name} holds the most stations (${b.stations}, ${b.share}% of coverage), with ${b.elevated} above the alert line.`;
+    return b
+      ? `${b.name} holds the most stations (${b.stations}, ${b.share}% of coverage), with ${b.elevated} above the alert line.`
+      : empty;
   }
   if (/(threshold|80|100|110|class)/.test(t)) {
     return "A gauge is “alert” from 80% of full storage capacity, “minor flood” from 100% and “major flood” from 110%.";

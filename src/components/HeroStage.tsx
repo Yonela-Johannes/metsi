@@ -2,7 +2,8 @@
 
 import dynamic from "next/dynamic";
 import { useMemo, useRef, useState } from "react";
-import { useDashboard } from "@/lib/dashboard";
+import { useDashboard, goToView } from "@/lib/dashboard";
+import type { ViewId } from "@/lib/dashboard";
 import { formatDate } from "@/lib/data";
 import { STATUS_META } from "@/lib/types";
 import type { Station } from "@/lib/types";
@@ -87,6 +88,10 @@ export function HeroStage() {
       })
     : "—";
 
+  const readingDate = formatDate(records[0]?.date);
+  const highest = d.byLevel[0];
+  const jump = (view: ViewId) => goToView(view, dispatch);
+
   const headline =
     d.counts.major > 0
       ? `${d.counts.major} gauge${d.counts.major === 1 ? "" : "s"} above the major flood line`
@@ -127,7 +132,7 @@ export function HeroStage() {
     <>
       {/* ---------------- alert strips ---------------- */}
       <div className="strips" id="alerts-strip">
-        {d.counts.major > 0 ? (
+        {d.counts.major > 0 && highest ? (
           <div className="strip strip--danger" role="status">
             <Icon name="warning" size={17} />
             <strong>
@@ -135,24 +140,31 @@ export function HeroStage() {
               {d.counts.major === 1 ? "" : "s"} at 110%+
             </strong>
             <span className="strip__meta muted">
-              {d.byLevel[0].gauge} · {d.byLevel[0].water_level.toFixed(1)}% of
-              full capacity · {d.byLevel[0].basin}
+              {highest.gauge} · {highest.water_level.toFixed(1)}% of full
+              capacity · {highest.basin}
             </span>
-            <a className="ui-link strip__link" href="#alerts">
+            <button
+              type="button"
+              className="ui-link strip__link"
+              onClick={() => jump("alerts")}
+            >
               All alerts <Icon name="arrow" size={14} />
-            </a>
+            </button>
           </div>
-        ) : d.elevated > 0 ? (
+        ) : d.elevated > 0 && highest ? (
           <div className="strip strip--alert" role="status">
             <Icon name="bell" size={17} />
             <strong>{d.elevated} gauges above the alert line</strong>
             <span className="strip__meta muted">
-              Highest: {d.byLevel[0].gauge} at{" "}
-              {d.byLevel[0].water_level.toFixed(1)}%
+              Highest: {highest.gauge} at {highest.water_level.toFixed(1)}%
             </span>
-            <a className="ui-link strip__link" href="#alerts">
+            <button
+              type="button"
+              className="ui-link strip__link"
+              onClick={() => jump("alerts")}
+            >
               All alerts <Icon name="arrow" size={14} />
-            </a>
+            </button>
           </div>
         ) : (
           <div className="strip strip--ok" role="status">
@@ -161,13 +173,17 @@ export function HeroStage() {
             <span className="strip__meta muted">
               All {d.total} gauges are below the 80% alert threshold
             </span>
-            <a className="ui-link strip__link" href="#alerts">
+            <button
+              type="button"
+              className="ui-link strip__link"
+              onClick={() => jump("alerts")}
+            >
               All alerts <Icon name="arrow" size={14} />
-            </a>
+            </button>
           </div>
         )}
         <div className="strip strip--chips">
-          <a className="chip" href="#stations">
+          <button type="button" className="chip" onClick={() => jump("stations")}>
             <span className="chip__tile">
               <Icon name="list" size={18} />
             </span>
@@ -176,8 +192,12 @@ export function HeroStage() {
               <small>{d.total} gauges · search &amp; CSV export</small>
             </span>
             <Icon name="chevron" size={15} />
-          </a>
-          <a className="chip" href="#view-water-level">
+          </button>
+          <button
+            type="button"
+            className="chip"
+            onClick={() => jump("water-level")}
+          >
             <span className="chip__tile">
               <Icon name="water" size={18} />
             </span>
@@ -186,8 +206,8 @@ export function HeroStage() {
               <small>Median {d.median.toFixed(1)}% of capacity</small>
             </span>
             <Icon name="chevron" size={15} />
-          </a>
-          <a className="chip" href="#view-rainfall">
+          </button>
+          <button type="button" className="chip" onClick={() => jump("rainfall")}>
             <span className="chip__tile">
               <Icon name="rain" size={18} />
             </span>
@@ -200,7 +220,7 @@ export function HeroStage() {
               </small>
             </span>
             <Icon name="chevron" size={15} />
-          </a>
+          </button>
         </div>
       </div>
 
@@ -244,9 +264,8 @@ export function HeroStage() {
               {headline}
             </h1>
             <p className="briefing__summary">
-              Readings from {d.total} DWS gauges on{" "}
-              {formatDate(records[0]?.date)}. Alert line at 80% of full storage
-              capacity, minor flood at 100%, major at 110%.
+              Readings from {d.total} DWS gauges on {readingDate}. Alert line at
+              80% of full storage capacity, minor flood at 100%, major at 110%.
             </p>
 
             <ul className="metrics">

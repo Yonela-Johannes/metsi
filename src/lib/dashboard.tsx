@@ -51,6 +51,56 @@ export const VIEWS: {
 const REFRESH_INTERVAL = 5 * 60 * 1000;
 const CACHE_KEY = "sa-water-cache-v2";
 
+export function viewFromSearch(search: string): ViewId {
+  const wanted = new URLSearchParams(search).get("view");
+  return VIEWS.some((v) => v.id === wanted) ? (wanted as ViewId) : "overview";
+}
+
+export function goToView(
+  view: ViewId,
+  dispatch: React.Dispatch<Action>,
+  options: { scroll?: boolean; replace?: boolean } = {},
+) {
+  const { scroll = true, replace = false } = options;
+  dispatch({ type: "view", view });
+
+  try {
+    const url = new URL(window.location.href);
+    if (view === "overview") url.searchParams.delete("view");
+    else url.searchParams.set("view", view);
+    url.hash = "";
+    const next = `${url.pathname}${url.search}`;
+    const current = `${window.location.pathname}${window.location.search}`;
+    if (next !== current) {
+      if (replace) window.history.replaceState(null, "", next);
+      else window.history.pushState(null, "", next);
+    }
+  } catch {
+    /* history is unavailable — the view still switches */
+  }
+
+  if (scroll) {
+    window.requestAnimationFrame(() => {
+      document
+        .getElementById("dashboard")
+        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+}
+
+/** One station per dam name — pristine station appears first so dedupe keeps it. */
+export function dedupeStations(records: Station[]): Station[] {
+  const seen = new Set<string>();
+  const out: Station[] = [];
+  for (const r of records) {
+    const key = (r.gauge || r.station_id || "").trim().toLowerCase();
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    out.push(r);
+  }
+  return out;
+}
+
 /* ------------------------------ derived data ------------------------------ */
 export type Ranked = {
   name: string;
@@ -58,7 +108,20 @@ export type Ranked = {
   value: number;
   delta: number;
   status: FloodStatus;
+  /** The underlying record — dam names are not unique, so never re-look it up by name. */
+  station: Station;
 };
+
+function toRanked(r: Station): Ranked {
+  return {
+    name: r.gauge,
+    sub: [r.river, r.basin].filter(Boolean).join(" · "),
+    value: r.water_level,
+    delta: r.water_level - r.last_week_lvl,
+    status: statusOf(r),
+    station: r,
+  };
+}
 
 export function derive(records: Station[]) {
   const counts = countByStatus(records);
@@ -69,7 +132,9 @@ export function derive(records: Station[]) {
   const rain = records
     .map((r) => r.rain_fall)
     .filter((n) => Number.isFinite(n));
-  const byLevel = [...records].sort((a, b) => b.water_level - a.water_level);
+  const byLevel = [...records].sort(
+    (a, b) => b.water_level - a.water_level,
+  );
   const byRain = [...records].sort((a, b) => b.rain_fall - a.rain_fall);
 
   const weekDelta = (r: Station) => r.water_level - r.last_week_lvl;
@@ -77,25 +142,13 @@ export function derive(records: Station[]) {
     .sort((a, b) => weekDelta(b) - weekDelta(a))
     .filter((r) => weekDelta(r) > 0)
     .slice(0, 6)
-    .map<Ranked>((r) => ({
-      name: r.gauge,
-      sub: `${r.river} · ${r.basin}`,
-      value: r.water_level,
-      delta: weekDelta(r),
-      status: statusOf(r),
-    }));
+    .map<Ranked>(toRanked);
 
   const falling = [...records]
     .sort((a, b) => weekDelta(a) - weekDelta(b))
     .filter((r) => weekDelta(r) < 0)
     .slice(0, 6)
-    .map<Ranked>((r) => ({
-      name: r.gauge,
-      sub: `${r.river} · ${r.basin}`,
-      value: r.water_level,
-      delta: weekDelta(r),
-      status: statusOf(r),
-    }));
+    .map<Ranked>(toRanked);
 
   const basins = Object.entries(
     records.reduce<Record<string, Station[]>>((acc, r) => {
@@ -147,8 +200,8 @@ export function derive(records: Station[]) {
     median: median(levels),
     avg: mean(levels),
     risingStreams: pct(records.filter((r) => weekDelta(r) > 0).length, total),
-    maxWater: byLevel[0],
-    maxRain: byRain[0],
+    maxWater: byLevel[0] as Station | undefined,
+    maxRain: byRain[0] as Station | undefined,
     totalRain: sum(rain),
     rainReporters,
     safetyMargin,
@@ -240,6 +293,17 @@ export function DashboardProvider({
   const [selected, setSelected] = useState<Station | null>(null);
   const timer = useRef<number | null>(null);
 
+  useEffect(() => {
+    const initial = viewFromSearch(window.location.search);
+    if (initial !== "overview") dispatch({ type: "view", view: initial });
+
+    const onPop = () => {
+      dispatch({ type: "view", view: viewFromSearch(window.location.search) });
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
+
   const applyDataset = useCallback((next: GaugeDataset, fromCache: boolean) => {
     setDataset(next);
     setLastFetched(Date.now());
@@ -301,14 +365,18 @@ export function DashboardProvider({
     );
   }, []);
 
-  const d = useMemo(() => derive(dataset.records), [dataset.records]);
+  const records = useMemo(
+    () => dedupeStations(dataset.records),
+    [dataset.records],
+  );
+  const d = useMemo(() => derive(records), [records]);
 
   const value = useMemo<Ctx>(
     () => ({
       state,
       dispatch,
       dataset,
-      records: dataset.records,
+      records,
       d,
       lastFetched,
       refresh,
@@ -316,7 +384,7 @@ export function DashboardProvider({
       selected,
       setSelected,
     }),
-    [state, dataset, d, lastFetched, refresh, saveStation, selected],
+    [state, dataset, records, d, lastFetched, refresh, saveStation, selected],
   );
 
   return (

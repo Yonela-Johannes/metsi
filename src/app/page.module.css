@@ -1,6 +1,9 @@
 /* page-level layout — imports nothing but tokens */
 .page {
   min-height: 100vh;
+  /* Nothing inside should be able to widen the document (the ticker and map
+     overlays have their own internal scroll areas). */
+  overflow-x: clip;
   padding-bottom: calc(var(--ui-nav-h) + env(safe-area-inset-bottom, 0px));
 }
 

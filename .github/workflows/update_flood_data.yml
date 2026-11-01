@@ -33,7 +33,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          cache: "pip"
 
       - name: Install dependencies
         run: |
@@ -58,13 +57,25 @@ jobs:
           print(data.get("record_count", 0))
           PY
           )
+          LIVE_COUNT=$(python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path("public/data/gauges_2_view.json").read_text())
+          print(data.get("records_from_live_scrape", 0))
+          PY
+          )
 
           echo "record_count=${RECORD_COUNT}" >> "$GITHUB_OUTPUT"
-          echo "Successfully retrieved ${RECORD_COUNT} gauge records"
+          echo "delta_live=${LIVE_COUNT}" >> "$GITHUB_OUTPUT"
+          echo "Successfully retrieved ${RECORD_COUNT} gauge records (${LIVE_COUNT} from live scrape)"
 
           if [ "$RECORD_COUNT" -eq 0 ]; then
-            echo "Record count is 0; failing run to avoid committing empty data."
+            echo "::error::Record count is 0; failing run to avoid committing empty data."
             exit 1
+          fi
+
+          if [ "$LIVE_COUNT" -eq 0 ]; then
+            echo "::warning::Live DWS scrape returned 0 stations (DWS likely blocks GitHub runner IPs). The published data set was left unchanged; check the job summary diagnostics."
           fi
 
       - name: Check for data changes
@@ -90,6 +101,13 @@ jobs:
 
           RECORD_COUNT=${{ steps.scrape.outputs.record_count }}
           TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
+          LIVE_COUNT=${{ steps.scrape.outputs.delta_live }}
+
+          if [ "${LIVE_COUNT:-0}" -eq 0 ]; then
+            echo "No live records were scraped this run; there is nothing to publish."
+            echo "Skipping commit to avoid producing a commit with no data changes." | tee -a "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
 
           git add public/data/gauges_2_view.json public/data/gauges_2_view.csv
           
@@ -118,6 +136,7 @@ jobs:
           ## Flood Data Update Summary
 
           - **Records Retrieved:** ${{ steps.scrape.outputs.record_count }}
+          - **Records From Live Scrape:** ${{ steps.scrape.outputs.delta_live }}
           - **Data Changed:** ${{ steps.check-changes.outputs.changes_detected }}
           - **Changes Count:** ${{ steps.check-changes.outputs.changes_count }}
           - **Timestamp:** $(date -u +"%Y-%m-%d %H:%M:%S UTC")

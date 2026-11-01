@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useDashboard } from "@/lib/dashboard";
+import { useDashboard, goToView } from "@/lib/dashboard";
+import type { ViewId } from "@/lib/dashboard";
 import { STATUS_META } from "@/lib/types";
 import { Dialog } from "./Dialog";
 import { Icon } from "./Icon";
@@ -13,7 +14,7 @@ type MenuLink = {
   desc: string;
   href: string;
   locked?: boolean;
-  view?: string;
+  view?: ViewId;
 };
 type MenuSection = { title: string; links: MenuLink[] };
 
@@ -222,6 +223,11 @@ export function Header({ alerts }: { alerts: number }) {
     )
     .slice(0, 4);
 
+  const go = (view: ViewId) => {
+    setBellOpen(false);
+    goToView(view, dispatch);
+  };
+
   return (
     <header className="site-header" ref={headerRef}>
       <div className="site-header__bar ui-wrap">
@@ -247,7 +253,15 @@ export function Header({ alerts }: { alerts: number }) {
         <form
           className="site-search"
           role="search"
-          onSubmit={(e) => e.preventDefault()}
+          onSubmit={(e) => {
+            e.preventDefault();
+
+            const first = results[0];
+            if (first) {
+              setSelected(first);
+              setQuery("");
+            }
+          }}
         >
           <label htmlFor="site-search" className="sr">
             Search stations, rivers or provinces
@@ -285,6 +299,7 @@ export function Header({ alerts }: { alerts: number }) {
                 <li key={`${r.station_id}-${r.gauge}-${r.latitude}`}>
                   <button
                     type="button"
+                    role="option"
                     className="site-search__result"
                     onClick={() => {
                       setSelected(r);
@@ -305,6 +320,10 @@ export function Header({ alerts }: { alerts: number }) {
                 </li>
               ))}
             </ul>
+          ) : query.trim().length >= 2 ? (
+            <p className="site-search__empty faint" role="status">
+              No station, river or province matches “{query.trim()}”.
+            </p>
           ) : null}
         </form>
 
@@ -355,16 +374,7 @@ export function Header({ alerts }: { alerts: number }) {
                                       if (!view || link.locked) return;
                                       e.preventDefault();
                                       setOpenMenu(null);
-                                      dispatch({
-                                        type: "view",
-                                        view: view as never,
-                                      });
-                                      document
-                                        .getElementById("dashboard")
-                                        ?.scrollIntoView({
-                                          behavior: "smooth",
-                                          block: "start",
-                                        });
+                                      goToView(view, dispatch);
                                     }}
                                     target={
                                       link.href.startsWith("http") ||
@@ -439,9 +449,9 @@ export function Header({ alerts }: { alerts: number }) {
             >
               <div className="popover__head">
                 <strong>Alerts</strong>
-                <a href="/?view=alerts" onClick={() => setBellOpen(false)}>
+                <button type="button" onClick={() => go("alerts")}>
                   All alerts
-                </a>
+                </button>
               </div>
               <ul className="popover__list">
                 {topAlerts.map((a) => (
@@ -509,19 +519,16 @@ function MobileSheet({
   onClose: () => void;
 }) {
   const { dispatch } = useDashboard();
-  const shortcuts = [
+  const shortcuts: { id: ViewId; label: string; icon: string }[] = [
     { id: "overview", label: "Overview", icon: "chart" },
     { id: "alerts", label: "Alerts", icon: "warning" },
     { id: "map", label: "Map", icon: "pin" },
     { id: "stations", label: "Stations", icon: "table" },
-  ] as const;
+  ];
 
-  function go(view: string) {
-    dispatch({ type: "view", view: view as never });
+  function go(view: ViewId) {
     onClose();
-    document
-      .getElementById("dashboard")
-      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    goToView(view, dispatch);
   }
 
   return (
