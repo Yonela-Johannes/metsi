@@ -54,7 +54,7 @@ jobs:
           RECORD_COUNT=$(python - <<'PY'
           import json
           from pathlib import Path
-          data = json.loads(Path("data/gauges_2_view.json").read_text())
+          data = json.loads(Path("public/data/gauges_2_view.json").read_text())
           print(data.get("record_count", 0))
           PY
           )
@@ -71,7 +71,7 @@ jobs:
         id: check-changes
         run: |
           set -euo pipefail
-          CHANGES=$(git status --porcelain data/gauges_2_view.json data/gauges_2_view.csv | wc -l)
+          CHANGES=$(git status --porcelain public/data/gauges_2_view.json public/data/gauges_2_view.csv | wc -l)
           echo "changes_count=${CHANGES}" >> "$GITHUB_OUTPUT"
 
           if [ "$CHANGES" -gt 0 ]; then
@@ -91,7 +91,7 @@ jobs:
           RECORD_COUNT=${{ steps.scrape.outputs.record_count }}
           TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
 
-          git add data/gauges_2_view.json data/gauges_2_view.csv
+          git add public/data/gauges_2_view.json public/data/gauges_2_view.csv
           
           if [ "${{ steps.check-changes.outputs.changes_detected }}" == "true" ]; then
             git commit -m "chore: update gauges_2_view data (${RECORD_COUNT} records, ${TIMESTAMP})"
@@ -107,7 +107,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: flood-data-${{ github.run_id }}
-          path: data/gauges_2_view.json
+          path: public/data/gauges_2_view.json
           retention-days: 30
           compression-level: 9
 
@@ -124,8 +124,8 @@ jobs:
           - **Workflow Run:** #${{ github.run_number }}
 
           ### Files Updated
-          - data/gauges_2_view.json (JSON format with metadata)
-          - data/gauges_2_view.csv (CSV format for spreadsheet applications)
+          - public/data/gauges_2_view.json (JSON format with metadata)
+          - public/data/gauges_2_view.csv (CSV format for spreadsheet applications)
 
           EOF
 

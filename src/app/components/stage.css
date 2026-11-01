@@ -143,6 +143,14 @@
   );
 }
 
+/* Leaflet's SVG renderer cannot read CSS custom properties, so the marker
+   fills arrive as inline var(--…) and are bridged to their theme values here. */
+.map-pane path[fill="var(--ui-ok)"] { fill: var(--ui-ok); }
+.map-pane path[fill="var(--ui-warn)"] { fill: var(--ui-warn); }
+.map-pane path[fill="var(--ui-above)"] { fill: var(--ui-above); }
+.map-pane path[fill="var(--ui-danger)"] { fill: var(--ui-danger); }
+.map-pane path[stroke="var(--ui-bg)"] { stroke: var(--ui-bg); }
+
 /* rising gauges get an expanding ring */
 .map-marker--rising {
   animation: marker-ring 2.6s var(--ui-ease) infinite;

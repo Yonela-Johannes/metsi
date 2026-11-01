@@ -9,7 +9,7 @@ South Africa and DWS ArcGIS GIS Feature Services, enriched with rainfall data.
 - Matches station coordinates & catchments from DWS ArcGIS Feature Server.
 - Fetches real-time rainfall totals (mm) for station locations via Open-Meteo.
 - Normalises readings into standard schema for the Water Monitoring Dashboard.
-- Writes both data/gauges_2_view.json and data/gauges_2_view.csv.
+- Writes both public/data/gauges_2_view.json and public/data/gauges_2_view.csv.
 """
 
 from __future__ import annotations
@@ -24,8 +24,10 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 import requests
+from requests.adapters import HTTPAdapter
 from bs4 import BeautifulSoup
 import urllib3
+from urllib3.util import Retry
 
 urllib3.disable_warnings()
 
@@ -52,21 +54,59 @@ OPEN_METEO_URL = "https://api.open-meteo.com/v1/forecast"
 
 # Timeouts & Headers
 TIMEOUT = 15
-DEFAULT_HEADERS = {
+BROWSER_HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-        "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        "(KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
     ),
+    "Accept": (
+        "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,"
+        "image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+    ),
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Sec-Ch-Ua": '"Google Chrome";v="123", "Not:A-Brand";v="8", "Chromium";v="123"',
+    "Sec-Ch-Ua-Mobile": "?0",
+    "Sec-Ch-Ua-Platform": '"Windows"',
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "none",
+    "Sec-Fetch-User": "?1",
+    "Upgrade-Insecure-Requests": "1",
 }
 
 # Output paths
 REPO_ROOT = Path(__file__).resolve().parents[1]
-DATA_DIR = REPO_ROOT / "data"
+DATA_DIR = REPO_ROOT / "public" / "data"
 JSON_OUTPUT_PATH = DATA_DIR / "gauges_2_view.json"
 CSV_OUTPUT_PATH = DATA_DIR / "gauges_2_view.csv"
 
 
 # ==== HELPERS ================================================================
+
+def create_dws_session() -> requests.Session:
+    """Create a requests.Session configured with browser headers, retries, and warm-up cookies."""
+    session = requests.Session()
+    session.headers.update(BROWSER_HEADERS)
+
+    retry = Retry(
+        total=3,
+        backoff_factor=1.0,
+        status_forcelist=[403, 429, 500, 502, 503, 504],
+        raise_on_status=False,
+    )
+    adapter = HTTPAdapter(max_retries=retry)
+    session.mount("https://", adapter)
+    session.mount("http://", adapter)
+
+    # Warm up session to acquire session cookies (e.g. ASP.NET_SessionId)
+    try:
+        session.get("https://www.dws.gov.za/Hydrology/", verify=False, timeout=TIMEOUT)
+    except Exception as e:
+        print(f"[warn] Session warmup request to DWS homepage failed: {e}")
+
+    return session
+
 
 def fetch_arcgis_dam_coordinates() -> Dict[str, Dict[str, Any]]:
     """Query DWS Major Dams layer from ArcGIS for precise coordinates and metadata."""
@@ -77,8 +117,18 @@ def fetch_arcgis_dam_coordinates() -> Dict[str, Dict[str, Any]]:
         "returnGeometry": "false",
         "f": "json",
     }
+    headers = {
+        "User-Agent": BROWSER_HEADERS["User-Agent"],
+        "Accept": "application/json, */*",
+    }
     try:
-        r = requests.get(DWS_ARCGIS_MAJORDAMS_URL, params=params, headers=DEFAULT_HEADERS, verify=False, timeout=TIMEOUT)
+        r = requests.get(
+            DWS_ARCGIS_MAJORDAMS_URL,
+            params=params,
+            headers=headers,
+            verify=False,
+            timeout=TIMEOUT,
+        )
         r.raise_for_status()
         data = r.json()
         for f in data.get("features", []):
@@ -109,16 +159,37 @@ def fetch_arcgis_dam_coordinates() -> Dict[str, Dict[str, Any]]:
     return coord_map
 
 
-def fetch_dws_weekly_dams(coord_map: Dict[str, Dict[str, Any]]) -> List[Dict[str, Any]]:
+def fetch_dws_weekly_dams(coord_map: Dict[str, Dict[str, Any]], session: Optional[requests.Session] = None) -> List[Dict[str, Any]]:
     """Scrape DWS official Weekly State of Dams tables across all South African provinces."""
+    sess = session or create_dws_session()
     stations: List[Dict[str, Any]] = []
 
     for code, (prov_name, default_lat, default_lng) in PROVINCES.items():
-        url = f"https://www.dws.gov.za/Hydrology/Weekly/ProvinceWeek.aspx?region={code}"
+        urls_to_try = [
+            f"https://www.dws.gov.za/Hydrology/Weekly/ProvinceWeek.aspx?region={code}",
+            f"http://www.dws.gov.za/Hydrology/Weekly/ProvinceWeek.aspx?region={code}",
+        ]
+
+        response_text = None
+        sess.headers.update({"Referer": "https://www.dws.gov.za/Hydrology/Weekly/Province.aspx"})
+
+        for url in urls_to_try:
+            try:
+                r = sess.get(url, verify=False, timeout=TIMEOUT)
+                if r.status_code == 200 and r.text:
+                    response_text = r.text
+                    break
+                else:
+                    print(f"[warn] {url} returned status code {r.status_code}")
+            except Exception as e:
+                print(f"[warn] Error requesting {url}: {e}")
+
+        if not response_text:
+            print(f"[warn] Failed to fetch DWS dams for province {code}")
+            continue
+
         try:
-            r = requests.get(url, headers=DEFAULT_HEADERS, verify=False, timeout=TIMEOUT)
-            r.raise_for_status()
-            soup = BeautifulSoup(r.text, "html.parser")
+            soup = BeautifulSoup(response_text, "html.parser")
 
             date_str = None
             h_text = soup.get_text()
@@ -204,7 +275,9 @@ def fetch_dws_weekly_dams(coord_map: Dict[str, Dict[str, Any]]) -> List[Dict[str
                         })
 
         except Exception as e:
-            print(f"[warn] Failed to fetch DWS dams for province {code}: {e}")
+            print(f"[warn] Parsing DWS dam table failed for province {code}: {e}")
+
+        time.sleep(0.3)
 
     print(f"[info] Scraped {len(stations)} DWS monitoring stations across South Africa")
     return stations
@@ -294,10 +367,20 @@ def write_outputs(stations: List[Dict[str, Any]]) -> None:
 def main() -> None:
     print("[info] Starting South African Water Monitoring Data Ingestion...")
     coord_map = fetch_arcgis_dam_coordinates()
-    stations = fetch_dws_weekly_dams(coord_map)
+    session = create_dws_session()
+    stations = fetch_dws_weekly_dams(coord_map, session=session)
 
     if not stations:
-        raise RuntimeError("No South African water monitoring stations retrieved.")
+        if JSON_OUTPUT_PATH.exists():
+            print(f"[warn] Live DWS scraping yielded 0 stations. Using cached fallback data from {JSON_OUTPUT_PATH}")
+            try:
+                cached_data = json.loads(JSON_OUTPUT_PATH.read_text(encoding="utf-8"))
+                stations = cached_data.get("records", [])
+            except Exception as e:
+                print(f"[warn] Failed to read cached data: {e}")
+
+    if not stations:
+        raise RuntimeError("No South African water monitoring stations retrieved and no cached fallback available.")
 
     enrich_stations_with_rainfall(stations)
     write_outputs(stations)

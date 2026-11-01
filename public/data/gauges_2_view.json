@@ -1,5 +1,5 @@
 {
-  "last_updated_utc": "2026-10-31T00:04:52.410548+00:00",
+  "last_updated_utc": "2026-10-31T15:37:39.657700+00:00",
   "source": "Department of Water and Sanitation (DWS) South Africa",
   "source_url": "https://www.dws.gov.za/Hydrology/",
   "record_count": 448,
@@ -22,7 +22,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 1.0
+      "rain_fall": 0.5
     },
     {
       "gauge": "Binfield Dam",
@@ -42,7 +42,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.0
+      "rain_fall": 1.5
     },
     {
       "gauge": "Boesmanskrantz Dam",
@@ -62,7 +62,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Boesmanskrantz Dam",
@@ -82,7 +82,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Bridle Drift Dam",
@@ -102,7 +102,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.3
+      "rain_fall": 1.0
     },
     {
       "gauge": "Cata Dam",
@@ -122,7 +122,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.1
+      "rain_fall": 2.6
     },
     {
       "gauge": "Corana Dam",
@@ -142,7 +142,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Darlington Dam",
@@ -162,7 +162,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 5.1
+      "rain_fall": 0.1
     },
     {
       "gauge": "De Mistkraal Dam",
@@ -182,7 +182,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Debe Dam",
@@ -202,7 +202,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Doornrivier Dam",
@@ -222,7 +222,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Elands Drift Dam",
@@ -242,7 +242,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Elandsdrift Dam",
@@ -262,7 +262,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 1.1
+      "rain_fall": 2.8
     },
     {
       "gauge": "Glen Melville Dam",
@@ -282,7 +282,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Glen Melville Dam",
@@ -302,7 +302,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Grassridge Dam",
@@ -322,7 +322,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.2
+      "rain_fall": 0.6
     },
     {
       "gauge": "Groendal Dam",
@@ -362,7 +362,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.0
+      "rain_fall": 6.3
     },
     {
       "gauge": "Impofu Dam",
@@ -382,7 +382,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.5
+      "rain_fall": 0.3
     },
     {
       "gauge": "Jozanashoek Dam",
@@ -402,7 +402,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Katrivier Dam",
@@ -422,7 +422,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.2
+      "rain_fall": 4.7
     },
     {
       "gauge": "Kommandodrift Dam",
@@ -442,7 +442,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 1.8
+      "rain_fall": 0.3
     },
     {
       "gauge": "Kouga Dam",
@@ -482,7 +482,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Laing Dam",
@@ -502,7 +502,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.1
+      "rain_fall": 0.5
     },
     {
       "gauge": "Lake Arthur Dam",
@@ -522,7 +522,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.2
+      "rain_fall": 0.9
     },
     {
       "gauge": "Loerie Dam",
@@ -542,7 +542,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.3
+      "rain_fall": 0.0
     },
     {
       "gauge": "Lubisi Dam",
@@ -562,7 +562,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.5
+      "rain_fall": 0.8
     },
     {
       "gauge": "Mabeleni Dam",
@@ -582,7 +582,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.2
+      "rain_fall": 1.5
     },
     {
       "gauge": "Macubeni Dam",
@@ -602,7 +602,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Macubeni Dam",
@@ -622,7 +622,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Mlanga Dam",
@@ -642,7 +642,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.1
+      "rain_fall": 1.0
     },
     {
       "gauge": "Mnyameni Dam",
@@ -662,7 +662,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Nahoon Dam",
@@ -682,7 +682,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.3
+      "rain_fall": 1.4
     },
     {
       "gauge": "Ncora Dam",
@@ -722,7 +722,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.2
+      "rain_fall": 1.9
     },
     {
       "gauge": "Nqweba Dam",
@@ -742,7 +742,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Ntenetyana Dam",
@@ -762,7 +762,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Nuwejaars Dam",
@@ -782,7 +782,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 4.6
+      "rain_fall": 0.4
     },
     {
       "gauge": "Oxkraal Dam",
@@ -802,7 +802,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Rooikrans Dam",
@@ -822,7 +822,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Sandile Dam",
@@ -842,7 +842,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.0
+      "rain_fall": 1.0
     },
     {
       "gauge": "Tsojana Dam",
@@ -862,7 +862,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.3
+      "rain_fall": 1.7
     },
     {
       "gauge": "Umtata Dam",
@@ -882,7 +882,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.0
+      "rain_fall": 0.4
     },
     {
       "gauge": "Waterdown Dam",
@@ -902,7 +902,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 1.3
+      "rain_fall": 0.9
     },
     {
       "gauge": "Wriggleswade Dam",
@@ -922,7 +922,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.0
+      "rain_fall": 4.4
     },
     {
       "gauge": "Xonxa Dam",
@@ -942,7 +942,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.7
     },
     {
       "gauge": "Belfort Dam",
@@ -962,7 +962,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 1.0
+      "rain_fall": 0.5
     },
     {
       "gauge": "Binfield Dam",
@@ -982,7 +982,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.0
+      "rain_fall": 1.5
     },
     {
       "gauge": "Boesmanskrantz Dam",
@@ -1002,7 +1002,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Boesmanskrantz Dam",
@@ -1022,7 +1022,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Bridle Drift Dam",
@@ -1042,7 +1042,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.3
+      "rain_fall": 1.0
     },
     {
       "gauge": "Cata Dam",
@@ -1062,7 +1062,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.1
+      "rain_fall": 2.6
     },
     {
       "gauge": "Corana Dam",
@@ -1082,7 +1082,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Darlington Dam",
@@ -1102,7 +1102,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 5.1
+      "rain_fall": 0.1
     },
     {
       "gauge": "De Mistkraal Dam",
@@ -1122,7 +1122,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Debe Dam",
@@ -1142,7 +1142,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Doornrivier Dam",
@@ -1162,7 +1162,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Elands Drift Dam",
@@ -1182,7 +1182,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Elandsdrift Dam",
@@ -1202,7 +1202,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 1.1
+      "rain_fall": 2.8
     },
     {
       "gauge": "Glen Melville Dam",
@@ -1222,7 +1222,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Glen Melville Dam",
@@ -1242,7 +1242,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Grassridge Dam",
@@ -1262,7 +1262,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.2
+      "rain_fall": 0.6
     },
     {
       "gauge": "Groendal Dam",
@@ -1302,7 +1302,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.0
+      "rain_fall": 6.3
     },
     {
       "gauge": "Impofu Dam",
@@ -1322,7 +1322,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.5
+      "rain_fall": 0.3
     },
     {
       "gauge": "Jozanashoek Dam",
@@ -1342,7 +1342,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Katrivier Dam",
@@ -1362,7 +1362,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.2
+      "rain_fall": 4.7
     },
     {
       "gauge": "Kommandodrift Dam",
@@ -1382,7 +1382,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 1.8
+      "rain_fall": 0.3
     },
     {
       "gauge": "Kouga Dam",
@@ -1422,7 +1422,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Laing Dam",
@@ -1442,7 +1442,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.1
+      "rain_fall": 0.5
     },
     {
       "gauge": "Lake Arthur Dam",
@@ -1462,7 +1462,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.2
+      "rain_fall": 0.9
     },
     {
       "gauge": "Loerie Dam",
@@ -1482,7 +1482,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.3
+      "rain_fall": 0.0
     },
     {
       "gauge": "Lubisi Dam",
@@ -1502,7 +1502,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.5
+      "rain_fall": 0.8
     },
     {
       "gauge": "Mabeleni Dam",
@@ -1522,7 +1522,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.2
+      "rain_fall": 1.5
     },
     {
       "gauge": "Macubeni Dam",
@@ -1542,7 +1542,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Macubeni Dam",
@@ -1562,7 +1562,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Mlanga Dam",
@@ -1582,7 +1582,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.1
+      "rain_fall": 1.0
     },
     {
       "gauge": "Mnyameni Dam",
@@ -1602,7 +1602,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Nahoon Dam",
@@ -1622,7 +1622,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.3
+      "rain_fall": 1.4
     },
     {
       "gauge": "Ncora Dam",
@@ -1662,7 +1662,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.2
+      "rain_fall": 1.9
     },
     {
       "gauge": "Nqweba Dam",
@@ -1682,7 +1682,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Ntenetyana Dam",
@@ -1702,7 +1702,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Nuwejaars Dam",
@@ -1722,7 +1722,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 4.6
+      "rain_fall": 0.4
     },
     {
       "gauge": "Oxkraal Dam",
@@ -1742,7 +1742,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Rooikrans Dam",
@@ -1762,7 +1762,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 1.7
     },
     {
       "gauge": "Sandile Dam",
@@ -1782,7 +1782,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.0
+      "rain_fall": 1.0
     },
     {
       "gauge": "Tsojana Dam",
@@ -1802,7 +1802,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.3
+      "rain_fall": 1.7
     },
     {
       "gauge": "Umtata Dam",
@@ -1822,7 +1822,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.0
+      "rain_fall": 0.4
     },
     {
       "gauge": "Waterdown Dam",
@@ -1842,7 +1842,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 1.3
+      "rain_fall": 0.9
     },
     {
       "gauge": "Wriggleswade Dam",
@@ -1862,7 +1862,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.0
+      "rain_fall": 4.4
     },
     {
       "gauge": "Xonxa Dam",
@@ -1882,7 +1882,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.7
     },
     {
       "gauge": "Allemanskraal Dam",
@@ -1942,7 +1942,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.1
     },
     {
       "gauge": "Egmont Dam",
@@ -2022,7 +2022,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.9
+      "rain_fall": 1.4
     },
     {
       "gauge": "Groothoek Dam",
@@ -2062,7 +2062,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.8
+      "rain_fall": 0.9
     },
     {
       "gauge": "Knellpoort Dam",
@@ -2222,7 +2222,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.0
+      "rain_fall": 0.3
     },
     {
       "gauge": "Vaal Dam",
@@ -2282,7 +2282,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 2.9
     },
     {
       "gauge": "Welbedacht Dam",
@@ -2362,7 +2362,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.1
     },
     {
       "gauge": "Egmont Dam",
@@ -2442,7 +2442,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.9
+      "rain_fall": 1.4
     },
     {
       "gauge": "Groothoek Dam",
@@ -2482,7 +2482,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.8
+      "rain_fall": 0.9
     },
     {
       "gauge": "Knellpoort Dam",
@@ -2642,7 +2642,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.0
+      "rain_fall": 0.3
     },
     {
       "gauge": "Vaal Dam",
@@ -2702,7 +2702,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 2.9
     },
     {
       "gauge": "Welbedacht Dam",
@@ -2742,7 +2742,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 0.0
     },
     {
       "gauge": "Bronkhorstspruit Dam",
@@ -2762,7 +2762,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 0.2
     },
     {
       "gauge": "Klipdrift Dam",
@@ -2802,7 +2802,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.8
+      "rain_fall": 1.1
     },
     {
       "gauge": "Roodeplaat Dam",
@@ -2822,7 +2822,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.0
+      "rain_fall": 0.5
     },
     {
       "gauge": "Bon Accord Dam",
@@ -2842,7 +2842,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 0.0
     },
     {
       "gauge": "Bronkhorstspruit Dam",
@@ -2862,7 +2862,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.6
+      "rain_fall": 0.2
     },
     {
       "gauge": "Klipdrift Dam",
@@ -2902,7 +2902,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.8
+      "rain_fall": 1.1
     },
     {
       "gauge": "Roodeplaat Dam",
@@ -2922,7 +2922,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.0
+      "rain_fall": 0.5
     },
     {
       "gauge": "Albert Falls Dam",
@@ -2982,7 +2982,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.3
+      "rain_fall": 1.0
     },
     {
       "gauge": "Driel Barrage Dam",
@@ -3002,7 +3002,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 1.8
+      "rain_fall": 1.1
     },
     {
       "gauge": "Goedertrouw Dam",
@@ -3182,7 +3182,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.2
+      "rain_fall": 0.7
     },
     {
       "gauge": "Pongolapoort Dam",
@@ -3222,7 +3222,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 1.0
+      "rain_fall": 0.5
     },
     {
       "gauge": "Spring Grove Dam",
@@ -3262,7 +3262,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.3
+      "rain_fall": 0.7
     },
     {
       "gauge": "Woodstock Dam",
@@ -3282,7 +3282,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.7
+      "rain_fall": 0.0
     },
     {
       "gauge": "Zaaihoek Dam",
@@ -3302,7 +3302,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 1.3
     },
     {
       "gauge": "Albert Falls Dam",
@@ -3362,7 +3362,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.3
+      "rain_fall": 1.0
     },
     {
       "gauge": "Driel Barrage Dam",
@@ -3382,7 +3382,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 1.8
+      "rain_fall": 1.1
     },
     {
       "gauge": "Goedertrouw Dam",
@@ -3562,7 +3562,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.2
+      "rain_fall": 0.7
     },
     {
       "gauge": "Pongolapoort Dam",
@@ -3602,7 +3602,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 1.0
+      "rain_fall": 0.5
     },
     {
       "gauge": "Spring Grove Dam",
@@ -3642,7 +3642,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.3
+      "rain_fall": 0.7
     },
     {
       "gauge": "Woodstock Dam",
@@ -3662,7 +3662,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.7
+      "rain_fall": 0.0
     },
     {
       "gauge": "Zaaihoek Dam",
@@ -3682,7 +3682,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 1.3
     },
     {
       "gauge": "Albasini Dam",
@@ -3742,7 +3742,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 2.5
+      "rain_fall": 2.2
     },
     {
       "gauge": "Doorndraai Dam",
@@ -3802,7 +3802,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.9
+      "rain_fall": 0.0
     },
     {
       "gauge": "Glen Alpine Dam",
@@ -4142,7 +4142,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.8
+      "rain_fall": 0.0
     },
     {
       "gauge": "Tours Dam",
@@ -4222,7 +4222,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.0
     },
     {
       "gauge": "Vondo Dam",
@@ -4322,7 +4322,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 2.5
+      "rain_fall": 2.2
     },
     {
       "gauge": "Doorndraai Dam",
@@ -4382,7 +4382,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.9
+      "rain_fall": 0.0
     },
     {
       "gauge": "Glen Alpine Dam",
@@ -4722,7 +4722,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.8
+      "rain_fall": 0.0
     },
     {
       "gauge": "Tours Dam",
@@ -4802,7 +4802,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.0
     },
     {
       "gauge": "Vondo Dam",
@@ -4862,7 +4862,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.1
+      "rain_fall": 0.0
     },
     {
       "gauge": "Buffelskloof Dam",
@@ -4942,7 +4942,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.9
+      "rain_fall": 0.0
     },
     {
       "gauge": "Heyshope Dam",
@@ -4962,7 +4962,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.7
     },
     {
       "gauge": "Inyaka Dam",
@@ -4982,7 +4982,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.1
+      "rain_fall": 0.0
     },
     {
       "gauge": "Jericho Dam",
@@ -5002,7 +5002,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.2
+      "rain_fall": 0.3
     },
     {
       "gauge": "Klipkopjes Dam",
@@ -5042,7 +5042,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.3
+      "rain_fall": 0.7
     },
     {
       "gauge": "Longmere Dam",
@@ -5062,7 +5062,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.1
+      "rain_fall": 0.0
     },
     {
       "gauge": "Loskop Dam",
@@ -5082,7 +5082,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 2.5
+      "rain_fall": 0.0
     },
     {
       "gauge": "Middelburg Dam",
@@ -5102,7 +5102,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.3
+      "rain_fall": 0.9
     },
     {
       "gauge": "Morgenstond Dam",
@@ -5122,7 +5122,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.1
+      "rain_fall": 0.2
     },
     {
       "gauge": "Nooitgedacht Dam",
@@ -5222,7 +5222,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.1
+      "rain_fall": 0.0
     },
     {
       "gauge": "Westoe Dam",
@@ -5242,7 +5242,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.0
+      "rain_fall": 0.5
     },
     {
       "gauge": "Witbank Dam",
@@ -5262,7 +5262,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.3
     },
     {
       "gauge": "Witklip Dam",
@@ -5302,7 +5302,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.1
+      "rain_fall": 0.0
     },
     {
       "gauge": "Buffelskloof Dam",
@@ -5382,7 +5382,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.9
+      "rain_fall": 0.0
     },
     {
       "gauge": "Heyshope Dam",
@@ -5402,7 +5402,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.7
     },
     {
       "gauge": "Inyaka Dam",
@@ -5422,7 +5422,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.1
+      "rain_fall": 0.0
     },
     {
       "gauge": "Jericho Dam",
@@ -5442,7 +5442,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.2
+      "rain_fall": 0.3
     },
     {
       "gauge": "Klipkopjes Dam",
@@ -5482,7 +5482,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.3
+      "rain_fall": 0.7
     },
     {
       "gauge": "Longmere Dam",
@@ -5502,7 +5502,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.1
+      "rain_fall": 0.0
     },
     {
       "gauge": "Loskop Dam",
@@ -5522,7 +5522,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 2.5
+      "rain_fall": 0.0
     },
     {
       "gauge": "Middelburg Dam",
@@ -5542,7 +5542,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.3
+      "rain_fall": 0.9
     },
     {
       "gauge": "Morgenstond Dam",
@@ -5562,7 +5562,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.1
+      "rain_fall": 0.2
     },
     {
       "gauge": "Nooitgedacht Dam",
@@ -5662,7 +5662,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.1
+      "rain_fall": 0.0
     },
     {
       "gauge": "Westoe Dam",
@@ -5682,7 +5682,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.0
+      "rain_fall": 0.5
     },
     {
       "gauge": "Witbank Dam",
@@ -5702,7 +5702,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.3
     },
     {
       "gauge": "Witklip Dam",
@@ -5742,7 +5742,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 2.1
+      "rain_fall": 2.2
     },
     {
       "gauge": "Douglas Weir Dam",
@@ -5762,7 +5762,7 @@
       "date": "2026-10-26",
       "status": "major",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 1.7
+      "rain_fall": 6.4
     },
     {
       "gauge": "Karee Dam",
@@ -5782,7 +5782,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.3
+      "rain_fall": 0.5
     },
     {
       "gauge": "Leeubos Dam",
@@ -5802,7 +5802,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.9
+      "rain_fall": 1.4
     },
     {
       "gauge": "Spitskop Dam",
@@ -5822,7 +5822,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.5
+      "rain_fall": 1.4
     },
     {
       "gauge": "Vaalharts Weir Dam",
@@ -5842,7 +5842,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 1.7
+      "rain_fall": 6.4
     },
     {
       "gauge": "Boegoeberg Dam",
@@ -5862,7 +5862,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 2.1
+      "rain_fall": 2.2
     },
     {
       "gauge": "Douglas Weir Dam",
@@ -5882,7 +5882,7 @@
       "date": "2026-10-26",
       "status": "major",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 1.7
+      "rain_fall": 6.4
     },
     {
       "gauge": "Karee Dam",
@@ -5902,7 +5902,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.3
+      "rain_fall": 0.5
     },
     {
       "gauge": "Leeubos Dam",
@@ -5922,7 +5922,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.9
+      "rain_fall": 1.4
     },
     {
       "gauge": "Spitskop Dam",
@@ -5942,7 +5942,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.5
+      "rain_fall": 1.4
     },
     {
       "gauge": "Vaalharts Weir Dam",
@@ -5962,7 +5962,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 1.7
+      "rain_fall": 6.4
     },
     {
       "gauge": "Boskop Dam",
@@ -5982,7 +5982,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.0
+      "rain_fall": 0.1
     },
     {
       "gauge": "Bospoort Dam",
@@ -6082,7 +6082,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.1
+      "rain_fall": 0.0
     },
     {
       "gauge": "Johan Neser Dam",
@@ -6102,7 +6102,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.1
+      "rain_fall": 0.4
     },
     {
       "gauge": "Klein-Maricopoort Dam",
@@ -6502,7 +6502,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.1
     },
     {
       "gauge": "Vaalkop Dam",
@@ -6542,7 +6542,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.0
+      "rain_fall": 0.1
     },
     {
       "gauge": "Bospoort Dam",
@@ -6642,7 +6642,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.1
+      "rain_fall": 0.0
     },
     {
       "gauge": "Johan Neser Dam",
@@ -6662,7 +6662,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.1
+      "rain_fall": 0.4
     },
     {
       "gauge": "Klein-Maricopoort Dam",
@@ -7062,7 +7062,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.1
     },
     {
       "gauge": "Vaalkop Dam",
@@ -7162,7 +7162,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.7
+      "rain_fall": 1.7
     },
     {
       "gauge": "Bulshoek Dam",
@@ -7182,7 +7182,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.0
+      "rain_fall": 0.1
     },
     {
       "gauge": "Calitzdorp Dam",
@@ -7322,7 +7322,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 2.2
+      "rain_fall": 3.3
     },
     {
       "gauge": "Duiwenhoks Dam",
@@ -7342,7 +7342,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 1.0
+      "rain_fall": 0.9
     },
     {
       "gauge": "Eikenhof Dam",
@@ -7362,7 +7362,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 2.5
+      "rain_fall": 2.2
     },
     {
       "gauge": "Elandskloof Dam",
@@ -7382,7 +7382,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.5
+      "rain_fall": 0.4
     },
     {
       "gauge": "Ernest Robertson Dam",
@@ -7402,7 +7402,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.2
+      "rain_fall": 0.0
     },
     {
       "gauge": "Floriskraal Dam",
@@ -7442,7 +7442,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 2.9
+      "rain_fall": 0.1
     },
     {
       "gauge": "Gamkapoort Dam",
@@ -7482,7 +7482,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.3
+      "rain_fall": 0.1
     },
     {
       "gauge": "Haarlem Dam",
@@ -7502,7 +7502,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.0
     },
     {
       "gauge": "Hartebeestkuil Dam",
@@ -7522,7 +7522,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.0
     },
     {
       "gauge": "Kammanassie Dam",
@@ -7622,7 +7622,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.0
     },
     {
       "gauge": "Kwaggaskloof Dam",
@@ -7682,7 +7682,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.0
+      "rain_fall": 0.4
     },
     {
       "gauge": "Miertjieskraal Dam",
@@ -7762,7 +7762,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 4.0
+      "rain_fall": 2.8
     },
     {
       "gauge": "Poortjieskloof Dam",
@@ -7782,7 +7782,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.5
+      "rain_fall": 0.7
     },
     {
       "gauge": "Prinsrivier Dam",
@@ -7802,7 +7802,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.1
+      "rain_fall": 0.7
     },
     {
       "gauge": "Roode Els Berg Dam",
@@ -7822,7 +7822,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.0
     },
     {
       "gauge": "Roodefontein Dam",
@@ -7842,7 +7842,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.0
     },
     {
       "gauge": "Steenbras-Lower Dam",
@@ -7862,7 +7862,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.0
     },
     {
       "gauge": "Steenbras-Upper Dam",
@@ -7882,7 +7882,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.0
     },
     {
       "gauge": "Stettynskloof Dam",
@@ -7942,7 +7942,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 1.6
+      "rain_fall": 1.4
     },
     {
       "gauge": "Tierkloof Dam",
@@ -7962,7 +7962,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.0
     },
     {
       "gauge": "Voelvlei Dam",
@@ -8022,7 +8022,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.0
     },
     {
       "gauge": "Bellair Dam",
@@ -8102,7 +8102,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.7
+      "rain_fall": 1.7
     },
     {
       "gauge": "Bulshoek Dam",
@@ -8122,7 +8122,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.0
+      "rain_fall": 0.1
     },
     {
       "gauge": "Calitzdorp Dam",
@@ -8262,7 +8262,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 2.2
+      "rain_fall": 3.3
     },
     {
       "gauge": "Duiwenhoks Dam",
@@ -8282,7 +8282,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 1.0
+      "rain_fall": 0.9
     },
     {
       "gauge": "Eikenhof Dam",
@@ -8302,7 +8302,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 2.5
+      "rain_fall": 2.2
     },
     {
       "gauge": "Elandskloof Dam",
@@ -8322,7 +8322,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.5
+      "rain_fall": 0.4
     },
     {
       "gauge": "Ernest Robertson Dam",
@@ -8342,7 +8342,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.2
+      "rain_fall": 0.0
     },
     {
       "gauge": "Floriskraal Dam",
@@ -8382,7 +8382,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 2.9
+      "rain_fall": 0.1
     },
     {
       "gauge": "Gamkapoort Dam",
@@ -8422,7 +8422,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.3
+      "rain_fall": 0.1
     },
     {
       "gauge": "Haarlem Dam",
@@ -8442,7 +8442,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.0
     },
     {
       "gauge": "Hartebeestkuil Dam",
@@ -8462,7 +8462,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.0
     },
     {
       "gauge": "Kammanassie Dam",
@@ -8562,7 +8562,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.0
     },
     {
       "gauge": "Kwaggaskloof Dam",
@@ -8622,7 +8622,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.0
+      "rain_fall": 0.4
     },
     {
       "gauge": "Miertjieskraal Dam",
@@ -8702,7 +8702,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 4.0
+      "rain_fall": 2.8
     },
     {
       "gauge": "Poortjieskloof Dam",
@@ -8722,7 +8722,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.5
+      "rain_fall": 0.7
     },
     {
       "gauge": "Prinsrivier Dam",
@@ -8742,7 +8742,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.1
+      "rain_fall": 0.7
     },
     {
       "gauge": "Roode Els Berg Dam",
@@ -8762,7 +8762,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.0
     },
     {
       "gauge": "Roodefontein Dam",
@@ -8782,7 +8782,7 @@
       "date": "2026-10-26",
       "status": "alert",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.0
     },
     {
       "gauge": "Steenbras-Lower Dam",
@@ -8802,7 +8802,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.0
     },
     {
       "gauge": "Steenbras-Upper Dam",
@@ -8822,7 +8822,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.0
     },
     {
       "gauge": "Stettynskloof Dam",
@@ -8882,7 +8882,7 @@
       "date": "2026-10-26",
       "status": "normal",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 1.6
+      "rain_fall": 1.4
     },
     {
       "gauge": "Tierkloof Dam",
@@ -8902,7 +8902,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.0
     },
     {
       "gauge": "Voelvlei Dam",
@@ -8962,7 +8962,7 @@
       "date": "2026-10-26",
       "status": "minor",
       "source": "Department of Water and Sanitation (DWS) South Africa",
-      "rain_fall": 0.4
+      "rain_fall": 0.0
     }
   ]
 }

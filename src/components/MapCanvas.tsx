@@ -45,14 +45,23 @@ export function MapCanvas({
         worldCopyJump: true,
       });
       m.attributionControl.setPrefix(false);
-      leaflet
-        .tileLayer("https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png", {
+      // The CARTO basemap load is optional: if it is blocked or offline the
+      // stations and region outlines are still drawn on the themed canvas.
+      const tiles = leaflet.tileLayer(
+        "https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png",
+        {
           attribution:
             '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a> · DWS South Africa',
           maxZoom: 18,
           className: "map-tiles",
-        })
-        .addTo(m);
+          errorTileUrl:
+            "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+        },
+      );
+      tiles.on("tileerror", () => {
+        m.getContainer()?.classList.add("map--tiles-offline");
+      });
+      tiles.addTo(m);
       group.current = leaflet.layerGroup().addTo(m);
       map.current = m;
       // give the tile pane our theme filter
@@ -126,9 +135,9 @@ export function MapCanvas({
         leaflet
           .circleMarker([s.latitude, s.longitude], {
             radius: Math.min(26, 4 + Math.sqrt(s.rain_fall) * 3.2),
-            color: "var(--ui-info)",
+            color: "#3c86ff",
             weight: 1,
-            fillColor: "var(--ui-info)",
+            fillColor: "#3c86ff",
             fillOpacity: 0.08,
             interactive: false,
           })
