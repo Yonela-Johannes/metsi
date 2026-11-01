@@ -233,35 +233,41 @@ export function Ticker() {
 
   return (
     <div className="ticker" role="region" aria-label="Latest readings">
-      <div className="ticker__label">
-        <Icon name="activity" size={15} /> Latest readings
+      <div className="ticker__inner">
+        <div className="ticker__label">
+          <Icon name="activity" size={15} /> Latest readings
+        </div>
+        <div
+          className="ticker__track"
+          tabIndex={0}
+          aria-label="Scrollable list of latest readings"
+        >
+          {items.map((s, i) => (
+            <button
+              key={`${s.station_id}-${s.gauge}-${i}`}
+              type="button"
+              className="ticker__item"
+              onClick={() => setSelected(s)}
+            >
+              <span
+                className="dot"
+                style={{ color: STATUS_META[s.status].token }}
+                aria-hidden="true"
+              />
+              <span className="ticker__name">{s.gauge}</span>
+              <span className="num ticker__val">
+                {s.water_level.toFixed(1)}%
+              </span>
+              <Delta
+                value={s.water_level - s.last_week_lvl}
+                unit=""
+                withSr={false}
+              />
+            </button>
+          ))}
+        </div>
+        <span className="ticker__time faint num">{time} UTC</span>
       </div>
-      <div
-        className="ticker__track"
-        tabIndex={0}
-        aria-label="Scrollable list of latest readings"
-      >
-        {items.map((s, i) => (
-          <button
-            key={`${s.station_id}-${s.gauge}-${i}`}
-            type="button"
-            className="ticker__item"
-            onClick={() => setSelected(s)}
-          >
-            <span
-              className="dot"
-              style={{ color: STATUS_META[s.status].token }}
-              aria-hidden="true"
-            />
-            <span className="ticker__name">{s.gauge}</span>
-            <span className="num ticker__val">
-              {s.water_level.toFixed(1)}%
-            </span>
-            <Delta value={s.water_level - s.last_week_lvl} unit="" />
-          </button>
-        ))}
-      </div>
-      <span className="ticker__time faint num">{time} UTC</span>
     </div>
   );
 }

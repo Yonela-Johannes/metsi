@@ -265,6 +265,7 @@ interface Ctx {
   records: Station[];
   d: Derived;
   lastFetched: number | null;
+  refreshing: boolean;
   refresh: (manual?: boolean) => Promise<void>;
   saveStation: (name: string) => void;
   selected: Station | null;
@@ -290,8 +291,10 @@ export function DashboardProvider({
   const [state, dispatch] = useReducer(reducer, initial);
   const [dataset, setDataset] = useState<GaugeDataset>(initialData);
   const [lastFetched, setLastFetched] = useState<number | null>(null);
+  const [refreshing, setRefreshing] = useState(false);
   const [selected, setSelected] = useState<Station | null>(null);
   const timer = useRef<number | null>(null);
+  const inFlight = useRef(false);
 
   useEffect(() => {
     const initial = viewFromSearch(window.location.search);
@@ -318,6 +321,10 @@ export function DashboardProvider({
 
   const refresh = useCallback(
     async (manual = false) => {
+      // never stack overlapping polls on a slow connection
+      if (inFlight.current) return;
+      inFlight.current = true;
+      if (manual) setRefreshing(true);
       try {
         const res = await fetch(`${LIVE_DATA_URL}?t=${Date.now()}`, {
           cache: "no-store",
@@ -329,22 +336,31 @@ export function DashboardProvider({
             new CustomEvent("sa-toast", { detail: "Live DWS data refreshed." }),
           );
       } catch {
+        let recovered = false;
         try {
           const cached = sessionStorage.getItem(CACHE_KEY);
           if (cached) {
-            applyDataset(JSON.parse(cached) as GaugeDataset, true);
-          } else {
-            dispatch({ type: "status", status: "error" });
+            const parsed = JSON.parse(cached) as GaugeDataset;
+            if (Array.isArray(parsed?.records) && parsed.records.length) {
+              applyDataset(parsed, true);
+              recovered = true;
+            }
           }
         } catch {
-          dispatch({ type: "status", status: "error" });
+          /* corrupt cache — fall through to the error state */
         }
+        // The server-rendered dataset is still on screen, so a failed poll
+        // only becomes an outright error when there is nothing to show.
+        if (!recovered) dispatch({ type: "status", status: "error" });
         if (manual)
           window.dispatchEvent(
             new CustomEvent("sa-toast", {
               detail: "Network unavailable — showing the last saved dataset.",
             }),
           );
+      } finally {
+        inFlight.current = false;
+        if (manual) setRefreshing(false);
       }
     },
     [applyDataset],
@@ -379,12 +395,23 @@ export function DashboardProvider({
       records,
       d,
       lastFetched,
+      refreshing,
       refresh,
       saveStation,
       selected,
       setSelected,
     }),
-    [state, dataset, records, d, lastFetched, refresh, saveStation, selected],
+    [
+      state,
+      dataset,
+      records,
+      d,
+      lastFetched,
+      refreshing,
+      refresh,
+      saveStation,
+      selected,
+    ],
   );
 
   return (

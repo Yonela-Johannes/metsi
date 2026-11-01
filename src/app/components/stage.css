@@ -7,32 +7,31 @@
   padding-top: 14px;
 }
 
+/* Single column on small screens: the strips flow first, then the canvas and
+   the rail. No explicit grid-row here — placing both children on row 2 would
+   create a second implicit column and squeeze the page. */
 .hero-rail {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   min-width: 0;
   gap: 14px;
   align-content: start;
-  grid-row: 2;
 }
 
 .hero-main {
   position: relative;
   min-width: 0;
-  grid-row: 2;
-}
-
-@media (min-width: 900px) {
-  .hero-rail,
-  .hero-main {
-    grid-row: 1;
-  }
 }
 
 @media (min-width: 900px) {
   .hero-grid {
     grid-template-columns: minmax(0, 1fr) 336px;
     align-items: stretch;
+  }
+
+  .hero-rail,
+  .hero-main {
+    grid-row: 1;
   }
 }
 
@@ -78,13 +77,21 @@
   z-index: 1;
 }
 
+/* neutral skeleton while the Leaflet bundle loads — no fake coastline */
 .stage-map__loading {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at 30% 40%, var(--ui-land) 0 12%, transparent 12.5%),
-    radial-gradient(circle at 62% 64%, var(--ui-land) 0 10%, transparent 10.5%),
-    var(--ui-map-bg);
+  background: var(--ui-map-bg)
+    repeating-linear-gradient(
+      0deg,
+      color-mix(in srgb, var(--ui-coast) 18%, transparent) 0 1px,
+      transparent 1px 96px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--ui-coast) 18%, transparent) 0 1px,
+      transparent 1px 96px
+    );
 }
 
 .stage .leaflet-container {

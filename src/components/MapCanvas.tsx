@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import type * as LType from "leaflet";
+import "leaflet/dist/leaflet.css";
 import { STATUS_META } from "@/lib/types";
 import type { Station } from "@/lib/types";
 

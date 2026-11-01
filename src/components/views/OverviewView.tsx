@@ -10,7 +10,8 @@ import { Delta, MiniBars, StatusBadge } from "../visuals";
 const ORDER: FloodStatus[] = ["normal", "alert", "minor", "major"];
 
 export function OverviewView() {
-  const { d, records, setSelected, dataset, refresh, dispatch } = useDashboard();
+  const { d, records, setSelected, refresh, refreshing, dispatch } =
+    useDashboard();
   const total = d.total || 1;
   const top = [...records]
     .filter((r) => r.status !== "normal")
@@ -72,16 +73,23 @@ export function OverviewView() {
           </span>
           <h2>National picture at a glance</h2>
           <p className="muted">
-            {d.total} gauges · reading of {formatDate(records[0]?.date)} ·
-            source {dataset.source}
+            {d.total} gauges · DWS reading of {formatDate(records[0]?.date)}
           </p>
         </div>
         <button
           type="button"
           className="ui-btn ui-btn--secondary ui-btn--sm"
           onClick={() => refresh(true)}
+          disabled={refreshing}
+          aria-busy={refreshing}
+          title="Fetch the latest DWS reading"
         >
-          <Icon name="refresh" size={14} /> Refresh data
+          <Icon
+            name="refresh"
+            size={14}
+            className={refreshing ? "is-spinning" : undefined}
+          />
+          {refreshing ? "Refreshing…" : "Refresh data"}
         </button>
       </div>
 

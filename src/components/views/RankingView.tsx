@@ -48,6 +48,7 @@ export function RankingView({ kind }: Props) {
           className="ui-btn ui-btn--secondary ui-btn--sm"
           href="/data/gauges_2_view.csv"
           download
+          title="Download the full station dataset as CSV"
         >
           <Icon name="download" size={14} /> Export CSV
         </a>
@@ -117,8 +118,10 @@ export function RankingView({ kind }: Props) {
         </ol>
         {kind === "water-level" ? (
           <p className="faint rank-bars__foot">
-            Ticks mark the 80%, 100% and 110% thresholds. Colour follows the
-            gauge status.
+            <span className="rank-bars__key">
+              Ticks: 80% alert · 100% minor flood · 110% major flood
+            </span>
+            <span>Colour follows the gauge status.</span>
           </p>
         ) : null}
       </section>

@@ -180,6 +180,16 @@ textarea {
   height: 14px;
 }
 
+@keyframes ui-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.icon.is-spinning {
+  animation: ui-spin 0.9s linear infinite;
+}
+
 .muted {
   color: var(--ui-muted);
 }
@@ -284,6 +294,16 @@ textarea {
   padding: 0 12px;
   font-size: 13px;
   border-radius: var(--ui-r-chip);
+}
+
+.ui-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: none;
+}
+
+.ui-btn--secondary:disabled:hover {
+  background: transparent;
 }
 
 .ui-link {

@@ -30,12 +30,14 @@ export function pct(part: number, whole: number): number {
 export function formatUtc(iso: string | undefined): string {
   if (!iso) return "—";
   const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "—";
   return `${d.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "UTC" })} UTC`;
 }
 
 export function formatDate(iso: string | undefined): string {
   if (!iso) return "—";
-  const d = new Date(`${iso}T00:00:00Z`);
+  // dates arrive as YYYY-MM-DD; a full ISO timestamp is also accepted
+  const d = new Date(iso.length > 10 ? iso : `${iso}T00:00:00Z`);
   if (Number.isNaN(d.getTime())) return iso;
   return d.toLocaleDateString("en-ZA", {
     day: "2-digit",
@@ -43,6 +45,11 @@ export function formatDate(iso: string | undefined): string {
     year: "numeric",
     timeZone: "UTC",
   });
+}
+
+/** Guard against a record arriving without a usable reading. */
+export function levelOf(s: Station): number {
+  return Number.isFinite(s.water_level) ? s.water_level : 0;
 }
 
 export function median(values: number[]): number {

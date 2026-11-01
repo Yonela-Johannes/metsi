@@ -165,13 +165,33 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  /* without a definite width the inner scroll strip sizes the whole document */
+  width: 100%;
   max-width: 100%;
   min-width: 0;
   margin-top: 14px;
   border-block: 1px solid var(--ui-border);
   background: var(--ui-panel-alt);
-  padding: 0 16px;
   overflow: hidden;
+  contain: inline-size;
+}
+
+/* the ticker is a full-bleed band, so its inner strip is padded separately */
+.ticker__inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: var(--ui-maxw);
+  min-width: 0;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+@media (min-width: 600px) {
+  .ticker__inner {
+    padding-inline: 22px;
+  }
 }
 
 .ticker__label {
@@ -191,8 +211,6 @@
 .ticker__track {
   display: flex;
   gap: 10px;
-  /* without min-width:0 a flex child refuses to shrink below its content,
-     which blew the whole document out to 8× the viewport on mobile */
   min-width: 0;
   overflow-x: auto;
   overscroll-behavior-x: contain;
@@ -200,6 +218,8 @@
   flex: 1;
   scrollbar-width: none;
   scroll-snap-type: x proximity;
+  /* anchors absolutely positioned (screen-reader) children inside the strip */
+  position: relative;
 }
 
 .ticker__track::-webkit-scrollbar {

@@ -22,7 +22,16 @@ export function StatusBadge({
   );
 }
 
-export function Delta({ value, unit = "%" }: { value: number; unit?: string }) {
+export function Delta({
+  value,
+  unit = "%",
+  withSr = true,
+}: {
+  value: number;
+  unit?: string;
+  /** screen-reader text describing direction — off inside scroll strips */
+  withSr?: boolean;
+}) {
   const dir = value > 0.05 ? "up" : value < -0.05 ? "down" : "flat";
   const sign = dir === "up" ? "+" : "";
   return (
@@ -30,9 +39,15 @@ export function Delta({ value, unit = "%" }: { value: number; unit?: string }) {
       {dir === "up" ? <Icon name="trend" size={12} /> : null}
       {sign}
       {value.toFixed(1)} {unit}
-      <span className="sr">
-        {dir === "up" ? " rising" : dir === "down" ? " falling" : " unchanged"}
-      </span>
+      {withSr ? (
+        <span className="sr">
+          {dir === "up"
+            ? " rising"
+            : dir === "down"
+              ? " falling"
+              : " unchanged"}
+        </span>
+      ) : null}
     </span>
   );
 }

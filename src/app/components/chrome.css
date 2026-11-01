@@ -775,7 +775,9 @@ details[open] > summary .sheet-acc__chev {
 
 /* ============================ ALERT STRIPS ============================ */
 .strips {
+  /* as a grid item, an auto track otherwise shrinks to the widest word */
   width: 100%;
+  min-width: 0;
 }
 
 .strip {
@@ -840,9 +842,28 @@ details[open] > summary .sheet-acc__chev {
   gap: 8px;
   flex-wrap: nowrap;
   overflow-x: auto;
+  /* keep the cards bleeding to the viewport edge while scrolling */
+  margin-inline: -16px;
+  padding-inline: 16px;
+  scroll-padding-inline: 16px;
   padding-block: 10px;
   scrollbar-width: none;
   background: var(--ui-panel-alt);
+}
+
+@media (min-width: 600px) {
+  .strip--chips {
+    margin-inline: -22px;
+    padding-inline: 22px;
+    scroll-padding-inline: 22px;
+  }
+}
+
+@media (min-width: 990px) {
+  .strip--chips {
+    margin-inline: 0;
+    padding-inline: 0;
+  }
 }
 
 .strip--chips::-webkit-scrollbar {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useDashboard, VIEWS } from "@/lib/dashboard";
+import { Icon } from "./Icon";
 import { AlertsView } from "./views/AlertsView";
 import { BasinsView } from "./views/BasinsView";
 import { MapView } from "./views/MapView";
@@ -25,7 +26,9 @@ function Panel({ id, children }: { id: string; children: React.ReactNode }) {
 
 /** The eight original dashboard views, now driven by the shared store. */
 export function Dashboard() {
-  const { state } = useDashboard();
+  const { state, records, refresh, lastFetched } = useDashboard();
+  const failed = state.status === "error" && records.length === 0;
+  const stale = state.status === "error" && records.length > 0;
 
   return (
     <section
@@ -33,6 +36,39 @@ export function Dashboard() {
       className="dashboard ui-wrap"
       aria-label="Dashboard"
     >
+      {failed ? (
+        <div className="data-state data-state--error" role="alert">
+          <Icon name="warning" size={17} />
+          <p>
+            <strong>Monitoring data could not be loaded.</strong> The DWS feed
+            is unreachable and no saved copy is available in this session.
+          </p>
+          <button
+            type="button"
+            className="ui-btn ui-btn--secondary ui-btn--sm"
+            onClick={() => refresh(true)}
+          >
+            <Icon name="refresh" size={14} /> Try again
+          </button>
+        </div>
+      ) : stale ? (
+        <div className="data-state data-state--warn" role="status">
+          <Icon name="info" size={17} />
+          <p>
+            <strong>Showing the last saved reading.</strong> The live DWS feed
+            could not be reached
+            {lastFetched ? " just now" : ""} — figures below may be stale.
+          </p>
+          <button
+            type="button"
+            className="ui-btn ui-btn--secondary ui-btn--sm"
+            onClick={() => refresh(true)}
+          >
+            <Icon name="refresh" size={14} /> Retry
+          </button>
+        </div>
+      ) : null}
+
       {state.view === "overview" && (
         <Panel id="overview">
           <OverviewView />
