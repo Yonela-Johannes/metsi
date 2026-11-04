@@ -13,7 +13,7 @@ import { DashboardProvider } from "@/lib/dashboard";
 import { loadDataset } from "@/lib/dataset";
 import styles from "./page.module.css";
 
-export const dynamic = "force-dynamic";
+export const dynamic = "force-static";
 
 export default async function HomePage() {
   const dataset = await loadDataset();

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { loadDataset } from "@/lib/dataset";
 
-export const dynamic = "force-dynamic";
+export const dynamic = "force-static";
 
 const BASE = process.env.SITE_URL ?? "http://localhost:3000";
 

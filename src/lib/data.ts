@@ -1,7 +1,8 @@
 import type { FloodStatus, Station } from './types';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 /** Client-side revalidation: the endpoint the ingestion job writes to. */
-export const LIVE_DATA_URL = '/data/gauges_2_view.json';
+export const LIVE_DATA_URL = `${basePath}/data/gauges_2_view.json`;
 
 export function statusOf(s: Station): FloodStatus {
   if (s.status) return s.status;

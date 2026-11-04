@@ -5,7 +5,20 @@ import { StatusBadge, Delta } from "@/components/visuals";
 import { formatDate } from "@/lib/data";
 import { loadDataset } from "@/lib/dataset";
 
-export const dynamic = "force-dynamic";
+export const dynamic = "force-static";
+
+export async function generateStaticParams() {
+  const dataset = await loadDataset();
+  const seen = new Set<string>();
+  const ids: { id: string }[] = [];
+  for (const r of dataset.records) {
+    if (r.station_id && !seen.has(r.station_id)) {
+      seen.add(r.station_id);
+      ids.push({ id: r.station_id });
+    }
+  }
+  return ids;
+}
 
 export default async function StationPage({
   params,
