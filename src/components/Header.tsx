@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
+import logoImg from "../../public/logo.png";
 import { useDashboard, goToView } from "@/lib/dashboard";
 import type { ViewId } from "@/lib/dashboard";
 import { STATUS_META } from "@/lib/types";
@@ -237,7 +238,7 @@ export function Header({ alerts }: { alerts: number }) {
           aria-label="Metsi Water Monitor — home"
         >
           <Image
-            src="/logo.png"
+            src={logoImg}
             alt=""
             width={40}
             height={40}

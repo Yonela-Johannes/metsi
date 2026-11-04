@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Metsi — South Africa Water Monitor",
   description:
     "Real-time hydrological, dam-level and flood intelligence for South Africa, powered by Department of Water and Sanitation (DWS) readings.",
-  icons: { icon: "/logo.png" },
+  icons: { icon: "./logo.png" },
 };
 
 export const viewport: Viewport = {
