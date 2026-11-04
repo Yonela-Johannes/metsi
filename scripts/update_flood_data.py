@@ -9,6 +9,7 @@ South Africa and DWS ArcGIS GIS Feature Services, enriched with rainfall data.
 - Matches station coordinates & catchments from DWS ArcGIS Feature Server.
 - Fetches real-time rainfall totals (mm) for station locations via Open-Meteo.
 - Normalises readings into standard schema for the Water Monitoring Dashboard.
+- Updates README.md automated flood monitoring activity summary.
 - Writes both public/data/gauges_2_view.json and public/data/gauges_2_view.csv.
 """
 
@@ -19,7 +20,7 @@ import json
 import os
 import re
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -78,11 +79,14 @@ BROWSER_HEADERS = {
     "Upgrade-Insecure-Requests": "1",
 }
 
-# Output paths
+# Output paths & markers
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = REPO_ROOT / "public" / "data"
 JSON_OUTPUT_PATH = DATA_DIR / "gauges_2_view.json"
 CSV_OUTPUT_PATH = DATA_DIR / "gauges_2_view.csv"
+README_PATH = REPO_ROOT / "README.md"
+SUMMARY_START_MARKER = "<!-- FLOOD_DATA_SUMMARY:START -->"
+SUMMARY_END_MARKER = "<!-- FLOOD_DATA_SUMMARY:END -->"
 
 
 # ==== HELPERS ================================================================
@@ -352,7 +356,6 @@ def fetch_dws_weekly_dams(
         if parsed:
             print(f"[info] Province {code} ({prov_name}): parsed {parsed} dam records")
         else:
-            # Page was served but no table rows matched: DWS likely changed its layout.
             too_small.append(f"{code} (served page, 0 rows parsed)")
             print(f"[warn] Province {code}: page fetched but no dam rows could be parsed")
 
@@ -423,34 +426,115 @@ def enrich_stations_with_rainfall(stations: List[Dict[str, Any]]) -> None:
         s["rain_fall"] = unique_coords.get(key, 0.0)
 
 
+def generate_readme_summary(stations: List[Dict[str, Any]], utc_now_dt: datetime) -> str:
+    """Generate markdown summary for the automated README flood monitoring section."""
+    sast_offset = timezone(timedelta(hours=2))
+    sast_dt = utc_now_dt.astimezone(sast_offset)
+    formatted_time = sast_dt.strftime("%Y-%m-%d %H:%M SAST")
+
+    total = len(stations)
+    major_list = [s for s in stations if s.get("status") == "major"]
+    minor_list = [s for s in stations if s.get("status") == "minor"]
+    alert_list = [s for s in stations if s.get("status") == "alert"]
+    normal_list = [s for s in stations if s.get("status") == "normal"]
+
+    highest = max(stations, key=lambda s: s.get("water_level", 0.0)) if stations else None
+    total_fsc = sum(s.get("fsc_mcm", 0.0) for s in stations)
+    rainy_count = sum(1 for s in stations if s.get("rain_fall", 0.0) > 0)
+    max_rain_station = max(stations, key=lambda s: s.get("rain_fall", 0.0)) if stations else None
+
+    highest_str = (
+        f"**{highest.get('gauge')}** ({highest.get('water_level')}%\u00a0FSC \u2014 {highest.get('province')})"
+        if highest else "N/A"
+    )
+    max_rain_str = (
+        f"**{max_rain_station.get('gauge')}** ({max_rain_station.get('rain_fall')}\u00a0mm \u2014 {max_rain_station.get('province')})"
+        if (max_rain_station and max_rain_station.get("rain_fall", 0.0) > 0) else "None recorded"
+    )
+
+    summary = (
+        f"{SUMMARY_START_MARKER}\n"
+        f"### 🌊 Latest Flood Data Update\n\n"
+        f"> **Data Status:** Successfully Updated | **Last Refreshed:** `{formatted_time}`\n\n"
+        f"| Metric | Details |\n"
+        f"| :--- | :--- |\n"
+        f"| **Total Stations Monitored** | **{total}** DWS stations across 9 provinces |\n"
+        f"| **🔴 Major Flood Risk (≥ 110% FSC)** | **{len(major_list)}** dams |\n"
+        f"| **🟠 Minor Flood Warning (100% – 109.9%)** | **{len(minor_list)}** dams |\n"
+        f"| **🟡 Flood Alert (80% – 99.9%)** | **{len(alert_list)}** dams |\n"
+        f"| **🟢 Normal Level (< 80%)** | **{len(normal_list)}** dams |\n"
+        f"| **Highest Dam Water Level** | {highest_str} |\n"
+        f"| **Total Storage Capacity** | **{total_fsc:,.1f} MCM** |\n"
+        f"| **Stations Recording 24h Rain** | **{rainy_count}** location(s) (Peak: {max_rain_str}) |\n"
+        f"| **Live Data Feed** | [`gauges_2_view.json`](public/data/gauges_2_view.json) | [`gauges_2_view.csv`](public/data/gauges_2_view.csv) |\n\n"
+        f"*Data sourced from South Africa Department of Water and Sanitation (DWS) & Open-Meteo API.*\n"
+        f"{SUMMARY_END_MARKER}"
+    )
+
+    return summary
+
+
+def update_readme_summary(stations: List[Dict[str, Any]], utc_now_dt: datetime) -> None:
+    """Safely update the automated flood data activity summary block in README.md."""
+    if not README_PATH.exists():
+        print(f"[warn] {README_PATH} not found; skipping README summary update.")
+        return
+
+    content = README_PATH.read_text(encoding="utf-8")
+    new_summary = generate_readme_summary(stations, utc_now_dt)
+
+    if SUMMARY_START_MARKER in content and SUMMARY_END_MARKER in content:
+        pattern = re.compile(
+            re.escape(SUMMARY_START_MARKER) + r".*?" + re.escape(SUMMARY_END_MARKER),
+            re.DOTALL,
+        )
+        updated_content = pattern.sub(new_summary, content)
+    else:
+        lines = content.split("\n")
+        insert_idx = -1
+        for i, line in enumerate(lines):
+            if line.startswith("## Core capabilities"):
+                insert_idx = i
+                break
+        if insert_idx != -1:
+            updated_content = "\n".join(lines[:insert_idx]) + f"{new_summary}\n\n---\n\n" + "\n".join(lines[insert_idx:])
+        else:
+            updated_content = content + f"\n\n{new_summary}\n"
+
+    if updated_content != content:
+        README_PATH.write_text(updated_content, encoding="utf-8")
+        print(f"[info] Updated flood monitoring summary in {README_PATH}")
+    else:
+        print(f"[info] {README_PATH} summary is already up to date.")
+
+
 def write_outputs(
     stations: List[Dict[str, Any]],
     live_count: Optional[int] = None,
     status: str = "live",
     note: str = "",
     coord_matches: Optional[int] = None,
+    utc_now_dt: Optional[datetime] = None,
 ) -> None:
-    """Write normalized data payload to JSON and CSV files.
-
-    ``status`` is "live" when every record came from this run's scrape, or
-    "cached_fallback" when the scrape was blocked/empty and the previously
-    published data is being re-emitted.
-    """
+    """Write normalized data payload to JSON and CSV files."""
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-    utc_now = datetime.now(timezone.utc).isoformat()
+    utc_now_dt = utc_now_dt or datetime.now(timezone.utc)
+    utc_now = utc_now_dt.isoformat()
     if live_count is None:
         live_count = len(stations)
+
+    # Only update README activity summary if live data was fetched
+    if status == "live" and live_count > 0:
+        update_readme_summary(stations, utc_now_dt)
 
     payload = {
         "last_updated_utc": utc_now,
         "source": "Department of Water and Sanitation (DWS) South Africa",
         "source_url": "https://www.dws.gov.za/Hydrology/",
         "record_count": len(stations),
-        # Lets CI tell a real update apart from a re-emitted cache.
         "records_from_live_scrape": live_count,
         "ingestion_status": status,
         "ingestion_note": note,
-        # Stations positioned from DWS ArcGIS; the rest fall back to a provincial centroid.
         "records_with_arcgis_coords": coord_matches if coord_matches is not None else 0,
         "records": stations,
     }

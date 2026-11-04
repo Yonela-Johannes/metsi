@@ -82,14 +82,14 @@ jobs:
         id: check-changes
         run: |
           set -euo pipefail
-          CHANGES=$(git status --porcelain public/data/gauges_2_view.json public/data/gauges_2_view.csv | wc -l)
+          CHANGES=$(git status --porcelain public/data/gauges_2_view.json public/data/gauges_2_view.csv README.md | wc -l)
           echo "changes_count=${CHANGES}" >> "$GITHUB_OUTPUT"
 
           if [ "$CHANGES" -gt 0 ]; then
-            echo "Changes detected in gauge data"
+            echo "Changes detected in gauge data or README summary"
             echo "changes_detected=true" >> "$GITHUB_OUTPUT"
           else
-            echo "No changes in gauge data, skipping commit"
+            echo "No changes in gauge data or README summary, skipping commit"
             echo "changes_detected=false" >> "$GITHUB_OUTPUT"
           fi
 
@@ -109,16 +109,14 @@ jobs:
             exit 0
           fi
 
-          git add public/data/gauges_2_view.json public/data/gauges_2_view.csv
-          
           if [ "${{ steps.check-changes.outputs.changes_detected }}" == "true" ]; then
-            git commit -m "chore: update gauges_2_view data (${RECORD_COUNT} records, ${TIMESTAMP})"
+            git add public/data/gauges_2_view.json public/data/gauges_2_view.csv README.md
+            git commit -m "data: update flood monitoring dataset (${RECORD_COUNT} records, ${TIMESTAMP})"
+            git push origin main
+            echo "Successfully pushed data update to main branch"
           else
-            git commit -m "chore: verify gauges_2_view data (${RECORD_COUNT} records, ${TIMESTAMP})" --allow-empty
+            echo "No changes in gauge data or README summary; skipping commit"
           fi
-          
-          git push origin main
-          echo "Successfully pushed data update to main branch"
 
       - name: Upload data as artifact
         if: always()

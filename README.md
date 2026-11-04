@@ -4,6 +4,28 @@ A real-time water level, rainfall and flood monitoring dashboard for South Afric
 
 ---
 
+<!-- FLOOD_DATA_SUMMARY:START -->
+### 🌊 Latest Flood Data Update
+
+> **Data Status:** Successfully Updated | **Last Refreshed:** `2026-11-04 22:34 SAST`
+
+| Metric | Details |
+| :--- | :--- |
+| **Total Stations Monitored** | **448** DWS stations across 9 provinces |
+| **🔴 Major Flood Risk (≥ 110% FSC)** | **0** dams |
+| **🟠 Minor Flood Warning (100% – 109.9%)** | **162** dams |
+| **🟡 Flood Alert (80% – 99.9%)** | **238** dams |
+| **🟢 Normal Level (< 80%)** | **48** dams |
+| **Highest Dam Water Level** | **Boegoeberg Dam** (109.5% FSC — Northern Cape) |
+| **Total Storage Capacity** | **58,803.0 MCM** |
+| **Stations Recording 24h Rain** | **166** location(s) (Peak: **Klipvoor Dam** (7.7 mm — North West)) |
+| **Live Data Feed** | [`gauges_2_view.json`](public/data/gauges_2_view.json) | [`gauges_2_view.csv`](public/data/gauges_2_view.csv) |
+
+*Data sourced from South Africa Department of Water and Sanitation (DWS) & Open-Meteo API.*
+<!-- FLOOD_DATA_SUMMARY:END -->
+
+---
+
 ## Core capabilities
 
 - **Authoritative data** — DWS Hydrology dam levels, joined to the DWS ArcGIS `DWS_Major_Dams_500k` layer for coordinates, station IDs and catchments.
@@ -52,11 +74,30 @@ No Python runtime is needed for the dashboard — the committed dataset in `publ
 
 ---
 
-## Data pipeline
+## Data pipeline & activity automation
 
 1. `scripts/update_flood_data.py` scrapes DWS Hydrology, enriches with ArcGIS coordinates and Open-Meteo rainfall.
-2. It writes `public/data/gauges_2_view.json` and `public/data/gauges_2_view.csv` (the single source of truth — these are the files the app serves at `/data/gauges_2_view.json`).
-3. The GitHub Action runs every five minutes and commits refreshed data back to `main` (skipping the commit when nothing changed).
+2. It writes `public/data/gauges_2_view.json` and `public/data/gauges_2_view.csv` (the single source of truth — served at `/data/gauges_2_view.json`).
+3. Whenever live flood data is refreshed, the script automatically updates the **Latest Flood Data Update** summary table in `README.md` between `<!-- FLOOD_DATA_SUMMARY:START -->
+### 🌊 Latest Flood Data Update
+
+> **Data Status:** Successfully Updated | **Last Refreshed:** `2026-11-04 22:34 SAST`
+
+| Metric | Details |
+| :--- | :--- |
+| **Total Stations Monitored** | **448** DWS stations across 9 provinces |
+| **🔴 Major Flood Risk (≥ 110% FSC)** | **0** dams |
+| **🟠 Minor Flood Warning (100% – 109.9%)** | **162** dams |
+| **🟡 Flood Alert (80% – 99.9%)** | **238** dams |
+| **🟢 Normal Level (< 80%)** | **48** dams |
+| **Highest Dam Water Level** | **Boegoeberg Dam** (109.5% FSC — Northern Cape) |
+| **Total Storage Capacity** | **58,803.0 MCM** |
+| **Stations Recording 24h Rain** | **166** location(s) (Peak: **Klipvoor Dam** (7.7 mm — North West)) |
+| **Live Data Feed** | [`gauges_2_view.json`](public/data/gauges_2_view.json) | [`gauges_2_view.csv`](public/data/gauges_2_view.csv) |
+
+*Data sourced from South Africa Department of Water and Sanitation (DWS) & Open-Meteo API.*
+<!-- FLOOD_DATA_SUMMARY:END -->`.
+4. The GitHub Action workflow (`.github/workflows/update_flood_data.yml`) runs on schedule every 5 minutes, committing updated dataset files and the README activity summary when data changes occur (and skipping commits when data remains identical).
 
 Run the ingestion locally with:
 
