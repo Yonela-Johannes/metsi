@@ -7,7 +7,7 @@ A real-time water level, rainfall and flood monitoring dashboard for South Afric
 <!-- FLOOD_DATA_SUMMARY:START -->
 ### 🌊 Latest Flood Data Update
 
-> **Data Status:** Successfully Updated | **Last Refreshed:** `2026-11-04 22:34 SAST`
+> **Data Status:** Successfully Updated | **Last Refreshed:** `2026-11-08 17:25 SAST`
 
 | Metric | Details |
 | :--- | :--- |
@@ -18,7 +18,7 @@ A real-time water level, rainfall and flood monitoring dashboard for South Afric
 | **🟢 Normal Level (< 80%)** | **48** dams |
 | **Highest Dam Water Level** | **Boegoeberg Dam** (109.5% FSC — Northern Cape) |
 | **Total Storage Capacity** | **58,803.0 MCM** |
-| **Stations Recording 24h Rain** | **166** location(s) (Peak: **Klipvoor Dam** (7.7 mm — North West)) |
+| **Stations Recording 24h Rain** | **298** location(s) (Peak: **Heyshope Dam** (35.3 mm — Mpumalanga)) |
 | **Live Data Feed** | [`gauges_2_view.json`](public/data/gauges_2_view.json) | [`gauges_2_view.csv`](public/data/gauges_2_view.csv) |
 
 *Data sourced from South Africa Department of Water and Sanitation (DWS) & Open-Meteo API.*
@@ -81,7 +81,7 @@ No Python runtime is needed for the dashboard — the committed dataset in `publ
 3. Whenever live flood data is refreshed, the script automatically updates the **Latest Flood Data Update** summary table in `README.md` between `<!-- FLOOD_DATA_SUMMARY:START -->
 ### 🌊 Latest Flood Data Update
 
-> **Data Status:** Successfully Updated | **Last Refreshed:** `2026-11-04 22:34 SAST`
+> **Data Status:** Successfully Updated | **Last Refreshed:** `2026-11-08 17:25 SAST`
 
 | Metric | Details |
 | :--- | :--- |
@@ -92,7 +92,7 @@ No Python runtime is needed for the dashboard — the committed dataset in `publ
 | **🟢 Normal Level (< 80%)** | **48** dams |
 | **Highest Dam Water Level** | **Boegoeberg Dam** (109.5% FSC — Northern Cape) |
 | **Total Storage Capacity** | **58,803.0 MCM** |
-| **Stations Recording 24h Rain** | **166** location(s) (Peak: **Klipvoor Dam** (7.7 mm — North West)) |
+| **Stations Recording 24h Rain** | **298** location(s) (Peak: **Heyshope Dam** (35.3 mm — Mpumalanga)) |
 | **Live Data Feed** | [`gauges_2_view.json`](public/data/gauges_2_view.json) | [`gauges_2_view.csv`](public/data/gauges_2_view.csv) |
 
 *Data sourced from South Africa Department of Water and Sanitation (DWS) & Open-Meteo API.*

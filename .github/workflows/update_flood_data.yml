@@ -93,7 +93,7 @@ jobs:
             echo "changes_detected=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Commit and push gauge data
+      - name: Commit and push gauge data & README summary
         run: |
           set -euo pipefail
           git config user.name "RensithUdara"
@@ -101,19 +101,12 @@ jobs:
 
           RECORD_COUNT=${{ steps.scrape.outputs.record_count }}
           TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
-          LIVE_COUNT=${{ steps.scrape.outputs.delta_live }}
-
-          if [ "${LIVE_COUNT:-0}" -eq 0 ]; then
-            echo "No live records were scraped this run; there is nothing to publish."
-            echo "Skipping commit to avoid producing a commit with no data changes." | tee -a "$GITHUB_STEP_SUMMARY"
-            exit 0
-          fi
 
           if [ "${{ steps.check-changes.outputs.changes_detected }}" == "true" ]; then
             git add public/data/gauges_2_view.json public/data/gauges_2_view.csv README.md
-            git commit -m "data: update flood monitoring dataset (${RECORD_COUNT} records, ${TIMESTAMP})"
+            git commit -m "data: update flood monitoring activity & summary (${RECORD_COUNT} records, ${TIMESTAMP})"
             git push origin main
-            echo "Successfully pushed data update to main branch"
+            echo "Successfully pushed data and README update to main branch"
           else
             echo "No changes in gauge data or README summary; skipping commit"
           fi

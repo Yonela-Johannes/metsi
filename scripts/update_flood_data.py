@@ -523,9 +523,8 @@ def write_outputs(
     if live_count is None:
         live_count = len(stations)
 
-    # Only update README activity summary if live data was fetched
-    if status == "live" and live_count > 0:
-        update_readme_summary(stations, utc_now_dt)
+    # Always update README activity summary with current station data
+    update_readme_summary(stations, utc_now_dt)
 
     payload = {
         "last_updated_utc": utc_now,
