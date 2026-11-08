@@ -7,7 +7,7 @@ A real-time water level, rainfall and flood monitoring dashboard for South Afric
 <!-- FLOOD_DATA_SUMMARY:START -->
 ### 🌊 Latest Flood Data Update
 
-> **Data Status:** Successfully Updated | **Last Refreshed:** `2026-11-08 17:25 SAST`
+> **Data Status:** Successfully Updated | **Last Refreshed:** `2026-11-08 17:35 SAST`
 
 | Metric | Details |
 | :--- | :--- |
@@ -81,7 +81,7 @@ No Python runtime is needed for the dashboard — the committed dataset in `publ
 3. Whenever live flood data is refreshed, the script automatically updates the **Latest Flood Data Update** summary table in `README.md` between `<!-- FLOOD_DATA_SUMMARY:START -->
 ### 🌊 Latest Flood Data Update
 
-> **Data Status:** Successfully Updated | **Last Refreshed:** `2026-11-08 17:25 SAST`
+> **Data Status:** Successfully Updated | **Last Refreshed:** `2026-11-08 17:35 SAST`
 
 | Metric | Details |
 | :--- | :--- |
