@@ -432,6 +432,10 @@ def generate_readme_summary(stations: List[Dict[str, Any]], utc_now_dt: datetime
     sast_dt = utc_now_dt.astimezone(sast_offset)
     formatted_time = sast_dt.strftime("%Y-%m-%d %H:%M SAST")
 
+    # Get the official DWS report measurement date from station records
+    dws_dates = sorted({s.get("date") for s in stations if s.get("date")})
+    dws_date_str = ", ".join(dws_dates) if dws_dates else "N/A"
+
     total = len(stations)
     major_list = [s for s in stations if s.get("status") == "major"]
     minor_list = [s for s in stations if s.get("status") == "minor"]
@@ -455,9 +459,11 @@ def generate_readme_summary(stations: List[Dict[str, Any]], utc_now_dt: datetime
     summary = (
         f"{SUMMARY_START_MARKER}\n"
         f"### 🌊 Latest Flood Data Update\n\n"
-        f"> **Data Status:** Successfully Updated | **Last Refreshed:** `{formatted_time}`\n\n"
+        f"> **DWS Reading Date:** `{dws_date_str}` | **Platform Ingestion Sync:** `{formatted_time}`\n\n"
         f"| Metric | Details |\n"
         f"| :--- | :--- |\n"
+        f"| **DWS Measurement Date** | **{dws_date_str}** (Official Weekly State of Dams) |\n"
+        f"| **Platform Ingestion Sync** | **{formatted_time}** (UTC+2) |\n"
         f"| **Total Stations Monitored** | **{total}** DWS stations across 9 provinces |\n"
         f"| **🔴 Major Flood Risk (≥ 110% FSC)** | **{len(major_list)}** dams |\n"
         f"| **🟠 Minor Flood Warning (100% – 109.9%)** | **{len(minor_list)}** dams |\n"

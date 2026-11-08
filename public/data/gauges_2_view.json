@@ -1,12 +1,12 @@
 {
-  "last_updated_utc": "2026-11-08T15:35:52.409794+00:00",
+  "last_updated_utc": "2026-11-08T15:41:11.017513+00:00",
   "source": "Department of Water and Sanitation (DWS) South Africa",
   "source_url": "https://www.dws.gov.za/Hydrology/",
   "record_count": 448,
-  "records_from_live_scrape": 0,
-  "ingestion_status": "cached_fallback",
-  "ingestion_note": "DWS source unreachable/blocked from the ingestion host; re-emitting last known data.",
-  "records_with_arcgis_coords": 0,
+  "records_from_live_scrape": 448,
+  "ingestion_status": "live",
+  "ingestion_note": "",
+  "records_with_arcgis_coords": 334,
   "records": [
     {
       "gauge": "Belfort Dam",
