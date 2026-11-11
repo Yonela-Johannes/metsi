@@ -7,12 +7,12 @@ A real-time water level, rainfall and flood monitoring dashboard for South Afric
 <!-- FLOOD_DATA_SUMMARY:START -->
 ### 🌊 Latest Flood Data Update
 
-> **DWS Reading Date:** `2026-11-02` | **Platform Ingestion Sync:** `2026-11-11 05:07 SAST`
+> **DWS Reading Date:** `2026-11-02` | **Platform Ingestion Sync:** `2026-11-11 12:51 SAST`
 
 | Metric | Details |
 | :--- | :--- |
 | **DWS Measurement Date** | **2026-11-02** (Official Weekly State of Dams) |
-| **Platform Ingestion Sync** | **2026-11-11 05:07 SAST** (UTC+2) |
+| **Platform Ingestion Sync** | **2026-11-11 12:51 SAST** (UTC+2) |
 | **Total Stations Monitored** | **448** DWS stations across 9 provinces |
 | **🔴 Major Flood Risk (≥ 110% FSC)** | **0** dams |
 | **🟠 Minor Flood Warning (100% – 109.9%)** | **162** dams |
@@ -83,12 +83,12 @@ No Python runtime is needed for the dashboard — the committed dataset in `publ
 3. Whenever live flood data is refreshed, the script automatically updates the **Latest Flood Data Update** summary table in `README.md` between `<!-- FLOOD_DATA_SUMMARY:START -->
 ### 🌊 Latest Flood Data Update
 
-> **DWS Reading Date:** `2026-11-02` | **Platform Ingestion Sync:** `2026-11-11 05:07 SAST`
+> **DWS Reading Date:** `2026-11-02` | **Platform Ingestion Sync:** `2026-11-11 12:51 SAST`
 
 | Metric | Details |
 | :--- | :--- |
 | **DWS Measurement Date** | **2026-11-02** (Official Weekly State of Dams) |
-| **Platform Ingestion Sync** | **2026-11-11 05:07 SAST** (UTC+2) |
+| **Platform Ingestion Sync** | **2026-11-11 12:51 SAST** (UTC+2) |
 | **Total Stations Monitored** | **448** DWS stations across 9 provinces |
 | **🔴 Major Flood Risk (≥ 110% FSC)** | **0** dams |
 | **🟠 Minor Flood Warning (100% – 109.9%)** | **162** dams |
